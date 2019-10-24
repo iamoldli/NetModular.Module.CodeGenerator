@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Nm.Lib.Cache.MemoryCache" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Data.MySql" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Data.SQLite" Version="1.4.0" />
     <PackageReference Include="Nm.Lib.Data.SqlServer" Version="1.4.0" />
     <PackageReference Include="Nm.Lib.Host.Web" Version="1.4.0" />
     <PackageReference Include="Nm.Module.Admin.Web" Version="1.4.0" />

@@ -337,3 +337,5 @@ ASALocalRun/
 /src/UI/td-module-common/package-lock.json
 /src/Web/modules
 /src/UI/module-common/package-lock.json
+/src/WebHost/wwwroot
+/src/UI/module-code-generator/package-lock.json

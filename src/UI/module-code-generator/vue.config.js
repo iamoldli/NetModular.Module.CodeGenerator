@@ -5,10 +5,14 @@ const isDev = process.env.NODE_ENV === 'development' // 开发环境
 
 // 增加环境变量
 process.env.VUE_APP_BUILD_TIME = require('dayjs')().format('YYYYMDHHmmss')
+// 打包输出路径
+const outputDir = '../../WebHost/wwwroot/app'
 
 module.exports = {
+  outputDir: outputDir,
+  publicPath: '/app',
   devServer: {
-    port: 5226
+    port: 5222
   },
   transpileDependencies: ['nm-.*', 'element-ui'],
   configureWebpack: {
@@ -19,7 +23,7 @@ module.exports = {
       new CopyWebpackPlugin([
         {
           from: path.join(__dirname, 'node_modules/nm-lib-skins/public'),
-          to: path.join(__dirname, 'dist'),
+          to: path.join(__dirname, outputDir),
           ignore: ['index.html']
         }
       ])
