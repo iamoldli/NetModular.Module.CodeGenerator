@@ -13,9 +13,9 @@
         "lint": "vue-cli-service lint",
         "cm": "rimraf node_modules",
         "cc": "rimraf node_modules/.cache",
-        "i": "cd ./script && npm_install.ps1",
-        "up": "cd ./script && npm_update.ps1",
-        "pub": "cd ./script && npm_publish.ps1"
+        "i": "cd ../../../script && npm_install.ps1",
+        "up": "cd ../../../script && npm_update.ps1",
+        "pub": "cd ../../../script && npm_publish.ps1"
     },
     "dependencies": {
         "nm-lib-icon": "^1.2.10",
