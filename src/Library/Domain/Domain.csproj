@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nm.Lib.Data.Core" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Data.Query" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Utils.Core" Version="1.4.0" />
+  </ItemGroup>
+  
+</Project>
+

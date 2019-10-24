@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nm.Lib.Auth.Web" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Module.AspNetCore" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Utils.Mvc" Version="1.4.0" />
+    <PackageReference Include="Nm.Lib.Validation.FluentValidation" Version="1.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Application\Application.csproj" />
+  </ItemGroup>
+
+</Project>
