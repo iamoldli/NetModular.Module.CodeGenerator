@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Nm.Module.CodeGenerator.Application.ProjectService.ViewModels
+namespace NetModular.Module.CodeGenerator.Application.ProjectService.ViewModels
 {
     /// <summary>
     /// 项目添加

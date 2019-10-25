@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Nm.Lib.Utils.Core.Extensions;
-using Nm.Module.CodeGenerator.Domain.Property;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Lib.Utils.Core.Extensions;
+using NetModular.Module.CodeGenerator.Domain.Property;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Domain
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Domain
 {
     public partial class Entity : ITemplateHandler
     {

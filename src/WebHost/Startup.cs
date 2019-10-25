@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
-using Nm.Lib.Host.Web;
+using NetModular.Lib.Host.Web;
 
-namespace Nm.Module.Common.WebHost
+namespace NetModular.Module.CodeGenerator.WebHost
 {
     public class Startup : StartupAbstract
     {

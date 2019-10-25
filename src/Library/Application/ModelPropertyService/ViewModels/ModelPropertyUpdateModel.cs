@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nm.Module.CodeGenerator.Application.ModelPropertyService.ViewModels
+namespace NetModular.Module.CodeGenerator.Application.ModelPropertyService.ViewModels
 {
     public class ModelPropertyUpdateModel : ModelPropertyBaseModel
     {

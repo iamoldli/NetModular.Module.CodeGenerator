@@ -1,6 +1,6 @@
-﻿using Nm.Lib.Data.Abstractions;
+﻿using NetModular.Lib.Data.Abstractions;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Repositories.MySql
+namespace NetModular.Module.CodeGenerator.Infrastructure.Repositories.MySql
 {
     public class ModelPropertyRepository : SqlServer.ModelPropertyRepository
     {

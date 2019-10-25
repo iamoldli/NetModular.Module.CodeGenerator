@@ -1,7 +1,7 @@
-﻿using Nm.Lib.Data.Abstractions.Attributes;
-using Nm.Lib.Data.Core.Entities.Extend;
+﻿using NetModular.Lib.Data.Abstractions.Attributes;
+using NetModular.Lib.Data.Core.Entities.Extend;
 
-namespace Nm.Module.CodeGenerator.Domain.Enum
+namespace NetModular.Module.CodeGenerator.Domain.Enum
 {
     /// <summary>
     /// 枚举实体

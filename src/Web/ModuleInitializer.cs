@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Nm.Lib.Module.AspNetCore;
+using NetModular.Lib.Module.AspNetCore;
 
-namespace Nm.Module.CodeGenerator.Web
+namespace NetModular.Module.CodeGenerator.Web
 {
     public class ModuleInitializer : IModuleInitializer
     {

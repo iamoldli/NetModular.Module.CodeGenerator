@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Nm.Lib.Data.Abstractions;
-using Nm.Lib.Data.Core;
-using Nm.Lib.Data.Query;
-using Nm.Module.CodeGenerator.Domain.EnumItem;
-using Nm.Module.CodeGenerator.Domain.EnumItem.Models;
+using NetModular.Lib.Data.Abstractions;
+using NetModular.Lib.Data.Core;
+using NetModular.Lib.Data.Query;
+using NetModular.Module.CodeGenerator.Domain.EnumItem;
+using NetModular.Module.CodeGenerator.Domain.EnumItem.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Repositories.SqlServer
+namespace NetModular.Module.CodeGenerator.Infrastructure.Repositories.SqlServer
 {
     public class EnumItemRepository : RepositoryAbstract<EnumItemEntity>, IEnumItemRepository
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Nm.Lib.Data.Abstractions;
+using NetModular.Lib.Data.Abstractions;
 
-namespace Nm.Module.CodeGenerator.Domain.ClassMethod
+namespace NetModular.Module.CodeGenerator.Domain.ClassMethod
 {
     public interface IClassMethodRepository : IRepository<ClassMethodEntity>
     {

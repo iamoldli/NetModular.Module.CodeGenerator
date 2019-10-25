@@ -1,6 +1,6 @@
-﻿using Nm.Lib.Data.Query;
+﻿using NetModular.Lib.Data.Query;
 
-namespace Nm.Module.CodeGenerator.Domain.Project.Models
+namespace NetModular.Module.CodeGenerator.Domain.Project.Models
 {
     public class ProjectQueryModel : QueryModel
     {

@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Nm.Module.CodeGenerator.Domain.ModelProperty;
-using Nm.Module.CodeGenerator.Domain.Property;
+using NetModular.Module.CodeGenerator.Domain.ModelProperty;
+using NetModular.Module.CodeGenerator.Domain.Property;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Models
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
 {
     /// <summary>
     /// 模型属性模型

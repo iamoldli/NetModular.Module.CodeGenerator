@@ -1,24 +1,23 @@
-﻿<Project>
+<Project>
   <PropertyGroup>
     <Id>CodeGenerator</Id>
-    <Name>代码生成</Name>
+    <Name>代码生成器</Name>
     <Authors>Oldli</Authors>
-    <Version>1.4.0</Version>
-    <Description>$(Name) - $(MSBuildProjectName)</Description>
+    <Version>1.4.1</Version>
+    <Description>NetModular Module $(Id)($(Name)) - $(MSBuildProjectName)</Description>
     <NoWarn>$(NoWarn);1591</NoWarn>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <LangVersion>7.3</LangVersion>
-    <!--设置打包路径-->
-    <PackageOutputPath>$(SolutionDir)\_packages</PackageOutputPath>
-    <!--取消生成目录附加目标框架目录-->
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Company></Company>
-    <Copyright></Copyright>
-    <RootNamespacePrefix>Nm.Module.$(Id)</RootNamespacePrefix>
+    <LangVersion>Latest</LangVersion>
+    <RootNamespacePrefix>NetModular.Module.$(Id)</RootNamespacePrefix>
     <AssemblyName>$(RootNamespacePrefix).$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>$(AssemblyName)</RootNamespace>
-    <PackageProjectUrl>https://github.com/iamoldli/Nm.Module.CodeGenerator</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/iamoldli/Nm.Module.CodeGenerator</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!--设置打包路径-->
+    <PackageOutputPath>$(SolutionDir)\_packages</PackageOutputPath>
+    <Company>Oldli</Company>
+    <Copyright>Oldli</Copyright>
+    <PackageProjectUrl>https://nm.iamoldli.com/docs/</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/iamoldli/NetModular.Docs/blob/master/src/.vuepress/public/images/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/iamoldli/NetModular.Module.CodeGenerator</RepositoryUrl>
   </PropertyGroup>
 </Project>

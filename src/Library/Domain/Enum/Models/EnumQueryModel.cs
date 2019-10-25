@@ -1,6 +1,6 @@
-﻿using Nm.Lib.Data.Query;
+﻿using NetModular.Lib.Data.Query;
 
-namespace Nm.Module.CodeGenerator.Domain.Enum.Models
+namespace NetModular.Module.CodeGenerator.Domain.Enum.Models
 {
     public class EnumQueryModel : QueryModel
     {

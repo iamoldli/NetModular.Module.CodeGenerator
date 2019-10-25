@@ -6,14 +6,14 @@ using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
-using Nm.Lib.Utils.Core.Options;
-using Nm.Lib.Utils.Core.Result;
-using Nm.Module.CodeGenerator.Application.ProjectService;
-using Nm.Module.CodeGenerator.Application.ProjectService.ViewModels;
-using Nm.Module.CodeGenerator.Domain.Project.Models;
-using Nm.Module.CodeGenerator.Infrastructure.Options;
+using NetModular.Lib.Utils.Core.Options;
+using NetModular.Lib.Utils.Core.Result;
+using NetModular.Module.CodeGenerator.Application.ProjectService;
+using NetModular.Module.CodeGenerator.Application.ProjectService.ViewModels;
+using NetModular.Module.CodeGenerator.Domain.Project.Models;
+using NetModular.Module.CodeGenerator.Infrastructure.Options;
 
-namespace Nm.Module.CodeGenerator.Web.Controllers
+namespace NetModular.Module.CodeGenerator.Web.Controllers
 {
     [Description("项目管理")]
     public class ProjectController : ModuleController

@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nm.Lib.Data.Query" Version="1.4.0" />
-    <PackageReference Include="Nm.Lib.Mapper.AutoMapper" Version="1.4.0" />
+    <PackageReference Include="NetModular.Lib.Data.Query" Version="1.4.1" />
+    <PackageReference Include="NetModular.Lib.Mapper.AutoMapper" Version="1.4.1" />
   </ItemGroup>
   
   <ItemGroup>

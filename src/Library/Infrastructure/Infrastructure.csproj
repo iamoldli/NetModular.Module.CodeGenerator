@@ -7,7 +7,7 @@
   <Import Project="..\..\..\build\module.build.targets" />
 
   <ItemGroup>
-    <PackageReference Include="Nm.Module.Admin.Domain" Version="1.4.0" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.4.1" />
     <PackageReference Include="System.CodeDom" Version="4.6.0" />
   </ItemGroup>
 

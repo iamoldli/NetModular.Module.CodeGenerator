@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Nm.Lib.Utils.Core.Result;
-using Nm.Module.CodeGenerator.Application.ClassService.ViewModels;
-using Nm.Module.CodeGenerator.Application.ProjectService;
-using Nm.Module.CodeGenerator.Application.ProjectService.ResultModels;
-using Nm.Module.CodeGenerator.Domain.Class;
-using Nm.Module.CodeGenerator.Domain.Class.Models;
-using Nm.Module.CodeGenerator.Domain.ClassMethod;
-using Nm.Module.CodeGenerator.Domain.Property;
-using Nm.Module.CodeGenerator.Infrastructure;
-using Nm.Module.CodeGenerator.Infrastructure.Repositories;
+using NetModular.Lib.Utils.Core.Result;
+using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
+using NetModular.Module.CodeGenerator.Application.ProjectService;
+using NetModular.Module.CodeGenerator.Application.ProjectService.ResultModels;
+using NetModular.Module.CodeGenerator.Domain.Class;
+using NetModular.Module.CodeGenerator.Domain.Class.Models;
+using NetModular.Module.CodeGenerator.Domain.ClassMethod;
+using NetModular.Module.CodeGenerator.Domain.Property;
+using NetModular.Module.CodeGenerator.Infrastructure;
+using NetModular.Module.CodeGenerator.Infrastructure.Repositories;
 
-namespace Nm.Module.CodeGenerator.Application.ClassService
+namespace NetModular.Module.CodeGenerator.Application.ClassService
 {
     public class ClassService : IClassService
     {

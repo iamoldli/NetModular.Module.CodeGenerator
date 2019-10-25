@@ -1,5 +1,5 @@
 <#@ template language="C#" #>
-<#@ import namespace="Nm.Lib.Utils.Core.Extensions" #>
+<#@ import namespace="NetModular.Lib.Utils.Core.Extensions" #>
 <template>
 <<#= _prefix #>-form-dialog ref="form" v-bind="form" v-on="on" :visible.sync="visible_">
     <el-row>

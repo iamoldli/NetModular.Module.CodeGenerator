@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure.Options
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure.Options
 {
     public partial class Options : ITemplateHandler
     {

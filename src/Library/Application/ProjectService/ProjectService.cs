@@ -6,25 +6,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.Extensions.Options;
-using Nm.Lib.Utils.Core.Extensions;
-using Nm.Lib.Utils.Core.Options;
-using Nm.Lib.Utils.Core.Result;
-using Nm.Module.CodeGenerator.Application.ProjectService.ResultModels;
-using Nm.Module.CodeGenerator.Application.ProjectService.ViewModels;
-using Nm.Module.CodeGenerator.Domain.Class;
-using Nm.Module.CodeGenerator.Domain.ClassMethod;
-using Nm.Module.CodeGenerator.Domain.Enum;
-using Nm.Module.CodeGenerator.Domain.EnumItem;
-using Nm.Module.CodeGenerator.Domain.ModelProperty;
-using Nm.Module.CodeGenerator.Domain.Project;
-using Nm.Module.CodeGenerator.Domain.Project.Models;
-using Nm.Module.CodeGenerator.Domain.Property;
-using Nm.Module.CodeGenerator.Infrastructure.Options;
-using Nm.Module.CodeGenerator.Infrastructure.Repositories;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Default;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Lib.Utils.Core.Extensions;
+using NetModular.Lib.Utils.Core.Options;
+using NetModular.Lib.Utils.Core.Result;
+using NetModular.Module.CodeGenerator.Application.ProjectService.ResultModels;
+using NetModular.Module.CodeGenerator.Application.ProjectService.ViewModels;
+using NetModular.Module.CodeGenerator.Domain.Class;
+using NetModular.Module.CodeGenerator.Domain.ClassMethod;
+using NetModular.Module.CodeGenerator.Domain.Enum;
+using NetModular.Module.CodeGenerator.Domain.EnumItem;
+using NetModular.Module.CodeGenerator.Domain.ModelProperty;
+using NetModular.Module.CodeGenerator.Domain.Project;
+using NetModular.Module.CodeGenerator.Domain.Project.Models;
+using NetModular.Module.CodeGenerator.Domain.Property;
+using NetModular.Module.CodeGenerator.Infrastructure.Options;
+using NetModular.Module.CodeGenerator.Infrastructure.Repositories;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Default;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Application.ProjectService
+namespace NetModular.Module.CodeGenerator.Application.ProjectService
 {
     public class ProjectService : IProjectService
     {

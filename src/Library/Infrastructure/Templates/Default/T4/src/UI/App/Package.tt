@@ -1,5 +1,5 @@
 <#@ template language="C#" #>
-<#@ import namespace="Nm.Lib.Utils.Core.Extensions" #>
+<#@ import namespace="NetModular.Lib.Utils.Core.Extensions" #>
 {
     "name": "<#= _model.Project.Code.ToLower() #>-<#= _model.Project.WebUIDicName #>",
     "version": "1.0.0",

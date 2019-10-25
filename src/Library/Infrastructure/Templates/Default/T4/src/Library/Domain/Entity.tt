@@ -1,6 +1,6 @@
 ﻿<#@ template language="C#" #>
-<#@ import namespace="Nm.Lib.Utils.Core.Extensions" #>
-<#@ import namespace="Nm.Module.CodeGenerator.Domain.Property" #>
+<#@ import namespace="NetModular.Lib.Utils.Core.Extensions" #>
+<#@ import namespace="NetModular.Module.CodeGenerator.Domain.Property" #>
 using System;
 using <#= _prefix #>.Lib.Data.Abstractions.Attributes;
 <# if(_baseEntityName=="IEntity" || _baseEntityName=="Entity" || _baseEntityName.StartsWith("Entity<")){ #>

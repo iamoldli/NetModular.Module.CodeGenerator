@@ -2,10 +2,10 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Nm.Lib.Utils.Core;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Lib.Utils.Core;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates
 {
     public class TemplateBuilderAbstract : ITemplateBuilder
     {

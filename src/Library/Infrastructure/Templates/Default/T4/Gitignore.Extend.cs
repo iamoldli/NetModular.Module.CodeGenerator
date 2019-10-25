@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Default.T4
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4
 {
     public partial class Gitignore : ITemplateHandler
     {

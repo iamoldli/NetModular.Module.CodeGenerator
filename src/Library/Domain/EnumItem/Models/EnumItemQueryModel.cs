@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Nm.Lib.Data.Query;
+using NetModular.Lib.Data.Query;
 
-namespace Nm.Module.CodeGenerator.Domain.EnumItem.Models
+namespace NetModular.Module.CodeGenerator.Domain.EnumItem.Models
 {
     public class EnumItemQueryModel : QueryModel
     {

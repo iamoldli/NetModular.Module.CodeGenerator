@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Linq;
-using Nm.Lib.Utils.Core.Extensions;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Lib.Utils.Core.Extensions;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App.src.views.index
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App.src.views.index
 {
     public partial class Page : ITemplateHandler
     {

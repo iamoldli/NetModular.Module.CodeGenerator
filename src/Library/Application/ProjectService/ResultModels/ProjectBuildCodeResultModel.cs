@@ -1,4 +1,4 @@
-﻿namespace Nm.Module.CodeGenerator.Application.ProjectService.ResultModels
+﻿namespace NetModular.Module.CodeGenerator.Application.ProjectService.ResultModels
 {
     /// <summary>
     /// 项目生成代码返回模型

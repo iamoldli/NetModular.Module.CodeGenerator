@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App.src
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App.src
 {
     public partial class Main : ITemplateHandler
     {

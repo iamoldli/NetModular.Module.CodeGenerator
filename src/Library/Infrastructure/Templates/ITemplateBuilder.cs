@@ -1,6 +1,6 @@
-﻿using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+﻿using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates
 {
     /// <summary>
     /// 模板生成器接口

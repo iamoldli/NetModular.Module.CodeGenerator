@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Nm.Module.CodeGenerator.Domain.Property;
+using NetModular.Module.CodeGenerator.Domain.Property;
 
-namespace Nm.Module.CodeGenerator.Application.PropertyService.ViewModels
+namespace NetModular.Module.CodeGenerator.Application.PropertyService.ViewModels
 {
     public class PropertyBaseModel
     {

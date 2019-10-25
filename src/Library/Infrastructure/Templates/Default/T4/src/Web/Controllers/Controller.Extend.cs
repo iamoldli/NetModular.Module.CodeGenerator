@@ -1,8 +1,8 @@
 ﻿using System.IO;
 using System.Linq;
-using Nm.Module.CodeGenerator.Infrastructure.Templates.Models;
+using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace Nm.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Web.Controllers
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Web.Controllers
 {
     public partial class Controller : ITemplateHandler
     {

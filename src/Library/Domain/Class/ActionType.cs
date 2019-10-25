@@ -1,4 +1,4 @@
-﻿namespace Nm.Module.CodeGenerator.Domain.Class
+﻿namespace NetModular.Module.CodeGenerator.Domain.Class
 {
     class ActionType
     {
