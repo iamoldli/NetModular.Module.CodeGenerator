@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Csproj : CsprojBase
     {
@@ -30,33 +30,33 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "entationFile>\r\n  </PropertyGroup>\r\n\r\n  <ItemGroup>\r\n    <PackageReference Includ" +
                     "e=\"");
             
-            #line 10 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+            #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Auth.Web\" Version=\"1.0.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Auth.Web\" Version=\"1.4.0\" />\r\n    <PackageReference Include=\"");
             
-            #line 11 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+            #line 11 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Module.AspNetCore\" Version=\"1.0.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Module.AspNetCore\" Version=\"1.4.0\" />\r\n    <PackageReference Include=\"");
             
-            #line 12 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+            #line 12 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Utils.Mvc\" Version=\"1.0.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Utils.Mvc\" Version=\"1.4.0\" />\r\n    <PackageReference Include=\"");
             
-            #line 13 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Validation.FluentValidation\" Version=\"1.0.0\" />\r\n  </ItemGroup>\r\n\r\n  <ItemGr" +
+            this.Write(".Lib.Validation.FluentValidation\" Version=\"1.4.0\" />\r\n  </ItemGroup>\r\n\r\n  <ItemGr" +
                     "oup>\r\n    <ProjectReference Include=\"..\\Library\\Application\\Application.csproj\" " +
                     "/>\r\n  </ItemGroup>\r\n\r\n</Project>\r\n");
             return this.GenerationEnvironment.ToString();
