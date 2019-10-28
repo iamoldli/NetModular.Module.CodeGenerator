@@ -62,7 +62,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     <Company>Oldli</Company>
     <Copyright>Oldli</Copyright>
     <PackageProjectUrl>https://nm.iamoldli.com/docs/</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/iamoldli/NetModular.Docs/blob/master/src/.vuepress/public/images/logo.png</PackageIconUrl>
+    <PackageIcon>https://github.com/iamoldli/NetModular.Docs/blob/master/src/.vuepress/public/images/logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/iamoldli/NetModular.Module.");
             
             #line 22 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
