@@ -28,7 +28,7 @@
   </nm-dialog>
 </template>
 <script>
-import { mixins } from 'nm-lib-skins'
+import { mixins } from 'netmodular-ui'
 import ListPage from '../components/list'
 export default {
   mixins: [mixins.dialog],

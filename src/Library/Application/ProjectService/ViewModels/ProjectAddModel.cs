@@ -23,5 +23,10 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService.ViewModels
         /// </summary>
         [Required(ErrorMessage = "请输入项目编码")]
         public string Code { get; set; }
+
+        /// <summary>
+        /// 版权声明
+        /// </summary>
+        public string Copyright { get; set; }
     }
 }

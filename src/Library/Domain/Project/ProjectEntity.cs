@@ -24,5 +24,12 @@ namespace NetModular.Module.CodeGenerator.Domain.Project
         /// 编码
         /// </summary>
         public string Code { get; set; }
+
+        /// <summary>
+        /// 版权声明
+        /// </summary>
+        [Nullable]
+        [Length(200)]
+        public string Copyright { get; set; }
     }
 }

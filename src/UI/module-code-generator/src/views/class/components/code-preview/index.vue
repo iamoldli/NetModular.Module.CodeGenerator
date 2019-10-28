@@ -9,7 +9,7 @@
   </nm-dialog>
 </template>
 <script>
-import { mixins } from 'nm-lib-skins'
+import { mixins } from 'netmodular-ui'
 export default {
   mixins: [mixins.dialog],
   data() {

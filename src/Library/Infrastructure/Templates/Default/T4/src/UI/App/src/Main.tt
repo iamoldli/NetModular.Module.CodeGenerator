@@ -4,7 +4,7 @@ import config from './config'
 import <#= _model.Project.Code #> from './index'
 
 // 注入模块
-WebHost.addModule(<#= _model.Project.Code #>)
+WebHost.registerModule(<#= _model.Project.Code #>)
 
 // 启动
 WebHost.start(config)

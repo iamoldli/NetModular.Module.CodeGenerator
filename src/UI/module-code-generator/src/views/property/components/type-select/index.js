@@ -1,4 +1,4 @@
-import { mixins } from 'nm-lib-skins'
+import { mixins } from 'netmodular-ui'
 const typeArr = [
   'String',
   'Byte',

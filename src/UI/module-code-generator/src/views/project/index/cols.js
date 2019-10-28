@@ -18,6 +18,10 @@ export default [
     label: '编码'
   },
   {
+    name: 'copyright',
+    label: '版权声明'
+  },
+  {
     name: 'creator',
     label: '创建人',
     width: 100,

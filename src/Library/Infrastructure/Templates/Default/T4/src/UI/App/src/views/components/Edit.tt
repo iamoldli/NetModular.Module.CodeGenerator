@@ -14,7 +14,7 @@
   </<#= _prefix #>-form-dialog>
 </template>
 <script>
-import { mixins } from '<#= _prefix.ToLower() #>-lib-skins'
+import { mixins } from '<#= _prefix.ToLower() #>-ui'
 
 const api = $api.<#= _model.Project.Code.FirstCharToLower() #>.<#= _class.Name.FirstCharToLower() #>
 

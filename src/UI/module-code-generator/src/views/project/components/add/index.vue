@@ -11,12 +11,15 @@
         <el-form-item label="编码：" prop="code">
           <el-input v-model="form.model.code" />
         </el-form-item>
+        <el-form-item label="版权声明：" prop="copyright">
+          <el-input v-model="form.model.copyright" />
+        </el-form-item>
       </el-col>
     </el-row>
   </nm-form-dialog>
 </template>
 <script>
-import { mixins } from 'nm-lib-skins'
+import { mixins } from 'netmodular-ui'
 
 const api = $api.codeGenerator.project
 
@@ -33,7 +36,8 @@ export default {
         model: {
           name: '',
           no: 0,
-          code: ''
+          code: '',
+          copyright: ''
         },
         rules: {
           name: [

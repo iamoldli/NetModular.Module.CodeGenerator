@@ -1,9 +1,9 @@
-import WebHost from 'nm-module-admin'
+import WebHost from 'netmodular-module-admin'
 import config from './config'
 import CodeGenerator from './index'
 
 // 注入模块
-WebHost.addModule(CodeGenerator)
+WebHost.registerModule(CodeGenerator)
 
 // 启动
 WebHost.start(config)

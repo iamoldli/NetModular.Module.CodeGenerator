@@ -28,6 +28,11 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// 版权声明
+        /// </summary>
+        public string Copyright { get; set; }
+
+        /// <summary>
         /// 类列表
         /// </summary>
         public List<ClassBuildModel> ClassList { get; set; } = new List<ClassBuildModel>();

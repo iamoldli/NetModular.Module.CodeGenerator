@@ -55,7 +55,7 @@
   </nm-form-dialog>
 </template>
 <script>
-import { mixins } from 'nm-lib-skins'
+import { mixins } from 'netmodular-ui'
 import TypeSelect from '../type-select'
 import EnumSelect from '../../../enum/components/select'
 
