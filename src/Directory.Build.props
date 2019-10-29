@@ -3,7 +3,7 @@
     <Id>CodeGenerator</Id>
     <Name>代码生成器</Name>
     <Authors>Oldli</Authors>
-    <Version>1.4.3</Version>
+    <Version>1.4.4</Version>
     <Description>NetModular Module $(Id)($(Name)) - $(MSBuildProjectName)</Description>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <LangVersion>Latest</LangVersion>
@@ -17,7 +17,6 @@
     <Company>Oldli</Company>
     <Copyright>Oldli</Copyright>
     <PackageProjectUrl>https://nm.iamoldli.com/docs/</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/iamoldli/NetModular.Docs/blob/master/src/.vuepress/public/images/logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/iamoldli/NetModular.Module.CodeGenerator</RepositoryUrl>
   </PropertyGroup>
 </Project>
