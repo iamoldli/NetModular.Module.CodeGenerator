@@ -82,7 +82,7 @@ module.exports = {
               test: /[\\/]node_modules[\\/]element-ui(.*)/
             },
             skins: {
-              name: 'chunk-skins',
+              name: 'chunk-<#= _prefix #>-ui',
               priority: 10,
               test: /[\\/]node_modules[\\/]<#= _prefix #>-ui(.*)/
             }
