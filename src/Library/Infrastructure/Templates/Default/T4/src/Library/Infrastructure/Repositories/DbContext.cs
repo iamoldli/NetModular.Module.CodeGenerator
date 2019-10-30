@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class DbContext : DbContextBase
     {
@@ -27,42 +27,42 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using System;\r\nusing ");
             
-            #line 3 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+            #line 3 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Data.Abstractions;\r\nusing ");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Data.Core;\r\n\r\nnamespace ");
             
-            #line 6 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 6 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Infrastructure.Repositories\r\n{\r\n    public class ");
             
-            #line 8 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write("DbContext : DbContext\r\n    {\r\n        public ");
             
-            #line 10 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
+            #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default

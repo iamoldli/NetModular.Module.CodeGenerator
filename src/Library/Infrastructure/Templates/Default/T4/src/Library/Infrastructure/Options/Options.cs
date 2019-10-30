@@ -9,11 +9,13 @@
 // ------------------------------------------------------------------------------
 namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure.Options
 {
+    using System;
+    
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Options : OptionsBase
     {
@@ -25,35 +27,35 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using ");
             
-            #line 2 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
+            #line 2 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Utils.Core.Options;\r\n\r\nnamespace ");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Infrastructure.Options\r\n{\r\n    /// <summary>\r\n    /// ");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Name));
             
             #line default
             #line hidden
             this.Write("配置项\r\n    /// </summary>\r\n    public class ");
             
-            #line 9 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
+            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default

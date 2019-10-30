@@ -17,7 +17,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Entity : EntityBase
     {
@@ -29,199 +29,199 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using System;\r\nusing ");
             
-            #line 5 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Data.Abstractions.Attributes;\r\n");
             
-            #line 6 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  if(_baseEntityName=="IEntity" || _baseEntityName=="Entity" || _baseEntityName.StartsWith("Entity<")){ 
             
             #line default
             #line hidden
             this.Write("using ");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Data.Core.Entities;\r\n");
             
-            #line 8 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
 }else{ 
             
             #line default
             #line hidden
             this.Write("using ");
             
-            #line 9 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Data.Core.Entities.Extend;\r\n");
             
-            #line 10 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
 } 
             
             #line default
             #line hidden
             this.Write("\r\nnamespace ");
             
-            #line 12 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 12 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 12 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 12 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Domain.");
             
-            #line 12 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 12 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    /// <summary>\r\n    /// ");
             
-            #line 15 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Remarks));
             
             #line default
             #line hidden
             this.Write("\r\n    /// </summary>\r\n    [Table(\"");
             
-            #line 17 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 17 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.TableName));
             
             #line default
             #line hidden
             this.Write("\")]\r\n    public partial class ");
             
-            #line 18 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 18 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("Entity : ");
             
-            #line 18 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 18 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_baseEntityName));
             
             #line default
             #line hidden
             this.Write("\r\n    {\r\n");
             
-            #line 20 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 20 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  foreach(var p in _propertyList){ if(p.IsInherit) continue;
             
             #line default
             #line hidden
             this.Write("        /// <summary>\r\n        /// ");
             
-            #line 22 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 22 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
             
             #line default
             #line hidden
             this.Write("\r\n        /// </summary>\r\n");
             
-            #line 24 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 24 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  if(p.Nullable){ 
             
             #line default
             #line hidden
             this.Write("\t\t[Nullable]\r\n");
             
-            #line 26 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 26 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  } 
             
             #line default
             #line hidden
             
-            #line 27 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 27 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  if(p.Type == PropertyType.String){ 
             
             #line default
             #line hidden
             
-            #line 28 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 28 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  if(p.Length == 0){ 
             
             #line default
             #line hidden
             this.Write("\t\t[Max]\r\n");
             
-            #line 30 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 30 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  } else { 
             
             #line default
             #line hidden
             this.Write("        [Length(");
             
-            #line 31 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 31 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Length));
             
             #line default
             #line hidden
             this.Write(")]\r\n");
             
-            #line 32 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 32 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  } 
             
             #line default
             #line hidden
             
-            #line 33 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 33 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  } 
             
             #line default
             #line hidden
             
-            #line 34 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 34 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  if(p.Type == PropertyType.Decimal||p.Type == PropertyType.Double){ 
             
             #line default
             #line hidden
             this.Write("\t\t[Precision]\r\n");
             
-            #line 36 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 36 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  } 
             
             #line default
             #line hidden
             this.Write("        public ");
             
-            #line 37 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 37 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Type == PropertyType.Enum ? p.Enum.Name : p.Type.ToDescription()));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 37 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 37 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Name));
             
             #line default
             #line hidden
             this.Write(" { get; set; }");
             
-            #line 37 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 37 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetDefaultValue(p)));
             
             #line default
             #line hidden
             this.Write("\r\n\r\n");
             
-            #line 39 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            #line 39 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
  } 
             
             #line default

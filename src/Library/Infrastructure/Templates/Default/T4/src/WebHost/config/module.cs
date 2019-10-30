@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\module.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\module.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class module : moduleBase
     {

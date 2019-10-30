@@ -9,11 +9,13 @@
 // ------------------------------------------------------------------------------
 namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
 {
+    using System;
+    
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\host.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\host.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class host : hostBase
     {
@@ -25,7 +27,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("{\r\n    //地址\r\n    \"Urls\": \"http://*:");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\host.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\host.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.No + 6220));
             
             #line default

@@ -9,11 +9,13 @@
 // ------------------------------------------------------------------------------
 namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Application
 {
+    using System;
+    
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class MapperConfig : MapperConfigBase
     {
@@ -25,70 +27,70 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using AutoMapper;\r\nusing ");
             
-            #line 3 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 3 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Mapper.AutoMapper;\r\nusing ");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Application.");
             
-            #line 4 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("Service.ViewModels;\r\nusing ");
             
-            #line 5 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 5 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Domain.");
             
-            #line 5 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write(";\r\n\r\nnamespace ");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Application.");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
@@ -97,42 +99,42 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "void Bind(IMapperConfigurationExpression cfg)\r\n        {\r\n            cfg.Create" +
                     "Map<");
             
-            #line 13 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("AddModel, ");
             
-            #line 13 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("Entity>();\r\n            cfg.CreateMap<");
             
-            #line 14 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 14 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("Entity, ");
             
-            #line 14 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 14 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("UpdateModel>();\r\n            cfg.CreateMap<");
             
-            #line 15 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("UpdateModel, ");
             
-            #line 15 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
+            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default

@@ -11,12 +11,13 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
 {
     using NetModular.Lib.Utils.Core.Extensions;
     using NetModular.Module.CodeGenerator.Domain.Property;
-
+    using System;
+    
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class QueryModel : QueryModelBase
     {
@@ -28,76 +29,76 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using System;\r\nusing ");
             
-            #line 5 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Data.Query;\r\n\r\nnamespace  ");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
             this.Write(".Domain.");
             
-            #line 7 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write(".Models\r\n{\r\n    public class ");
             
-            #line 9 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("QueryModel : QueryModel\r\n    {\r\n");
             
-            #line 11 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 11 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
   foreach(var property in _propertyList){ 
             
             #line default
             #line hidden
             this.Write("        /// <summary>\r\n        /// ");
             
-            #line 13 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Remarks));
             
             #line default
             #line hidden
             this.Write("\r\n        /// </summary>\r\n        public ");
             
-            #line 15 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Type == PropertyType.Enum ? property.Enum.Name : property.Type.ToDescription()));
             
             #line default
             #line hidden
             
-            #line 15 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Nullable && property.Type != PropertyType.String ? "?" : ""));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 15 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Name));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n\r\n");
             
-            #line 17 "D:\MyProject\NetModular\src\Module\CodeGenerator\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
+            #line 17 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Models\QueryModel.tt"
  } 
             
             #line default
