@@ -7,7 +7,7 @@
   <Import Project="..\..\..\build\module.build.targets" />
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.4.1" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.0" />
     <PackageReference Include="System.CodeDom" Version="4.6.0" />
   </ItemGroup>
 
@@ -662,6 +662,39 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\Default\T4\src\Library\Application\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Domain\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Web\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Web\ModuleInitializer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModuleInitializer.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

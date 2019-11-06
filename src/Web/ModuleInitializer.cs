@@ -1,7 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
+#if NETSTANDARD2_0
+using Microsoft.AspNetCore.Hosting;
+#endif
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+#if NETCOREAPP3_0
 using Microsoft.Extensions.Hosting;
+#endif
 using NetModular.Lib.Module.AspNetCore;
 
 namespace NetModular.Module.CodeGenerator.Web
@@ -21,7 +26,11 @@ namespace NetModular.Module.CodeGenerator.Web
         /// </summary>
         /// <param name="app"></param>
         /// <param name="env"></param>
+#if NETSTANDARD2_0
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+#elif NETCOREAPP3_0
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
+#endif
         {
         }
 

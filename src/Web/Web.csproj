@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Auth.Web" Version="1.4.1" />
-    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="1.4.1" />
-    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="1.4.1" />
-    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="1.4.1" />
+    <PackageReference Include="NetModular.Lib.Auth.Web" Version="1.5.0" />
+    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="1.5.0" />
+    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="1.5.0" />
+    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="1.5.0" />
   </ItemGroup>
   
   <ItemGroup>

@@ -25,25 +25,26 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using Microsoft.AspNetCore.Builder;\r\nusing Microsoft.AspNetCore.Mvc;\r\nusing Micro" +
-                    "soft.Extensions.DependencyInjection;\r\nusing Microsoft.Extensions.Hosting;\r\nusing" +
-                    " ");
+            this.Write("using Microsoft.AspNetCore.Builder;\r\n#if NETSTANDARD2_0\r\nusing Microsoft.AspNetCo" +
+                    "re.Hosting;\r\n#endif\r\nusing Microsoft.AspNetCore.Mvc;\r\nusing Microsoft.Extensions" +
+                    ".DependencyInjection;\r\n#if NETCOREAPP3_0\r\nusing Microsoft.Extensions.Hosting;\r\n#" +
+                    "endif\r\nusing ");
             
-            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 11 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Module.AspNetCore;\r\n\r\nnamespace ");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
@@ -65,7 +66,11 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         /// <param name=""app""></param>
         /// <param name=""env""></param>
+#if NETSTANDARD2_0
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+#elif NETCOREAPP3_0
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
+#endif
         {
         }
 
