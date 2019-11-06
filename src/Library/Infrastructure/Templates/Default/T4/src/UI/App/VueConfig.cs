@@ -26,9 +26,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public virtual string TransformText()
         {
             this.Write("const path = require(\'path\')\r\nconst CopyWebpackPlugin = require(\'copy-webpack-plu" +
-                    "gin\')\r\nconst UglifyJsPlugin = require(\'uglifyjs-webpack-plugin\')\r\nconst isDev = " +
-                    "process.env.NODE_ENV === \'development\' // 开发环境\r\n\r\n// 增加环境变量\r\nprocess.env.VUE_APP" +
-                    "_COPYRIGHT = \'");
+                    "gin\')\r\nconst TerserPlugin = require(\'terser-webpack-plugin\')\r\nconst isDev = proc" +
+                    "ess.env.NODE_ENV === \'development\' // 开发环境\r\n\r\n// 增加环境变量\r\nprocess.env.VUE_APP_COP" +
+                    "YRIGHT = \'");
             
             #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Copyright));
@@ -113,15 +113,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
       // 非开发环境
       .when(!isDev, config => {
         config.optimization.minimizer([
-          new UglifyJsPlugin({
-            uglifyOptions: {
-              // 移除 console
-              // 其它优化选项 https://segmentfault.com/a/1190000010874406
-              warnings: false,
+          new TerserPlugin({
+            cache: true,
+            parallel: true,
+            sourceMap: false, // Must be set to true if using source-maps in production
+            terserOptions: {
               compress: {
                 drop_console: true,
-                drop_debugger: true,
-                pure_funcs: ['console.log']
+                drop_debugger: true
               }
             }
           })
@@ -139,14 +138,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             skins: {
               name: 'chunk-");
             
-            #line 85 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 84 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write("-ui\',\r\n              priority: 10,\r\n              test: /[\\\\/]node_modules[\\\\/]");
             
-            #line 87 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 86 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default

@@ -96,7 +96,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         ""rimraf"": ""^3.0.0"",
         ""sass"": ""^1.22.10"",
         ""sass-loader"": ""^7.3.1"",
-        ""uglifyjs-webpack-plugin"": ""^2.2.0"",
+        ""terser-webpack-plugin"": ""^2.2.1"",
         ""vue-template-compiler"": ""^2.6.10""
     }
 }

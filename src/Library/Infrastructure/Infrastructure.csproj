@@ -681,6 +681,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Csproj.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\Package.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Package.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\VueConfig.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VueConfig.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
