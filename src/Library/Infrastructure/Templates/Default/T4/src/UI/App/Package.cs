@@ -79,7 +79,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(@"-module-admin"": ""^1.0.0""
+            this.Write(@"-module-admin"": ""^1.0.1""
     },
     ""devDependencies"": {
         ""@vue/cli-plugin-babel"": ""^3.11.0"",

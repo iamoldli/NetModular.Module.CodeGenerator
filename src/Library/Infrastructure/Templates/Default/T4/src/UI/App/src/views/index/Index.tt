@@ -24,8 +24,8 @@
 
       <!--操作列-->
       <template v-slot:col-operation="{row}">
-        <<#= _prefix #>-button-has :options="buttons.edit" @click="edit(row)" />
-        <<#= _prefix #>-button-delete :options="buttons.del" :id="row.id" :action="removeAction" @success="refresh"/>
+        <<#= _prefix #>-button v-bind="buttons.edit" @click="edit(row)" />
+        <<#= _prefix #>-button-delete v-bind="buttons.del" :id="row.id" :action="removeAction" @success="refresh"/>
       </template>
     </<#= _prefix #>-list>
 

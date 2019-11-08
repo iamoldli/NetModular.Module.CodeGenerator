@@ -686,6 +686,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Package.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Index.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Index.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\Default\T4\src\UI\App\VueConfig.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

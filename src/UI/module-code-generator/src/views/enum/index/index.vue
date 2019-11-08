@@ -13,7 +13,7 @@
 
       <!--按钮-->
       <template v-slot:querybar-buttons>
-        <nm-button-has :options="buttons.add" @click="add" />
+        <nm-button v-bind="buttons.add" @click="add" />
       </template>
 
       <!--配置枚举项-->
@@ -26,8 +26,8 @@
 
       <!--操作列-->
       <template v-slot:col-operation="{row}">
-        <nm-button-has :options="buttons.edi" @click="edit(row)" />
-        <nm-button-delete :options="buttons.del" :action="removeAction" :id="row.id" @success="refresh" />
+        <nm-button v-bind="buttons.edi" @click="edit(row)" />
+        <nm-button-delete v-bind="buttons.del" :action="removeAction" :id="row.id" @success="refresh" />
       </template>
     </nm-list>
 

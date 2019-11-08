@@ -100,15 +100,15 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("-button-has :options=\"buttons.edit\" @click=\"edit(row)\" />\r\n        <");
+            this.Write("-button v-bind=\"buttons.edit\" @click=\"edit(row)\" />\r\n        <");
             
             #line 28 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write("-button-delete :options=\"buttons.del\" :id=\"row.id\" :action=\"removeAction\" @succes" +
-                    "s=\"refresh\"/>\r\n      </template>\r\n    </");
+            this.Write("-button-delete v-bind=\"buttons.del\" :id=\"row.id\" :action=\"removeAction\" @success=" +
+                    "\"refresh\"/>\r\n      </template>\r\n    </");
             
             #line 30 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));

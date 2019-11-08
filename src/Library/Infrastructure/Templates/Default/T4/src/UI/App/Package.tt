@@ -16,7 +16,7 @@
         "cc": "rimraf node_modules/.cache"
     },
     "dependencies": {
-        "<#= _prefix #>-module-admin": "^1.0.0"
+        "<#= _prefix #>-module-admin": "^1.0.1"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^3.11.0",
