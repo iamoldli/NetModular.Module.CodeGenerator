@@ -45,6 +45,9 @@ export default {
           ],
           code: [
             { required: true, message: '请输入编码', trigger: 'blur' }
+          ],
+          copyright: [
+            { required: true, message: '请输入版权声明', trigger: 'blur' }
           ]
         }
       },
