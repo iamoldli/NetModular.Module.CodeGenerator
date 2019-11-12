@@ -29,14 +29,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("{\r\n    \"name\": \"");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write("-");
+            this.Write("-module-");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.WebUIDicName));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
             
             #line default
             #line hidden

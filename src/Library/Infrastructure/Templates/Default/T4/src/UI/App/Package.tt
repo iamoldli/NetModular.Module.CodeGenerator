@@ -1,7 +1,7 @@
 <#@ template language="C#" #>
 <#@ import namespace="NetModular.Lib.Utils.Core.Extensions" #>
 {
-    "name": "<#= _model.Project.Code.ToLower() #>-<#= _model.Project.WebUIDicName #>",
+    "name": "<#= _prefix #>-module-<#= _model.Project.Code.ToLower() #>",
     "version": "1.0.0",
     "code": "<#= _model.Project.Code.FirstCharToLower() #>",
     "title": "<#= _model.Project.Name #>",

@@ -23,6 +23,11 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
         public string Prefix { get; set; }
 
         /// <summary>
+        /// 前端组件前缀
+        /// </summary>
+        public string UIPrefix { get; set; }
+
+        /// <summary>
         /// 编码
         /// </summary>
         public string Code { get; set; }

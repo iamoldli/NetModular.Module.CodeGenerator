@@ -13,6 +13,8 @@
   //代码生成器
   "CodeGenerator": {
     //项目前缀
-    "Prefix": "NetModular"
+    "Prefix": "NetModular",
+    //前端组件前缀
+    "UIPrefix": "Nm" 
   } 
 }

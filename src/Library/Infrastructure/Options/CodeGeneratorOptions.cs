@@ -15,8 +15,13 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Options
         public string BuildCodePath { get; set; }
 
         /// <summary>
-        /// 前缀
+        /// 项目前缀
         /// </summary>
         public string Prefix { get; set; }
+
+        /// <summary>
+        /// 前端UI组件前缀
+        /// </summary>
+        public string UIPrefix { get; set; }
     }
 }

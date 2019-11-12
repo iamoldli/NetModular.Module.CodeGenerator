@@ -26,10 +26,10 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("<template>\r\n<");
+            this.Write("<template>\r\n  <");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
@@ -72,7 +72,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("      </el-col>\r\n    </el-row>\r\n  </");
             
             #line 14 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden

@@ -29,14 +29,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("<template>\r\n  <");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-container>\r\n    <");
             
             #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
@@ -80,7 +80,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "       <");
             
             #line 17 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
@@ -88,7 +88,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "--自定义列-->\r\n      <!-- <template v-slot:col-name=\"{row}\">\r\n        <");
             
             #line 22 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
@@ -96,14 +96,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     ">\r\n      <template v-slot:col-operation=\"{row}\">\r\n        <");
             
             #line 27 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-button v-bind=\"buttons.edit\" @click=\"edit(row)\" />\r\n        <");
             
             #line 28 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
@@ -111,7 +111,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "\"refresh\"/>\r\n      </template>\r\n    </");
             
             #line 30 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
@@ -120,7 +120,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "success=\"refresh\"/>\r\n  </");
             
             #line 36 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden

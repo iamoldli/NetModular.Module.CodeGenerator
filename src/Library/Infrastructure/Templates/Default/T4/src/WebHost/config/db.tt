@@ -22,11 +22,11 @@
       //模块名称
       "Name": "Admin",
       //数据库名称
-      "Database": "<#= _prefix #>_Admin"
+      "Database": "<#= _dbPrefix #>_Admin"
     },
     {
       "Name": "<#= _model.Project.Code #>",
-      "Database": "<#= _prefix #>_<#= _model.Project.Code #>"
+      "Database": "<#= _dbPrefix #>_<#= _model.Project.Code #>"
     }
   ]
 }

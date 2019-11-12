@@ -10,11 +10,13 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         private readonly TemplateBuildModel _model;
         private ClassBuildModel _class;
         private readonly string _prefix;
+        private readonly string _uiPrefix;
 
         public Edit(TemplateBuildModel model)
         {
             _model = model;
             _prefix = _model.Project.Prefix.ToLower();
+            _uiPrefix = _model.Project.UIPrefix.ToLower();
         }
 
         public void Save()

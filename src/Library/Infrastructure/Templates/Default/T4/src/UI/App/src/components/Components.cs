@@ -29,7 +29,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "/dictionary/select\'\r\n//\r\n// export default [{\r\n// //×é¼þÃû³Æ\r\n// name: \'");
             
             #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\components\Components.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden

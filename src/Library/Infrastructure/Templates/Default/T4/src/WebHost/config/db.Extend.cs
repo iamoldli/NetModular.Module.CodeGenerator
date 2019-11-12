@@ -6,12 +6,12 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     public partial class db : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
-        private readonly string _prefix;
+        private readonly string _dbPrefix;
 
         public db(TemplateBuildModel model)
         {
             _model = model;
-            _prefix = model.Project.Prefix;
+            _dbPrefix = model.Project.UIPrefix;
         }
 
         public void Save()

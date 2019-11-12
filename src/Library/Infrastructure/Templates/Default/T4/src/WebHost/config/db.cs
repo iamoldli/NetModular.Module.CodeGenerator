@@ -51,7 +51,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
       ""Database"": """);
             
             #line 25 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_dbPrefix));
             
             #line default
             #line hidden
@@ -65,7 +65,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("\",\r\n      \"Database\": \"");
             
             #line 29 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_dbPrefix));
             
             #line default
             #line hidden

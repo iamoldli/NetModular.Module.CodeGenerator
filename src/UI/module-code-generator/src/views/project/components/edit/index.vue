@@ -32,7 +32,7 @@ export default {
         title: '编辑项目',
         width: '30%',
         action: api.update,
-        labelWidth: '70px',
+        labelWidth: '120px',
         model: {
           name: '',
           no: 0,

@@ -1,7 +1,7 @@
 <#@ template language="C#" #>
 <#@ import namespace="NetModular.Lib.Utils.Core.Extensions" #>
 <template>
-<<#= _prefix #>-form-dialog ref="form" v-bind="form" v-on="on" :visible.sync="visible_">
+  <<#= _uiPrefix #>-form-dialog ref="form" v-bind="form" v-on="on" :visible.sync="visible_">
     <el-row>
       <el-col :span="20" :offset="1">
 <#    foreach(var p in _class.AddModelPropertyList){ #>
@@ -11,7 +11,7 @@
 <#    } #>
       </el-col>
     </el-row>
-  </<#= _prefix #>-form-dialog>
+  </<#= _uiPrefix #>-form-dialog>
 </template>
 <script>
 import { mixins } from '<#= _prefix.ToLower() #>-ui'

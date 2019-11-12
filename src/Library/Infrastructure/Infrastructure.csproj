@@ -686,6 +686,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Package.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\components\Components.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Components.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Add.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Add.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Edit.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Edit.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Index.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -695,6 +710,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>VueConfig.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\config\db.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
       <DesignTime>True</DesignTime>

@@ -1,8 +1,8 @@
 <#@ template language="C#" #>
 <#@ import namespace="NetModular.Lib.Utils.Core.Extensions" #>
 <template>
-  <<#= _prefix #>-container>
-    <<#= _prefix #>-list ref="list" v-bind="list">
+  <<#= _uiPrefix #>-container>
+    <<#= _uiPrefix #>-list ref="list" v-bind="list">
       <!--查询条件-->
       <template v-slot:querybar>
 <#    foreach(var p in _class.QueryModelPropertyList){ #>
@@ -14,26 +14,26 @@
 
       <!--按钮-->
       <template v-slot:querybar-buttons>
-        <<#= _prefix #>-button-has :options="buttons.add" @click="add" />
+        <<#= _uiPrefix #>-button-has :options="buttons.add" @click="add" />
       </template>
 
       <!--自定义列-->
       <!-- <template v-slot:col-name="{row}">
-        <<#= _prefix #>-button :text="row.name" type="text" />
+        <<#= _uiPrefix #>-button :text="row.name" type="text" />
       </template> -->
 
       <!--操作列-->
       <template v-slot:col-operation="{row}">
-        <<#= _prefix #>-button v-bind="buttons.edit" @click="edit(row)" />
-        <<#= _prefix #>-button-delete v-bind="buttons.del" :id="row.id" :action="removeAction" @success="refresh"/>
+        <<#= _uiPrefix #>-button v-bind="buttons.edit" @click="edit(row)" />
+        <<#= _uiPrefix #>-button-delete v-bind="buttons.del" :id="row.id" :action="removeAction" @success="refresh"/>
       </template>
-    </<#= _prefix #>-list>
+    </<#= _uiPrefix #>-list>
 
     <!--添加-->
     <add-page :visible.sync="dialog.add" @success="refresh"/>
     <!--编辑-->
     <edit-page :id="curr.id" :visible.sync="dialog.edit" @success="refresh"/>
-  </<#= _prefix #>-container>
+  </<#= _uiPrefix #>-container>
 </template>
 <script>
 import page from './page'

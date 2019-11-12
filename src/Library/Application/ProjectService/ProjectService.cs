@@ -143,6 +143,7 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService
             var projectBuildModel = _mapper.Map<ProjectBuildModel>(project);
 
             projectBuildModel.Prefix = _codeGeneratorOptions.Prefix;
+            projectBuildModel.UIPrefix = _codeGeneratorOptions.UIPrefix;
 
             var id = Guid.NewGuid().ToString();
             var rootPath = Path.Combine(_commonOptions.TempPath, _codeGeneratorOptions.BuildCodePath);

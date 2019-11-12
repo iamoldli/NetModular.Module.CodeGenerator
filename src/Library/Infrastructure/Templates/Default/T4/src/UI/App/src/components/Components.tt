@@ -6,7 +6,7 @@ export default []
 //
 // export default [{
 // //组件名称
-// name: '<#= _prefix #>-dictionary-select',
+// name: '<#= _uiPrefix #>-dictionary-select',
 // //组件对象
 // component: DictionarySelect
 // }
