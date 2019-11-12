@@ -42,7 +42,6 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
                 var name = BaseEntityType.ToDescription().ToLower();
                 if (name.Contains("int")) return "int";
                 if (name.Contains("long")) return "long";
-                if (name.Contains("string")) return "string";
                 if (name.Contains("guid")) return "Guid";
                 return "string";
             }
