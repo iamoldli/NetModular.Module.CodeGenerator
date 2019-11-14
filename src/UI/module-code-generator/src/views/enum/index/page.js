@@ -28,6 +28,12 @@ const page = new function() {
       icon: 'delete',
       code: `${this.name}_del`,
       permissions: [`${this.name}_delete_delete`]
+    },
+    item: {
+      text: '配置项',
+      type: 'text',
+      icon: 'tag',
+      code: `${this.name}_item`
     }
   }
 }()

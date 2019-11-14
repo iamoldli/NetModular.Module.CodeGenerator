@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4
         public void Save()
         {
             var content = TransformText();
-            var filePath = Path.Combine(_model.RootPath, _model.Project.Code, "README.md");
+            var filePath = Path.Combine(_model.RootPath, "README.md");
             File.WriteAllText(filePath, content);
         }
     }

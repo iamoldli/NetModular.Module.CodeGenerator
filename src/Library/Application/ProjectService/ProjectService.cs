@@ -147,9 +147,10 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService
 
             var id = Guid.NewGuid().ToString();
             var rootPath = Path.Combine(_commonOptions.TempPath, _codeGeneratorOptions.BuildCodePath);
+            var moduleFullName = $"{_codeGeneratorOptions.Prefix}.Module.{project.Code}";
             var buildModel = new TemplateBuildModel
             {
-                RootPath = Path.Combine(rootPath, id),
+                RootPath = Path.Combine(rootPath, id, moduleFullName),
             };
 
             if (classList == null)
@@ -231,7 +232,7 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService
             var builder = new DefaultTemplateBuilder();
             builder.Build(buildModel);
 
-            ZipFile.CreateFromDirectory(buildModel.RootPath, Path.Combine(rootPath, id + ".zip"));
+            ZipFile.CreateFromDirectory(Path.Combine(rootPath, id), Path.Combine(rootPath, id + ".zip"));
 
             var resultModel = new ProjectBuildCodeResultModel
             {

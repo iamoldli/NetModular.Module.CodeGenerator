@@ -20,9 +20,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates
         {
             Check.NotNull(model, nameof(TemplateBuildModel), "模板生成模型不能为空");
 
-            var dir = Path.Combine(model.RootPath, model.Project.Code);
-            if (!Directory.Exists(dir))
-                Directory.CreateDirectory(dir);
+            if (!Directory.Exists(model.RootPath))
+                Directory.CreateDirectory(model.RootPath);
 
             var handlerTypeList = Assembly.GetExecutingAssembly().GetTypes().Where(t =>
                   typeof(ITemplateHandler) != t && typeof(ITemplateHandler).IsAssignableFrom(t)

@@ -18,7 +18,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, _model.Project.Code, "src/Web/Controllers");
+            var dir = Path.Combine(_model.RootPath, "src/Web/Controllers");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 

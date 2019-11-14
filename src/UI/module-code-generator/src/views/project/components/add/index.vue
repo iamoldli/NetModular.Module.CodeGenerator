@@ -7,11 +7,7 @@
         </el-form-item>
         <el-form-item label="编号：" prop="no">
           <el-input v-model.number="form.model.no" />
-          <nm-txt type="warning">
-            当前项目启动端口号为：后端{{ 6220 + form.model.no }}，后端{{
-              5220 + form.model.no
-            }}
-          </nm-txt>
+          <nm-txt type="warning"> 当前项目启动端口号为：后端{{ 6220 + form.model.no }}，后端{{ 5220 + form.model.no }} </nm-txt>
         </el-form-item>
         <el-form-item label="编码：" prop="code">
           <el-input v-model="form.model.code" />
@@ -24,7 +20,7 @@
   </nm-form-dialog>
 </template>
 <script>
-import { mixins } from 'netmodular-ui';
+import { mixins } from 'netmodular-ui'
 
 const api = $api.codeGenerator.project
 
@@ -47,9 +43,7 @@ export default {
         rules: {
           name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
           code: [{ required: true, message: '请输入编码', trigger: 'blur' }],
-          copyright: [
-            { required: true, message: '请输入版权声明', trigger: 'blur' }
-          ]
+          copyright: [{ required: true, message: '请输入版权声明', trigger: 'blur' }]
         }
       },
       on: {

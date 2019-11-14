@@ -19,7 +19,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, _model.Project.Code, "src/Library/Infrastructure/Repositories/MySql");
+            var dir = Path.Combine(_model.RootPath, "src/Library/Infrastructure/Repositories/MySql");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 

@@ -27,7 +27,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                 {
                     _class = classModel;
 
-                    var dir = Path.Combine(_model.RootPath, _model.Project.Code, "src/Library/Domain", _class.Name, "Models");
+                    var dir = Path.Combine(_model.RootPath, "src/Library/Domain", _class.Name, "Models");
                     if (!Directory.Exists(dir))
                         Directory.CreateDirectory(dir);
 

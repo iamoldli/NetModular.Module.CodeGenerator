@@ -1,27 +1,25 @@
 ﻿using System.IO;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Domain
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App
 {
-    public partial class Csproj : ITemplateHandler
+    public partial class Prettierrc : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
-        private readonly string _prefix;
 
-        public Csproj(TemplateBuildModel model)
+        public Prettierrc(TemplateBuildModel model)
         {
             _model = model;
-            _prefix = model.Project.Prefix;
         }
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, "src/Library/Domain");
+            var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, "Domain.csproj");
+            var filePath = Path.Combine(dir, ".prettierrc");
             File.WriteAllText(filePath, content);
         }
     }
