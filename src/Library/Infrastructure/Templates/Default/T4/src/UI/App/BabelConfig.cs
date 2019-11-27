@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\BabelConfig.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\BabelConfig.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class BabelConfig : BabelConfigBase
     {
@@ -25,8 +25,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("module.exports = {\r\n  presets: [\r\n    [\r\n      \'@vue/app\',\r\n      {\r\n        useB" +
-                    "uiltIns: \'entry\'\r\n      }\r\n    ]\r\n  ]\r\n}\r\n");
+            this.Write("module.exports = {\r\n  presets: [\'@vue/cli-plugin-babel/preset\']\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

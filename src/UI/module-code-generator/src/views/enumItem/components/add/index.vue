@@ -39,26 +39,19 @@ export default {
           remarks: ''
         },
         rules: {
-          enumId: [
-            { required: true, message: '请选择枚举', trigger: 'blur' }
-          ],
-          name: [
-            { required: true, message: '请输入名称', trigger: 'blur' }
-          ],
+          enumId: [{ required: true, message: '请选择枚举', trigger: 'blur' }],
+          name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
           value: [
             { required: true, message: '请输入值', trigger: 'blur' },
             { type: 'number', message: '请输入值', trigger: 'blur' }
           ],
-          remarks: [
-            { required: true, message: '请输入备注', trigger: 'blur' }
-          ]
+          remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }]
         }
       },
       on: {
         success: this.onSuccess,
         open: this.onOpen
       }
-
     }
   },
   props: {

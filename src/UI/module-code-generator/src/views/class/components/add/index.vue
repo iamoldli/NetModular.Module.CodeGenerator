@@ -55,25 +55,16 @@ export default {
           }
         },
         rules: {
-          projectId: [
-            { required: true, message: '请选择项目', trigger: 'blur' }
-          ],
-          name: [
-            { required: true, message: '请输入实体名称', trigger: 'blur' }
-          ],
-          remarks: [
-            { required: true, message: '请输入备注', trigger: 'blur' }
-          ],
-          tableName: [
-            { required: true, message: '请输入表名', trigger: 'blur' }
-          ]
+          projectId: [{ required: true, message: '请选择项目', trigger: 'blur' }],
+          name: [{ required: true, message: '请输入实体名称', trigger: 'blur' }],
+          remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }],
+          tableName: [{ required: true, message: '请输入表名', trigger: 'blur' }]
         }
       },
       on: {
         success: this.onSuccess,
         open: this.onOpen
       }
-
     }
   },
   props: {

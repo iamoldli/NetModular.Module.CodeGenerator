@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : nm-codegenerator-mysql
  Source Server Type    : MySQL
- Source Server Version : 80015
- Source Host           : 127.0.0.1:3306
+ Source Server Version : 80018
+ Source Host           : localhost:27222
  Source Schema         : nm_admin
 
  Target Server Type    : MySQL
- Target Server Version : 80015
+ Target Server Version : 80018
  File Encoding         : 65001
 
- Date: 24/10/2019 13:32:49
+ Date: 27/11/2019 16:53:58
 */
 
 SET NAMES utf8mb4;
@@ -90,21 +90,23 @@ INSERT INTO `account_role` VALUES (2, '2E23D1D9-4A72-ACC2-F6FF-39ED21CB6A4A', '3
 DROP TABLE IF EXISTS `auditinfo`;
 CREATE TABLE `auditinfo`  (
   `Id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `AccountId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '账户编号',
-  `Area` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '区域',
-  `Controller` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '控制器',
-  `ControllerDesc` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '控制器说明',
-  `Action` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '操作',
-  `ActionDesc` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '操作说明',
-  `Parameters` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '参数',
-  `Result` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '返回数据',
-  `ExecutionTime` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) COMMENT '方法开始执行时间',
-  `ExecutionDuration` bigint(20) NOT NULL COMMENT '方法执行总用时(ms)',
-  `BrowserInfo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '浏览器信息',
-  `Platform` smallint(6) NOT NULL COMMENT '平台',
+  `AccountId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `AccountName` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Area` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Module` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Controller` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ControllerDesc` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Action` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `ActionDesc` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Parameters` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `Result` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `ExecutionTime` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  `ExecutionDuration` bigint(20) NOT NULL DEFAULT 0,
+  `BrowserInfo` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Platform` smallint(3) NOT NULL DEFAULT 0,
   `IP` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 39837 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for button

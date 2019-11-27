@@ -38,16 +38,12 @@ export default {
           remarks: ''
         },
         rules: {
-          name: [
-            { required: true, message: '请输入名称', trigger: 'blur' }
-          ],
+          name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
           value: [
             { required: true, message: '请输入值', trigger: 'blur' },
             { type: 'number', message: '请输入正确的数值', trigger: 'blur' }
           ],
-          remarks: [
-            { required: true, message: '请输入备注', trigger: 'blur' }
-          ]
+          remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }]
         }
       },
       on: {

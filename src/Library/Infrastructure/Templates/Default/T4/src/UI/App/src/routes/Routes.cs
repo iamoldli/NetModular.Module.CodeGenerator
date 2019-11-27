@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\routes\Routes.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\routes\Routes.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Routes : RoutesBase
     {
@@ -27,14 +27,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("import loadRoutes from \'");
             
-            #line 2 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\routes\Routes.tt"
+            #line 2 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\routes\Routes.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write("-ui/packages/utils/load-routes\'\r\nconst requireComponent = require.context(\'../vie" +
-                    "ws\', true, /\\page.js$/)\r\nexport default loadRoutes(\r\n  requireComponent.keys().m" +
-                    "ap(fileName => requireComponent(fileName).route)\r\n)\r\n");
+                    "ws\', true, /\\page.js$/)\r\nexport default loadRoutes(requireComponent.keys().map(f" +
+                    "ileName => requireComponent(fileName).route))\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Csproj : CsprojBase
     {
@@ -29,26 +29,26 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "tandard2.0</TargetFramework>\r\n  </PropertyGroup>\r\n\r\n  <ItemGroup>\r\n    <PackageR" +
                     "eference Include=\"");
             
-            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.Core\" Version=\"1.5.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.Core\" Version=\"1.5.6\" />\r\n    <PackageReference Include=\"");
             
-            #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
+            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.Query\" Version=\"1.5.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.Query\" Version=\"1.5.6\" />\r\n    <PackageReference Include=\"");
             
-            #line 11 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
+            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Utils.Core\" Version=\"1.5.0\" />\r\n  </ItemGroup>\r\n\r\n</Project>\r\n\r\n");
+            this.Write(".Lib.Utils.Core\" Version=\"1.5.4\" />\r\n  </ItemGroup>\r\n\r\n</Project>\r\n\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

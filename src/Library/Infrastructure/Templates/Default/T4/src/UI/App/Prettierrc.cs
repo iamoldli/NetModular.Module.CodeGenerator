@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Prettierrc.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Prettierrc.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Prettierrc : PrettierrcBase
     {
@@ -25,8 +25,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n    \"tabWidth\": 2,\r\n    \"semi\": false,\r\n    \"singleQuote\": true,\r\n    \"printWi" +
-                    "dth\": 200\r\n}");
+            this.Write("{\r\n  \"tabWidth\": 2,\r\n  \"semi\": false,\r\n  \"singleQuote\": true,\r\n  \"printWidth\": 20" +
+                    "0\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

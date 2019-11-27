@@ -40,15 +40,9 @@ export default {
           copyright: ''
         },
         rules: {
-          name: [
-            { required: true, message: '请输入名称', trigger: 'blur' }
-          ],
-          code: [
-            { required: true, message: '请输入编码', trigger: 'blur' }
-          ],
-          copyright: [
-            { required: true, message: '请输入版权声明', trigger: 'blur' }
-          ]
+          name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
+          code: [{ required: true, message: '请输入编码', trigger: 'blur' }],
+          copyright: [{ required: true, message: '请输入版权声明', trigger: 'blur' }]
         }
       }
     }

@@ -7,7 +7,7 @@
       <template v-slot:querybar>
 <#    foreach(var p in _class.QueryModelPropertyList){ #>
         <el-form-item label="<#= p.Remarks #>：" prop="<#= p.CamelName #>">
-          <el-input v-model="list.model.<#= p.CamelName #>" clearable/>
+          <el-input v-model="list.model.<#= p.CamelName #>" clearable />
         </el-form-item>
 <#    } #>
       </template>
@@ -23,16 +23,16 @@
       </template> -->
 
       <!--操作列-->
-      <template v-slot:col-operation="{row}">
+      <template v-slot:col-operation="{ row }">
         <<#= _uiPrefix #>-button v-bind="buttons.edit" @click="edit(row)" />
-        <<#= _uiPrefix #>-button-delete v-bind="buttons.del" :id="row.id" :action="removeAction" @success="refresh"/>
+        <<#= _uiPrefix #>-button-delete v-bind="buttons.del" :id="row.id" :action="removeAction" @success="refresh" />
       </template>
     </<#= _uiPrefix #>-list>
 
     <!--添加-->
-    <add-page :visible.sync="dialog.add" @success="refresh"/>
+    <add-page :visible.sync="dialog.add" @success="refresh" />
     <!--编辑-->
-    <edit-page :id="curr.id" :visible.sync="dialog.edit" @success="refresh"/>
+    <edit-page :id="curr.id" :visible.sync="dialog.edit" @success="refresh" />
   </<#= _uiPrefix #>-container>
 </template>
 <script>
@@ -46,7 +46,7 @@ const api = $api.<#= _model.Project.Code.FirstCharToLower() #>.<#= _class.Name.F
 export default {
   name: page.name,
   components: { AddPage, EditPage },
-  data () {
+  data() {
     return {
       curr: { id: '' },
       list: {
@@ -69,13 +69,13 @@ export default {
     }
   },
   methods: {
-    refresh () {
+    refresh() {
       this.$refs.list.refresh()
     },
-    add () {
+    add() {
       this.dialog.add = true
     },
-    edit (row) {
+    edit(row) {
       this.curr = row
       this.dialog.edit = true
     }

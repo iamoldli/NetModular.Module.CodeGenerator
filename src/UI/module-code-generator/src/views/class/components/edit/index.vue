@@ -51,15 +51,9 @@ export default {
           }
         },
         rules: {
-          name: [
-            { required: true, message: '请输入实体名称', trigger: 'blur' }
-          ],
-          tableName: [
-            { required: true, message: '请输入表名', trigger: 'blur' }
-          ],
-          remarks: [
-            { required: true, message: '请输入备注', trigger: 'blur' }
-          ]
+          name: [{ required: true, message: '请输入实体名称', trigger: 'blur' }],
+          tableName: [{ required: true, message: '请输入表名', trigger: 'blur' }],
+          remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }]
         }
       },
       on: {

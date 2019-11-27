@@ -17,10 +17,10 @@
       </template>
 
       <!--是否显示-->
-      <template v-slot:col-isShow="{row}">{{row.isShow?'是':'否'}}</template>
+      <template v-slot:col-isShow="{ row }">{{ row.isShow ? '是' : '否' }}</template>
 
       <!--操作列-->
-      <template v-slot:col-operation="{row}">
+      <template v-slot:col-operation="{ row }">
         <nm-button v-bind="buttons.edit" @click="edit(row)" />
         <nm-button text="实体" icon="entity" type="text" @click="manageClass(row)" />
         <nm-button v-bind="buttons.buildCode" @click="buildCode(row)" />
@@ -84,11 +84,14 @@ export default {
     },
     buildCode(row) {
       let loading = this._loading('正在努力生成代码，请稍后...')
-      api.buildCode({ id: row.id }).then(() => {
-        loading.close()
-      }).catch(() => {
-        loading.close()
-      })
+      api
+        .buildCode({ id: row.id })
+        .then(() => {
+          loading.close()
+        })
+        .catch(() => {
+          loading.close()
+        })
     },
     manageClass(row) {
       this.curr = row

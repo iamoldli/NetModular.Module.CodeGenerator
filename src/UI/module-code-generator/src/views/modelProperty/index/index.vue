@@ -6,19 +6,13 @@
     <div class="top">
       <el-tabs v-model="active" type="card">
         <el-tab-pane name="query">
-          <span slot="label">
-            <nm-icon name="search" />查询模型
-          </span>
+          <span slot="label"> <nm-icon name="search" />查询模型 </span>
         </el-tab-pane>
         <el-tab-pane name="add">
-          <span slot="label">
-            <nm-icon name="add" />添加模型
-          </span>
+          <span slot="label"> <nm-icon name="add" />添加模型 </span>
         </el-tab-pane>
         <el-tab-pane name="update">
-          <span slot="label">
-            <nm-icon name="edit" />编辑模型
-          </span>
+          <span slot="label"> <nm-icon name="edit" />编辑模型 </span>
         </el-tab-pane>
       </el-tabs>
     </div>

@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\vscode\settings.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\vscode\settings.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class settings : settingsBase
     {
@@ -26,14 +26,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public virtual string TransformText()
         {
             this.Write(@"{
-    ""editor.defaultFormatter"": ""esbenp.prettier-vscode"",
-    ""editor.formatOnPaste"": true,
-    ""editor.formatOnSave"": true,
-    ""editor.formatOnType"": true,
-    ""eslint.autoFixOnSave"": true,
-    ""editor.codeActionsOnSave"": {
-        ""source.fixAll.tslint"": true
-    }
+  ""editor.defaultFormatter"": ""esbenp.prettier-vscode"",
+  ""editor.formatOnPaste"": true,
+  ""editor.formatOnSave"": true,
+  ""editor.formatOnType"": true,
+  ""eslint.autoFixOnSave"": true,
+  ""editor.codeActionsOnSave"": {
+    ""source.fixAll.tslint"": true
+  }
 }");
             return this.GenerationEnvironment.ToString();
         }

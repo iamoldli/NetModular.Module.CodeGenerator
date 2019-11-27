@@ -145,12 +145,8 @@ export default {
           hasDefaultValue: false
         },
         rules: {
-          classId: [
-            { required: true, message: '请选择类', trigger: 'blur' }
-          ],
-          name: [
-            { required: true, message: '请输入类名', trigger: 'blur' }
-          ],
+          classId: [{ required: true, message: '请选择类', trigger: 'blur' }],
+          name: [{ required: true, message: '请输入类名', trigger: 'blur' }],
           type: [
             { required: true, message: '请选择类型', trigger: 'blur' },
             { type: 'number', message: '请选择正确的类型', trigger: 'blur' }

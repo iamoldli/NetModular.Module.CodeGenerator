@@ -85,15 +85,18 @@ export default {
 
       const params = { classId: this.parent.id, modelType: this.modelType, ids, sort: this.total }
       this.loading = true
-      api.importFromEntity(params).then(data => {
-        this._success('保存成功')
-        this.$emit('success')
-        this.loading = false
-        this.visible_ = false
-      }).catch(() => {
-        this._error('保存失败')
-        this.loading = false
-      })
+      api
+        .importFromEntity(params)
+        .then(() => {
+          this._success('保存成功')
+          this.$emit('success')
+          this.loading = false
+          this.visible_ = false
+        })
+        .catch(() => {
+          this._error('保存失败')
+          this.loading = false
+        })
     },
     onOpen() {
       this.querySelected()

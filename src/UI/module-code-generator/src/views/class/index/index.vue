@@ -11,7 +11,7 @@
         <nm-button type="success" text="添加" icon="add" @click="add" />
       </template>
 
-      <template v-slot:col-operation="{row}">
+      <template v-slot:col-operation="{ row }">
         <nm-button text="编辑" icon="edit" type="text" @click="edit(row)" />
         <nm-button text="属性" icon="entity" type="text" @click="manageProperty(row)" />
         <nm-button text="视图模型" icon="entity" type="text" @click="openModelManage(row)" />
@@ -101,11 +101,14 @@ export default {
     },
     buildCode(row) {
       let loading = this._loading('正在努力生成代码，请稍后...')
-      api.buildCode(row.id).then(() => {
-        loading.close()
-      }).catch(() => {
-        loading.close()
-      })
+      api
+        .buildCode(row.id)
+        .then(() => {
+          loading.close()
+        })
+        .catch(() => {
+          loading.close()
+        })
     },
     codePreview(row) {
       this.curr = row

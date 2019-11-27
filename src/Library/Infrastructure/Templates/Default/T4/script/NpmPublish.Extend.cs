@@ -1,25 +1,26 @@
 ﻿using System.IO;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.script
 {
-    public partial class EditorConfig : ITemplateHandler
+   public partial class NpmPublish : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
 
-        public EditorConfig(TemplateBuildModel model)
+        public NpmPublish(TemplateBuildModel model)
         {
             _model = model;
         }
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}");
+            var dir = Path.Combine(_model.RootPath, "script");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, ".editorconfig");
+
+            var filePath = Path.Combine(dir, "npm_publish.ps1");
             File.WriteAllText(filePath, content);
         }
     }

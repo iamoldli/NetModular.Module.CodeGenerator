@@ -1,0 +1,3 @@
+cd ../src/UI/module-<#= _model.Project.Code.ToLower() #>
+npm --registry  https://registry.npmjs.org/ update
+pause

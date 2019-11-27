@@ -16,7 +16,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Package : PackageBase
     {
@@ -26,79 +26,76 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n    \"name\": \"");
+            this.Write("{\r\n  \"name\": \"");
             
-            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write("-module-");
             
-            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
             
             #line default
             #line hidden
-            this.Write("\",\r\n    \"version\": \"1.0.0\",\r\n    \"code\": \"");
+            this.Write("\",\r\n  \"version\": \"1.0.0\",\r\n  \"code\": \"");
             
-            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.FirstCharToLower()));
             
             #line default
             #line hidden
-            this.Write("\",\r\n    \"title\": \"");
+            this.Write("\",\r\n  \"title\": \"");
             
-            #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Name));
             
             #line default
             #line hidden
-            this.Write("\",\r\n    \"description\": \"");
+            this.Write("\",\r\n  \"description\": \"");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Name));
             
             #line default
             #line hidden
             this.Write(@""",
-    ""main"": ""src/index.js"",
-    ""scripts"": {
-        ""serve"": ""vue-cli-service serve"",
-        ""build"": ""vue-cli-service build"",
-        ""lint"": ""vue-cli-service lint"",
-        ""dev"": ""cd ../../WebHost && dotnet watch run"",
-        ""cm"": ""rimraf node_modules"",
-        ""cc"": ""rimraf node_modules/.cache""
-    },
-    ""dependencies"": {
-        """);
-            
-            #line 19 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
-            
-            #line default
-            #line hidden
-            this.Write(@"-module-admin"": ""^1.0.1""
-    },
-    ""devDependencies"": {
-        ""@vue/cli-plugin-babel"": ""^3.11.0"",
-        ""@vue/cli-plugin-eslint"": ""^3.11.0"",
-        ""@vue/cli-service"": ""^3.11.0"",
-        ""@vue/eslint-config-standard"": ""^4.0.0"",
-        ""babel-eslint"": ""^10.0.3"",
-        ""eslint"": ""^6.2.2"",
-        ""eslint-config-elemefe"": ""^0.3.0"",
-        ""eslint-plugin-html"": ""^6.0.0"",
-        ""eslint-plugin-json"": ""^1.4.0"",
-        ""eslint-plugin-vue"": ""^5.2.3"",
-        ""fibers"": ""^4.0.1"",
-        ""rimraf"": ""^3.0.0"",
-        ""sass"": ""^1.22.10"",
-        ""sass-loader"": ""^7.3.1"",
-        ""terser-webpack-plugin"": ""^2.2.1"",
-        ""vue-template-compiler"": ""^2.6.10""
-    }
+  ""main"": ""src/index.js"",
+  ""scripts"": {
+    ""serve"": ""vue-cli-service serve"",
+    ""build"": ""vue-cli-service build"",
+    ""lint"": ""vue-cli-service lint"",
+    ""dev"": ""cd ../../WebHost && dotnet watch run"",
+    ""cm"": ""rimraf node_modules"",
+    ""cc"": ""rimraf node_modules/.cache"",
+    ""i"": ""cd ../../../script && npm_install.ps1"",
+    ""up"": ""cd ../../../script && npm_update.ps1"",
+    ""pub"": ""cd ../../../script && npm_publish.ps1""
+  },
+  ""dependencies"": {
+    ""netmodular-module-admin"": ""^1.0.8"",
+    ""netmodular-ui"": ""^1.2.0""
+  },
+  ""devDependencies"": {
+    ""@vue/cli-plugin-babel"": ""^4.0.0"",
+    ""@vue/cli-plugin-eslint"": ""^4.0.0"",
+    ""@vue/cli-plugin-router"": ""^4.0.0"",
+    ""@vue/cli-plugin-vuex"": ""^4.0.0"",
+    ""@vue/cli-service"": ""^4.0.0"",
+    ""@vue/eslint-config-prettier"": ""^5.0.0"",
+    ""babel-eslint"": ""^10.0.3"",
+    ""eslint"": ""^5.16.0"",
+    ""eslint-plugin-prettier"": ""^3.1.1"",
+    ""eslint-plugin-vue"": ""^5.0.0"",
+    ""prettier"": ""^1.18.2"",
+    ""raw-loader"": ""^3.1.0"",
+    ""rimraf"": ""^3.0.0"",
+    ""sass"": ""^1.22.10"",
+    ""sass-loader"": ""^8.0.0"",
+    ""vue-template-compiler"": ""^2.6.10""
+  }
 }
 ");
             return this.GenerationEnvironment.ToString();

@@ -7,7 +7,7 @@
 //     重新生成代码，这些更改将会丢失。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Web
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure.Repositories
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class Csproj : CsprojBase
+    public partial class PostgreSQLRepository : PostgreSQLRepositoryBase
     {
 #line hidden
         /// <summary>
@@ -25,45 +25,50 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write(@"<Project Sdk=""Microsoft.NET.Sdk"">
-
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
-    <GenerateDocumentationFile>false</GenerateDocumentationFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-	<PackageReference Include=""");
+            this.Write("    using ");
             
-            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+            #line 2 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Auth.Web\" Version=\"1.5.1\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.Abstractions;\r\n\r\nnamespace ");
             
-            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Module.AspNetCore\" Version=\"1.5.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Module.");
             
-            #line 12 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
-            
-            #line default
-            #line hidden
-            this.Write(".Lib.Utils.Mvc\" Version=\"1.5.4\" />\r\n    <PackageReference Include=\"");
-            
-            #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
             #line hidden
-            this.Write(".Lib.Validation.FluentValidation\" Version=\"1.5.0\" />\r\n  </ItemGroup>\r\n\r\n  <ItemGr" +
-                    "oup>\r\n    <ProjectReference Include=\"..\\Library\\Application\\Application.csproj\" " +
-                    "/>\r\n  </ItemGroup>\r\n\r\n</Project>\r\n");
+            this.Write(".Infrastructure.Repositories.PostgreSQL\r\n{\r\n    public class ");
+            
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
+            
+            #line default
+            #line hidden
+            this.Write("Repository : SqlServer.");
+            
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
+            
+            #line default
+            #line hidden
+            this.Write("Repository\r\n    {\r\n        public ");
+            
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
+            
+            #line default
+            #line hidden
+            this.Write("Repository(IDbContext dbContext) : base(dbContext)\r\n        {\r\n        }\r\n    }\r\n" +
+                    "}");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -75,7 +80,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class CsprojBase
+    public class PostgreSQLRepositoryBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

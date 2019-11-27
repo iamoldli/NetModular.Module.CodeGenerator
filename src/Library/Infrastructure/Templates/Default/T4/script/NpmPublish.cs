@@ -7,7 +7,7 @@
 //     重新生成代码，这些更改将会丢失。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.script
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\EditorConfig.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\script\NpmPublish.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class EditorConfig : EditorConfigBase
+    public partial class NpmPublish : NpmPublishBase
     {
 #line hidden
         /// <summary>
@@ -25,8 +25,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("[*.{js,jsx,ts,tsx,vue}]\r\nindent_style = space\r\nindent_size = 2\r\ntrim_trailing_whi" +
-                    "tespace = true\r\ninsert_final_newline = true\r\n");
+            this.Write("cd ../src/UI/module-");
+            
+            #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\script\NpmPublish.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\nnpm --registry  https://registry.npmjs.org/ publish\r\npause");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -38,7 +44,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class EditorConfigBase
+    public class NpmPublishBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

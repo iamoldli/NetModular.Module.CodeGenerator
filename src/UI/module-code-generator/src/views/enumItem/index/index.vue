@@ -1,5 +1,5 @@
 <template>
-  <nm-list-dialog :title=" `枚举项列表(${parent.name})`" icon="list" height="80%" :visible.sync="visible_" @open="onOpen">
+  <nm-list-dialog :title="`枚举项列表(${parent.name})`" icon="list" height="80%" :visible.sync="visible_" @open="onOpen">
     <nm-list ref="list" v-bind="list">
       <template v-slot:querybar>
         <el-form-item label="名称：" prop="name">
@@ -12,7 +12,7 @@
         <nm-button type="warning" text="排序" icon="sort" @click="openSort" />
       </template>
 
-      <template v-slot:col-operation="{row}">
+      <template v-slot:col-operation="{ row }">
         <nm-button text="编辑" icon="edit" type="text" @click="edit(row)" />
         <nm-button-delete :action="removeAction" :id="row.id" @success="refresh" />
       </template>

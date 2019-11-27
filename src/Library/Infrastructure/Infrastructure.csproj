@@ -7,7 +7,7 @@
   <Import Project="..\..\..\build\module.build.targets" />
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.0" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.5" />
     <PackageReference Include="System.CodeDom" Version="4.6.0" />
   </ItemGroup>
 
@@ -16,9 +16,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\Default\T4\script\NpmInstall.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>NpmInstall.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Default\T4\script\NpmPublish.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>NpmPublish.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Default\T4\script\NpmUpdate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>NpmUpdate.cs</LastGenOutput>
+    </None>
     <None Update="Templates\Default\T4\src\Library\Infrastructure\Options\ModuleOptionsConfigure.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ModuleOptionsConfigure.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt">
+      <LastGenOutput>PostgreSQLRepository.cs</LastGenOutput>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
     </None>
     <None Update="Templates\Default\T4\src\UI\App\src\api\components\Entity.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -91,10 +107,6 @@
     <None Update="Templates\Default\T4\src\UI\App\Browserslistrc.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Browserslistrc.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\Default\T4\src\UI\App\EditorConfig.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>EditorConfig.cs</LastGenOutput>
     </None>
     <None Update="Templates\Default\T4\src\UI\App\Eslintrc.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -175,6 +187,10 @@
     <None Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\MySqlRepository.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>MySqlRepository.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PostgreSQLRepository.cs</LastGenOutput>
     </None>
     <None Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\SQLiteRepository.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -307,6 +323,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\Default\T4\script\NpmInstall.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NpmInstall.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\script\NpmPublish.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NpmPublish.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\script\NpmUpdate.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NpmUpdate.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\Default\T4\build\WebBuildTargets.*">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -381,6 +412,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>MySqlRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PostgreSQLRepository.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\SQLiteRepository.*">
       <DesignTime>True</DesignTime>
@@ -671,6 +707,64 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Prettierrc.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\Default\T4\src\Library\Application\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Domain\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\Package.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Package.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\routes\Routes.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Routes.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Add.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Add.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Edit.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Edit.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Index.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Index.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Page.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Page.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Web\Csproj.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Csproj.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

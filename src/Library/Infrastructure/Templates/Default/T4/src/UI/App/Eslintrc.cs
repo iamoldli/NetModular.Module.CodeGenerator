@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Eslintrc.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Eslintrc.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Eslintrc : EslintrcBase
     {
@@ -26,22 +26,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public virtual string TransformText()
         {
             this.Write(@"module.exports = {
-    root: true,
+  root: true,
   env: {
     node: true
   },
-  extends: ['plugin:vue/essential', '@vue/standard'],
+  extends: ['plugin:vue/essential', '@vue/prettier'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'space-before-function-paren': 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
-  }, 
+  },
   globals: {
-      $http: 'readonly',
-      $api: 'readonly'
+    $http: 'readonly',
+    $api: 'readonly'
   }
 }
 ");

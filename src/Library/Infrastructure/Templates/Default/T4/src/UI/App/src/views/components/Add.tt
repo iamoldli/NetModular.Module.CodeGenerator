@@ -6,7 +6,7 @@
       <el-col :span="20" :offset="1">
 <#    foreach(var p in _class.AddModelPropertyList){ #>
         <el-form-item label="<#= p.Remarks #>：" prop="<#= p.CamelName #>">
-          <el-input v-model="form.model.<#= p.CamelName #>" clearable/>
+          <el-input v-model="form.model.<#= p.CamelName #>" clearable />
         </el-form-item>
 <#    } #>
       </el-col>
@@ -20,7 +20,7 @@ const api = $api.<#= _model.Project.Code.FirstCharToLower() #>.<#= _class.Name.F
 
 export default {
   mixins: [mixins.dialog],
-  data () {
+  data() {
     return {
       form: {
         title: '添加<#= _class.Remarks #>',
@@ -32,8 +32,7 @@ export default {
           <#= p.CamelName #>: ''<#=i < _class.AddModelPropertyList.Count-1 ? "," : "" #>
 <#    } #>
         },
-        rules: {
-        }
+        rules: {}
       },
       on: {
         success: this.onSuccess,
@@ -42,10 +41,10 @@ export default {
     }
   },
   methods: {
-    onSuccess () {
+    onSuccess() {
       this.$emit('success')
     },
-    onOpen () {
+    onOpen() {
       this.$nextTick(() => {
         this.$refs.form.reset()
       })

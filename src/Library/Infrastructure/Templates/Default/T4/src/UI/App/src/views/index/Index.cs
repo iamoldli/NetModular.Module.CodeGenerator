@@ -16,7 +16,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Index : IndexBase
     {
@@ -28,14 +28,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("<template>\r\n  <");
             
-            #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-container>\r\n    <");
             
-            #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
@@ -43,35 +43,35 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-list ref=\"list\" v-bind=\"list\">\r\n      <!--查询条件-->\r\n      <template v-slot:queryb" +
                     "ar>\r\n");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
     foreach(var p in _class.QueryModelPropertyList){ 
             
             #line default
             #line hidden
             this.Write("        <el-form-item label=\"");
             
-            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
             
             #line default
             #line hidden
             this.Write("：\" prop=\"");
             
-            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
             this.Write("\">\r\n          <el-input v-model=\"list.model.");
             
-            #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
-            this.Write("\" clearable/>\r\n        </el-form-item>\r\n");
+            this.Write("\" clearable />\r\n        </el-form-item>\r\n");
             
-            #line 12 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 12 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
     } 
             
             #line default
@@ -79,7 +79,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("      </template>\r\n\r\n      <!--按钮-->\r\n      <template v-slot:querybar-buttons>\r\n " +
                     "       <");
             
-            #line 17 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 17 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
@@ -87,39 +87,39 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-button-has :options=\"buttons.add\" @click=\"add\" />\r\n      </template>\r\n\r\n      <!" +
                     "--自定义列-->\r\n      <!-- <template v-slot:col-name=\"{row}\">\r\n        <");
             
-            #line 22 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 22 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-button :text=\"row.name\" type=\"text\" />\r\n      </template> -->\r\n\r\n      <!--操作列--" +
-                    ">\r\n      <template v-slot:col-operation=\"{row}\">\r\n        <");
+                    ">\r\n      <template v-slot:col-operation=\"{ row }\">\r\n        <");
             
-            #line 27 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 27 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-button v-bind=\"buttons.edit\" @click=\"edit(row)\" />\r\n        <");
             
-            #line 28 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 28 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-button-delete v-bind=\"buttons.del\" :id=\"row.id\" :action=\"removeAction\" @success=" +
-                    "\"refresh\"/>\r\n      </template>\r\n    </");
+                    "\"refresh\" />\r\n      </template>\r\n    </");
             
-            #line 30 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 30 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-list>\r\n\r\n    <!--添加-->\r\n    <add-page :visible.sync=\"dialog.add\" @success=\"refre" +
-                    "sh\"/>\r\n    <!--编辑-->\r\n    <edit-page :id=\"curr.id\" :visible.sync=\"dialog.edit\" @" +
-                    "success=\"refresh\"/>\r\n  </");
+                    "sh\" />\r\n    <!--编辑-->\r\n    <edit-page :id=\"curr.id\" :visible.sync=\"dialog.edit\" " +
+                    "@success=\"refresh\" />\r\n  </");
             
-            #line 36 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 36 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
@@ -128,51 +128,51 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "./cols\'\r\nimport AddPage from \'../components/add\'\r\nimport EditPage from \'../compo" +
                     "nents/edit\'\r\n\r\nconst api = $api.");
             
-            #line 44 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 44 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.FirstCharToLower()));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 44 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 44 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name.FirstCharToLower()));
             
             #line default
             #line hidden
             this.Write("\r\n\r\nexport default {\r\n  name: page.name,\r\n  components: { AddPage, EditPage },\r\n " +
-                    " data () {\r\n    return {\r\n      curr: { id: \'\' },\r\n      list: {\r\n        title:" +
-                    " page.title,\r\n        cols,\r\n        action: api.query,\r\n        model: {\r\n");
+                    " data() {\r\n    return {\r\n      curr: { id: \'\' },\r\n      list: {\r\n        title: " +
+                    "page.title,\r\n        cols,\r\n        action: api.query,\r\n        model: {\r\n");
             
-            #line 57 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 57 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
     for(var i=0;i<_class.QueryModelPropertyList.Count;i++){ var p=_class.QueryModelPropertyList[i]; 
             
             #line default
             #line hidden
             this.Write("          /** ");
             
-            #line 58 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 58 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
             
             #line default
             #line hidden
             this.Write(" */\r\n          ");
             
-            #line 59 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 59 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
             this.Write(": \'\'");
             
-            #line 59 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 59 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(i < _class.QueryModelPropertyList.Count-1 ? "," : ""));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 60 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
+            #line 60 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
     } 
             
             #line default
@@ -188,13 +188,13 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     }
   },
   methods: {
-    refresh () {
+    refresh() {
       this.$refs.list.refresh()
     },
-    add () {
+    add() {
       this.dialog.add = true
     },
-    edit (row) {
+    edit(row) {
       this.curr = row
       this.dialog.edit = true
     }
