@@ -48,7 +48,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Utils.Core\" Version=\"1.5.4\" />\r\n  </ItemGroup>\r\n\r\n</Project>\r\n\r\n");
+            this.Write(".Lib.Utils.Core\" Version=\"1.5.6\" />\r\n  </ItemGroup>\r\n\r\n</Project>\r\n\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

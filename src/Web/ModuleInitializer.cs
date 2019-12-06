@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 #endif
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-#if NETCOREAPP3_0
+#if NETCOREAPP3_1
 using Microsoft.Extensions.Hosting;
 #endif
 using NetModular.Lib.Module.AspNetCore;
@@ -17,7 +17,12 @@ namespace NetModular.Module.CodeGenerator.Web
         /// 注入服务
         /// </summary>
         /// <param name="services"></param>
-        public void ConfigureServices(IServiceCollection services)
+        /// <param name="env"></param>
+#if NETSTANDARD2_0
+        public void ConfigureServices(IServiceCollection services, IHostingEnvironment env)
+#elif NETCOREAPP3_1
+        public void ConfigureServices(IServiceCollection services, IHostEnvironment env)
+#endif
         {
         }
 
@@ -28,7 +33,7 @@ namespace NetModular.Module.CodeGenerator.Web
         /// <param name="env"></param>
 #if NETSTANDARD2_0
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-#elif NETCOREAPP3_0
+#elif NETCOREAPP3_1
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
 #endif
         {
@@ -40,7 +45,7 @@ namespace NetModular.Module.CodeGenerator.Web
         /// <param name="mvcOptions"></param>
         public void ConfigureMvc(MvcOptions mvcOptions)
         {
-           
+
         }
     }
 }

@@ -8,7 +8,7 @@
   <Import Project="..\..\..\build\module.build.targets" />
 
   <ItemGroup>
-    <PackageReference Include="<#= _prefix #>.Module.Admin.Domain" Version="1.5.5" />
+    <PackageReference Include="<#= _prefix #>.Module.Admin.Domain" Version="1.5.7" />
   </ItemGroup>
  
   <ItemGroup>

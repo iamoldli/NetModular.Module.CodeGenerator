@@ -7,7 +7,7 @@
   <Import Project="..\..\..\build\module.build.targets" />
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.6" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.7" />
     <PackageReference Include="System.CodeDom" Version="4.7.0" />
   </ItemGroup>
 
@@ -765,6 +765,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Csproj.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Web\ModuleInitializer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModuleInitializer.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

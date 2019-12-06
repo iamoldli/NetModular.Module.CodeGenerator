@@ -26,7 +26,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public virtual string TransformText()
         {
             this.Write("<Project Sdk=\"Microsoft.NET.Sdk.Web\">\r\n\r\n  <PropertyGroup>\r\n    <TargetFramework>" +
-                    "netcoreapp3.0</TargetFramework>\r\n  </PropertyGroup>\r\n\r\n  <ItemGroup>\r\n\t<PackageR" +
+                    "netcoreapp3.1</TargetFramework>\r\n  </PropertyGroup>\r\n\r\n  <ItemGroup>\r\n\t<PackageR" +
                     "eference Include=\"");
             
             #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
@@ -34,7 +34,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Cache.MemoryCache\" Version=\"1.5.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Cache.MemoryCache\" Version=\"1.5.1\" />\r\n    <PackageReference Include=\"");
             
             #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
@@ -62,14 +62,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Host.Web\" Version=\"1.5.1\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Host.Web\" Version=\"1.5.2\" />\r\n    <PackageReference Include=\"");
             
             #line 14 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(@".Module.Admin.Web"" Version=""1.5.5"" />
+            this.Write(@".Module.Admin.Web"" Version=""1.5.7"" />
   </ItemGroup>
 
   <ItemGroup>

@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class ModuleInitializer : ModuleInitializerBase
     {
@@ -30,21 +30,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     ".DependencyInjection;\r\n#if NETCOREAPP3_0\r\nusing Microsoft.Extensions.Hosting;\r\n#" +
                     "endif\r\nusing ");
             
-            #line 11 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Module.AspNetCore;\r\n\r\nnamespace ");
             
-            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
             
             #line default
@@ -57,7 +57,11 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// 注入服务
         /// </summary>
         /// <param name=""services""></param>
-        public void ConfigureServices(IServiceCollection services)
+#if NETSTANDARD2_0
+        public void ConfigureServices(IServiceCollection services, IHostingEnvironment env)
+#elif NETCOREAPP3_1
+        public void ConfigureServices(IServiceCollection services, IHostEnvironment env)
+#endif
         {
         }
 
