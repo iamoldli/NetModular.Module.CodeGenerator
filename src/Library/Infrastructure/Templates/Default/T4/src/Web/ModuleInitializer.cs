@@ -27,7 +27,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using Microsoft.AspNetCore.Builder;\r\n#if NETSTANDARD2_0\r\nusing Microsoft.AspNetCo" +
                     "re.Hosting;\r\n#endif\r\nusing Microsoft.AspNetCore.Mvc;\r\nusing Microsoft.Extensions" +
-                    ".DependencyInjection;\r\n#if NETCOREAPP3_0\r\nusing Microsoft.Extensions.Hosting;\r\n#" +
+                    ".DependencyInjection;\r\n#if NETCOREAPP3_1\r\nusing Microsoft.Extensions.Hosting;\r\n#" +
                     "endif\r\nusing ");
             
             #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
@@ -72,7 +72,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// <param name=""env""></param>
 #if NETSTANDARD2_0
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-#elif NETCOREAPP3_0
+#elif NETCOREAPP3_1
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
 #endif
         {

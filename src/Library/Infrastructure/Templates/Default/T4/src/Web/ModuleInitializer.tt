@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 #endif
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-#if NETCOREAPP3_0
+#if NETCOREAPP3_1
 using Microsoft.Extensions.Hosting;
 #endif
 using <#= _prefix #>.Lib.Module.AspNetCore;
@@ -33,7 +33,7 @@ namespace <#= _prefix #>.Module.<#= _model.Project.Code #>.Web
         /// <param name="env"></param>
 #if NETSTANDARD2_0
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-#elif NETCOREAPP3_0
+#elif NETCOREAPP3_1
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
 #endif
         {

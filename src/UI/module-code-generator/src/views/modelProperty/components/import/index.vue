@@ -37,7 +37,7 @@ export default {
       return {
         title: `从实体中导入属性(${this.parent.name})`,
         icon: 'import',
-        width: '718px',
+        width: '803px',
         height: '600px',
         noScrollbar: true,
         loading: this.loading,
