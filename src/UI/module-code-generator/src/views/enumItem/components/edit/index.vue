@@ -1,5 +1,5 @@
 <template>
-  <nm-form-dialog ref="form" v-bind="form" v-on="on" :visible.sync="visible_">
+  <nm-form-dialog ref="form" v-bind="form" :visible.sync="visible_">
     <el-row>
       <el-col :span="20" :offset="1">
         <el-form-item label="所属枚举：">
@@ -45,9 +45,6 @@ export default {
           ],
           remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }]
         }
-      },
-      on: {
-        opened: this.opened
       }
     }
   },
@@ -55,11 +52,6 @@ export default {
     parent: {
       type: Object,
       required: true
-    }
-  },
-  methods: {
-    opened() {
-      console.log(this.form)
     }
   }
 }
