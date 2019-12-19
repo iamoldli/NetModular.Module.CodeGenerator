@@ -15,17 +15,16 @@
 <script>
 import { mixins } from 'netmodular-ui'
 
-const api = $api.codeGenerator.enum
+const { add, edit, update } = $api.codeGenerator.enum
 
 export default {
-  mixins: [mixins.formDialogEdit],
+  mixins: [mixins.formSave],
   data() {
     return {
-      api,
+      title: '项目',
+      actions: { add, edit, update },
       form: {
-        title: '编辑项目',
         width: '30%',
-        action: api.update,
         labelWidth: '70px',
         model: {
           name: '',

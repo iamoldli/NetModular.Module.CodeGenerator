@@ -5,14 +5,14 @@ using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
 namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App.src.views.components
 {
-    public partial class Edit : ITemplateHandler
+    public partial class SavePage : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
         private ClassBuildModel _class;
         private readonly string _prefix;
         private readonly string _uiPrefix;
 
-        public Edit(TemplateBuildModel model)
+        public SavePage(TemplateBuildModel model)
         {
             _model = model;
             _prefix = _model.Project.Prefix.ToLower();
@@ -27,7 +27,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                 {
                     _class = classModel;
 
-                    var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}/src/views", _class.Name.FirstCharToLower(), "components/edit");
+                    var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}/src/views", _class.Name.FirstCharToLower(), "components/save");
                     if (!Directory.Exists(dir))
                         Directory.CreateDirectory(dir);
 

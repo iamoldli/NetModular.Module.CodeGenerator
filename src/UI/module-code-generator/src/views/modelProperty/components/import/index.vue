@@ -13,7 +13,7 @@ const api = $api.codeGenerator.modelProperty
 const propertyApi = $api.codeGenerator.property
 
 export default {
-  mixins: [mixins.dialog],
+  mixins: [mixins.visible],
   data() {
     return {
       list: [],

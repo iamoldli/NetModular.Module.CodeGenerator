@@ -7,7 +7,7 @@
   <Import Project="..\..\..\build\module.build.targets" />
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.9" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.5.11" />
     <PackageReference Include="System.CodeDom" Version="4.7.0" />
   </ItemGroup>
 
@@ -68,13 +68,9 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Main.cs</LastGenOutput>
     </None>
-    <None Update="Templates\Default\T4\src\UI\App\src\views\components\Edit.tt">
+    <None Update="Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>Edit.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\Default\T4\src\UI\App\src\views\components\Add.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>Add.cs</LastGenOutput>
+      <LastGenOutput>SavePage.cs</LastGenOutput>
     </None>
     <None Update="Templates\Default\T4\src\UI\App\src\views\index\Cols.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -643,16 +639,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Page.tt</DependentUpon>
     </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Add.*">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Add.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Edit.*">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Edit.tt</DependentUpon>
-    </Compile>
     <Compile Update="Templates\Default\T4\src\UI\App\src\Module.*">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -707,69 +693,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Prettierrc.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Templates\Default\T4\src\Library\Application\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Domain\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\Package.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Package.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\routes\Routes.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Routes.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Add.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Add.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\Edit.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Edit.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Index.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Index.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Page.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Page.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Web\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Web\ModuleInitializer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ModuleInitializer.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

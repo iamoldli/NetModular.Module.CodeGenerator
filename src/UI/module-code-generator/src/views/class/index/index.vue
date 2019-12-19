@@ -20,8 +20,8 @@
         <nm-button-delete :action="removeAction" :id="row.id" @success="refresh" />
       </template>
     </nm-list>
-    <add-page :project="project" :visible.sync="dialog.add" @success="refresh" />
-    <edit-page :id="curr.id" :project="project" :visible.sync="dialog.edit" @success="refresh" />
+
+    <save-page :id="curr.id" :project="project" :visible.sync="dialog.save" @success="refresh" />
     <property-page :parent="curr" :visible.sync="dialog.property" />
     <model-manage-page :parent="curr" :visible.sync="dialog.model" />
     <code-preview :id="curr.id" :visible.sync="dialog.codePreview" />
@@ -30,8 +30,7 @@
 <script>
 import { mixins } from 'netmodular-ui'
 import cols from './cols.js'
-import AddPage from '../components/add'
-import EditPage from '../components/edit'
+import SavePage from '../components/save'
 import PropertyPage from '../../property/index'
 import ModelManagePage from '../../modelProperty/index'
 import CodePreview from '../components/code-preview'
@@ -39,15 +38,15 @@ import CodePreview from '../components/code-preview'
 const api = $api.codeGenerator.class
 
 export default {
-  mixins: [mixins.dialog, mixins.loading],
-  components: { AddPage, EditPage, PropertyPage, ModelManagePage, CodePreview },
+  mixins: [mixins.visible, mixins.list],
+  components: { SavePage, PropertyPage, ModelManagePage, CodePreview },
   data() {
     return {
-      curr: { id: '' },
       list: {
         noHeader: true,
         queryOnCreated: false,
         action: api.query,
+        operationWidth: '400',
         model: {
           projectId: '',
           name: ''
@@ -55,8 +54,6 @@ export default {
         cols
       },
       dialog: {
-        add: false,
-        edit: false,
         property: false,
         model: false,
         codePreview: false
@@ -80,16 +77,6 @@ export default {
     }
   },
   methods: {
-    refresh() {
-      this.$refs.list.refresh()
-    },
-    add() {
-      this.dialog.add = true
-    },
-    edit(row) {
-      this.curr = row
-      this.dialog.edit = true
-    },
     /** 打开模型管理 */
     openModelManage(row) {
       this.curr = row
@@ -100,14 +87,14 @@ export default {
       this.dialog.property = true
     },
     buildCode(row) {
-      let loading = this._loading('正在努力生成代码，请稍后...')
+      this._openLoading('正在努力生成代码，请稍后...')
       api
         .buildCode(row.id)
         .then(() => {
-          loading.close()
+          this._closeLoading()
         })
         .catch(() => {
-          loading.close()
+          this._closeLoading()
         })
     },
     codePreview(row) {

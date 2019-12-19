@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using AutoMapper;
+using NetModular.Module.CodeGenerator.Domain.Class;
 
 namespace NetModular.Module.CodeGenerator.Application.ClassService.ViewModels
 {
@@ -25,6 +27,11 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService.ViewModels
         /// </summary>
         [Required(ErrorMessage = "请输入类名")]
         public string Remarks { get; set; }
+
+        /// <summary>
+        /// 基类类型
+        /// </summary>
+        public BaseEntityType BaseEntityType { get; set; }
 
         /// <summary>
         /// 方法

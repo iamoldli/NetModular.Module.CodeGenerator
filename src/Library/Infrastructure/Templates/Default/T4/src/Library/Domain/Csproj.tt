@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="<#= _prefix #>.Lib.Data.Core" Version="1.5.6" />
-    <PackageReference Include="<#= _prefix #>.Lib.Data.Query" Version="1.5.6" />
-    <PackageReference Include="<#= _prefix #>.Lib.Utils.Core" Version="1.5.6" />
+    <PackageReference Include="<#= _prefix #>.Lib.Data.Core" Version="1.5.9" />
+    <PackageReference Include="<#= _prefix #>.Lib.Data.Query" Version="1.5.9" />
+    <PackageReference Include="<#= _prefix #>.Lib.Utils.Core" Version="1.5.9" />
   </ItemGroup>
 
 </Project>

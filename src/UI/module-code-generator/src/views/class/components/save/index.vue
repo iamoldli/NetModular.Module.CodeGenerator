@@ -5,6 +5,9 @@
         <el-form-item label="所属项目：">
           <el-input v-model="project.name" disabled />
         </el-form-item>
+        <el-form-item label="基类类型：" prop="baseEntityType">
+          <nm-select :disabled="isEdit_" :method="getBaseEntityTypeSelect" v-model="form.model.baseEntityType" />
+        </el-form-item>
         <el-form-item label="实体名称：" prop="name">
           <el-input v-model="form.model.name" />
         </el-form-item>
@@ -27,21 +30,25 @@
 <script>
 import { mixins } from 'netmodular-ui'
 
-const api = $api.codeGenerator.class
+const { add, edit, update, getBaseEntityTypeSelect } = $api.codeGenerator.class
 
 export default {
-  mixins: [mixins.formDialogEdit],
+  mixins: [mixins.formSave],
   data() {
     return {
-      api,
+      title: '实体',
+      actions: {
+        add,
+        edit,
+        update
+      },
       form: {
-        title: '编辑实体',
         width: '40%',
-        action: api.update,
         model: {
-          id: '',
+          projectId: '',
           name: '',
           tableName: '',
+          baseEntityType: 6,
           remarks: '',
           method: {
             query: true,
@@ -51,14 +58,14 @@ export default {
           }
         },
         rules: {
+          projectId: [{ required: true, message: '请选择项目', trigger: 'blur' }],
           name: [{ required: true, message: '请输入实体名称', trigger: 'blur' }],
-          tableName: [{ required: true, message: '请输入表名', trigger: 'blur' }],
-          remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }]
+          remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }],
+          tableName: [{ required: true, message: '请输入表名', trigger: 'blur' }]
         }
       },
       on: {
-        success: this.onSuccess,
-        open: this.onOpen
+        reset: this.onReset
       }
     }
   },
@@ -66,6 +73,14 @@ export default {
     project: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    getBaseEntityTypeSelect() {
+      return getBaseEntityTypeSelect()
+    },
+    onReset() {
+      this.form.model.projectId = this.project.id
     }
   }
 }

@@ -50,7 +50,7 @@ import EditPage from '../components/edit'
 const api = $api.codeGenerator.property
 
 export default {
-  mixins: [mixins.dialog],
+  mixins: [mixins.visible],
   components: { AddPage, EditPage },
   data() {
     return {

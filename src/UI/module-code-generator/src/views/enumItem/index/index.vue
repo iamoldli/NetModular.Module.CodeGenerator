@@ -17,25 +17,23 @@
         <nm-button-delete :action="removeAction" :id="row.id" @success="refresh" />
       </template>
     </nm-list>
-    <add-page :parent="parent" :visible.sync="dialog.add" @success="refresh" />
-    <edit-page :id="curr.id" :parent="parent" :visible.sync="dialog.edit" @success="refresh" />
+
+    <save-page :id="curr.id" :parent="parent" :visible.sync="dialog.save" @success="refresh" />
     <nm-drag-sort-dialog v-bind="dragSort" :visible.sync="dialog.sort" @success="refresh" />
   </nm-list-dialog>
 </template>
 <script>
 import { mixins } from 'netmodular-ui'
 import cols from './cols.js'
-import AddPage from '../components/add'
-import EditPage from '../components/edit'
+import SavePage from '../components/save'
 
 const api = $api.codeGenerator.enumItem
 
 export default {
-  mixins: [mixins.dialog],
-  components: { AddPage, EditPage },
+  mixins: [mixins.list, mixins.visible],
+  components: { SavePage },
   data() {
     return {
-      curr: { id: '' },
       list: {
         noHeader: true,
         queryOnCreated: false,
@@ -47,8 +45,6 @@ export default {
         cols
       },
       dialog: {
-        add: false,
-        edit: false,
         sort: false
       },
       removeAction: api.remove
@@ -69,16 +65,6 @@ export default {
     }
   },
   methods: {
-    refresh() {
-      this.$refs.list.refresh()
-    },
-    add() {
-      this.dialog.add = true
-    },
-    edit(row) {
-      this.curr = row
-      this.dialog.edit = true
-    },
     openSort() {
       this.dialog.sort = true
     },

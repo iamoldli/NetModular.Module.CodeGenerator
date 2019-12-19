@@ -16,9 +16,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class Add : AddBase
+    public partial class SavePage : SavePageBase
     {
 #line hidden
         /// <summary>
@@ -28,140 +28,119 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("<template>\r\n  <");
             
-            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-form-dialog ref=\"form\" v-bind=\"form\" v-on=\"on\" :visible.sync=\"visible_\">\r\n    <e" +
-                    "l-row>\r\n      <el-col :span=\"20\" :offset=\"1\">\r\n");
+                    "l-row>\r\n      <el-col :span=\"20\" :offset=\"1\">\r\n      ");
             
-            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
-    foreach(var p in _class.AddModelPropertyList){ 
+            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
+    foreach(var p in _class.EditModelPropertyList){ 
             
             #line default
             #line hidden
             this.Write("        <el-form-item label=\"");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
             
             #line default
             #line hidden
             this.Write("£º\" prop=\"");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
             this.Write("\">\r\n          <el-input v-model=\"form.model.");
             
-            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
-            this.Write("\" clearable />\r\n        </el-form-item>\r\n");
+            this.Write("\" clearable />\r\n        </el-form-item>\r\n      ");
             
-            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
     } 
             
             #line default
             #line hidden
             this.Write("      </el-col>\r\n    </el-row>\r\n  </");
             
-            #line 14 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 14 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
             
             #line default
             #line hidden
             this.Write("-form-dialog>\r\n</template>\r\n<script>\r\nimport { mixins } from \'");
             
-            #line 17 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 17 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix.ToLower()));
             
             #line default
             #line hidden
-            this.Write("-ui\'\r\n\r\nconst api = $api.");
+            this.Write("-ui\'\r\n\r\nconst { add, edit, update } = $api.");
             
-            #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.FirstCharToLower()));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name.FirstCharToLower()));
             
             #line default
             #line hidden
-            this.Write("\r\n\r\nexport default {\r\n  mixins: [mixins.dialog],\r\n  data() {\r\n    return {\r\n     " +
-                    " form: {\r\n        title: \'Ìí¼Ó");
+            this.Write("\r\n\r\nexport default {\r\n  mixins: [mixins.formSave],\r\n  data() {\r\n    return {\r\n   " +
+                    "   title: \'");
             
-            #line 26 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 25 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Remarks));
             
             #line default
             #line hidden
-            this.Write("\',\r\n        icon: \'add\',\r\n        action: api.add,\r\n        model: {\r\n");
+            this.Write("\',\r\n      actions: { add, edit, update },\r\n      form: {\r\n        model: {\r\n");
             
-            #line 30 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
-    for(var i = 0;i < _class.AddModelPropertyList.Count;i++){ var p=_class.AddModelPropertyList[i]; 
+            #line 29 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
+    for(var i = 0;i < _class.EditModelPropertyList.Count;i++){ var p = _class.EditModelPropertyList[i]; 
             
             #line default
             #line hidden
             this.Write("          /** ");
             
-            #line 31 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 30 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
             
             #line default
             #line hidden
             this.Write(" */\r\n          ");
             
-            #line 32 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 31 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
             this.Write(": \'\'");
             
-            #line 32 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(i < _class.AddModelPropertyList.Count-1 ? "," : ""));
+            #line 31 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(i < _class.EditModelPropertyList.Count-1 ? "," : ""));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 33 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\Add.tt"
+            #line 32 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
     } 
             
             #line default
             #line hidden
-            this.Write(@"        },
-        rules: {}
-      },
-      on: {
-        success: this.onSuccess,
-        open: this.onOpen
-      }
-    }
-  },
-  methods: {
-    onSuccess() {
-      this.$emit('success')
-    },
-    onOpen() {
-      this.$nextTick(() => {
-        this.$refs.form.reset()
-      })
-    }
-  }
-}
-</script>
-");
+            this.Write("        },\r\n        rules: {}\r\n      }\r\n    }\r\n  }\r\n}\r\n</script>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -173,7 +152,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class AddBase
+    public class SavePageBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

@@ -28,10 +28,7 @@
       </template>
     </nm-list>
 
-    <!--添加-->
-    <add-page :visible.sync="dialog.add" @success="refresh" />
-    <!--编辑-->
-    <edit-page :id="curr.id" :visible.sync="dialog.edit" @success="refresh" />
+    <save-page :id="curr.id" :visible.sync="dialog.save" @success="refresh" />
     <!--类管理-->
     <class-page :project="curr" :visible.sync="dialog.class" />
   </nm-container>
@@ -40,19 +37,17 @@
 import { mixins } from 'netmodular-ui'
 import page from './page'
 import cols from './cols'
-import AddPage from '../components/add'
-import EditPage from '../components/edit'
+import SavePage from '../components/save'
 import ClassPage from '../../class/index'
 
 const api = $api.codeGenerator.project
 
 export default {
   name: page.name,
-  mixins: [mixins.loading],
-  components: { AddPage, EditPage, ClassPage },
+  mixins: [mixins.list],
+  components: { SavePage, ClassPage },
   data() {
     return {
-      curr: { id: '' },
       list: {
         title: page.title,
         cols,
@@ -63,34 +58,22 @@ export default {
         }
       },
       removeAction: api.remove,
+      buttons: page.buttons,
       dialog: {
-        add: false,
-        edit: false,
         class: false
-      },
-      buttons: page.buttons
+      }
     }
   },
   methods: {
-    refresh() {
-      this.$refs.list.refresh()
-    },
-    add() {
-      this.dialog.add = true
-    },
-    edit(row) {
-      this.curr = row
-      this.dialog.edit = true
-    },
     buildCode(row) {
-      let loading = this._loading('正在努力生成代码，请稍后...')
+      this._openLoading('正在努力生成代码，请稍后...')
       api
         .buildCode({ id: row.id })
         .then(() => {
-          loading.close()
+          this._closenLoading()
         })
         .catch(() => {
-          loading.close()
+          this._closenLoading()
         })
     },
     manageClass(row) {

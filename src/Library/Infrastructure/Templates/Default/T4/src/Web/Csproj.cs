@@ -40,21 +40,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Auth.Web\" Version=\"1.5.3\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Auth.Web\" Version=\"1.5.4\" />\r\n    <PackageReference Include=\"");
             
             #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Module.AspNetCore\" Version=\"1.5.1\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Module.AspNetCore\" Version=\"1.5.2\" />\r\n    <PackageReference Include=\"");
             
             #line 12 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Utils.Mvc\" Version=\"1.5.6\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Utils.Mvc\" Version=\"1.5.9\" />\r\n    <PackageReference Include=\"");
             
             #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));

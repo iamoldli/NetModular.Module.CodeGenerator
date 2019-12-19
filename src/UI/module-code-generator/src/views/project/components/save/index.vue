@@ -3,10 +3,11 @@
     <el-row>
       <el-col :span="20" :offset="1">
         <el-form-item label="名称：" prop="name">
-          <el-input v-model="form.model.name" />
+          <el-input autofocus v-model="form.model.name" />
         </el-form-item>
         <el-form-item label="编号：" prop="no">
           <el-input v-model.number="form.model.no" />
+          <nm-txt type="warning"> 当前项目启动端口号为：后端{{ 6220 + form.model.no }}，后端{{ 5220 + form.model.no }} </nm-txt>
         </el-form-item>
         <el-form-item label="编码：" prop="code">
           <el-input v-model="form.model.code" />
@@ -21,17 +22,16 @@
 <script>
 import { mixins } from 'netmodular-ui'
 
-const api = $api.codeGenerator.project
+const { add, edit, update } = $api.codeGenerator.project
 
 export default {
-  mixins: [mixins.formDialogEdit],
+  mixins: [mixins.formSave],
   data() {
     return {
-      api,
+      title: '项目',
+      actions: { add, edit, update },
       form: {
-        title: '编辑项目',
         width: '30%',
-        action: api.update,
         labelWidth: '120px',
         model: {
           name: '',

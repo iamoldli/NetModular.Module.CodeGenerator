@@ -34,7 +34,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.Query\" Version=\"1.5.6\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.Query\" Version=\"1.5.9\" />\r\n    <PackageReference Include=\"");
             
             #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));

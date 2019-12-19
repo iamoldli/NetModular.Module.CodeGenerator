@@ -21,17 +21,16 @@
 <script>
 import { mixins } from 'netmodular-ui'
 
-const api = $api.codeGenerator.enumItem
+const { add, edit, update } = $api.codeGenerator.enumItem
 
 export default {
-  mixins: [mixins.dialog],
+  mixins: [mixins.formSave],
   data() {
     return {
+      title: '枚举项',
+      actions: { add, edit, update },
       form: {
-        title: '添加类',
-        icon: 'add',
         width: '40%',
-        action: api.add,
         model: {
           enumId: '',
           name: '',
@@ -39,18 +38,16 @@ export default {
           remarks: ''
         },
         rules: {
-          enumId: [{ required: true, message: '请选择枚举', trigger: 'blur' }],
           name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
           value: [
             { required: true, message: '请输入值', trigger: 'blur' },
-            { type: 'number', message: '请输入值', trigger: 'blur' }
+            { type: 'number', message: '请输入正确的数值', trigger: 'blur' }
           ],
           remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }]
         }
       },
       on: {
-        success: this.onSuccess,
-        open: this.onOpen
+        reset: this.onReset
       }
     }
   },
@@ -61,14 +58,9 @@ export default {
     }
   },
   methods: {
-    onSuccess() {
-      this.$emit('success')
-    },
-    onOpen() {
-      this.$nextTick(() => {
-        this.$refs.form.reset()
-        this.form.model.enumId = this.parent.id
-      })
+    onReset() {
+      console.log(this.parent)
+      this.form.model.enumId = this.parent.id
     }
   }
 }

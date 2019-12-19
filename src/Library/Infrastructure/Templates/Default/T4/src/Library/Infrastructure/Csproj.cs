@@ -35,9 +35,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Module.Admin.Domain\" Version=\"1.5.7\" />\r\n  </ItemGroup>\r\n \r\n  <ItemGroup>\r\n    <" +
-                    "ProjectReference Include=\"..\\Domain\\Domain.csproj\" />\r\n  </ItemGroup>\r\n\r\n</Proje" +
-                    "ct>\r\n");
+            this.Write(".Module.Admin.Domain\" Version=\"1.5.11\" />\r\n  </ItemGroup>\r\n \r\n  <ItemGroup>\r\n    " +
+                    "<ProjectReference Include=\"..\\Domain\\Domain.csproj\" />\r\n  </ItemGroup>\r\n\r\n</Proj" +
+                    "ect>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

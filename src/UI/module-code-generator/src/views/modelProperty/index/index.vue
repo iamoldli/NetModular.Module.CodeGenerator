@@ -25,7 +25,7 @@
 import { mixins } from 'netmodular-ui'
 import ListPage from '../components/list'
 export default {
-  mixins: [mixins.dialog],
+  mixins: [mixins.visible],
   components: { ListPage },
   data() {
     return {

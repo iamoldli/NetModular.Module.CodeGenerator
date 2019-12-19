@@ -27,29 +27,26 @@
       </template>
     </nm-list>
 
-    <!--添加-->
-    <add-page :visible.sync="dialog.add" @success="refresh" />
-    <!--编辑-->
-    <edit-page :id="curr.id" :visible.sync="dialog.edit" @success="refresh" />
+    <save-page :id="curr.id" :visible.sync="dialog.save" @success="refresh" />
     <!--项管理-->
     <item-page :parent="curr" :visible.sync="dialog.item" />
   </nm-container>
 </template>
 <script>
+import { mixins } from 'netmodular-ui'
 import page from './page'
 import cols from './cols'
-import AddPage from '../components/add'
-import EditPage from '../components/edit'
+import SavePage from '../components/save'
 import ItemPage from '../../enumItem/index'
 
 const api = $api.codeGenerator.enum
 
 export default {
   name: page.name,
-  components: { AddPage, EditPage, ItemPage },
+  mixins: [mixins.list],
+  components: { SavePage, ItemPage },
   data() {
     return {
-      curr: { id: '' },
       list: {
         title: page.title,
         cols,
@@ -59,25 +56,13 @@ export default {
         }
       },
       removeAction: api.remove,
+      buttons: page.buttons,
       dialog: {
-        add: false,
-        edit: false,
         item: false
-      },
-      buttons: page.buttons
+      }
     }
   },
   methods: {
-    refresh() {
-      this.$refs.list.refresh()
-    },
-    add() {
-      this.dialog.add = true
-    },
-    edit(row) {
-      this.curr = row
-      this.dialog.edit = true
-    },
     manageItem(row) {
       this.curr = row
       this.dialog.item = true

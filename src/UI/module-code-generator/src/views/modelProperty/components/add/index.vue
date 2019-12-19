@@ -36,7 +36,7 @@ const api = $api.codeGenerator.modelProperty
 const enumApi = $api.codeGenerator.enum
 
 export default {
-  mixins: [mixins.dialog],
+  mixins: [mixins.visible],
   components: { TypeSelect, EnumSelect },
   data() {
     // 验证枚举

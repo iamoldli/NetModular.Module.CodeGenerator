@@ -30,9 +30,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
   ""editor.formatOnPaste"": true,
   ""editor.formatOnSave"": true,
   ""editor.formatOnType"": true,
-  ""eslint.autoFixOnSave"": true,
   ""editor.codeActionsOnSave"": {
-    ""source.fixAll.tslint"": true
+    ""source.fixAll.tslint"": true,
+    ""source.fixAll.eslint"": true
   }
 }");
             return this.GenerationEnvironment.ToString();

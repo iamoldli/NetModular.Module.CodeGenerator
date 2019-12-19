@@ -63,7 +63,7 @@ const api = $api.codeGenerator.property
 const enumApi = $api.codeGenerator.enum
 
 export default {
-  mixins: [mixins.dialog],
+  mixins: [mixins.visible],
   components: { TypeSelect, EnumSelect },
   data() {
     // 验证字符串长度
