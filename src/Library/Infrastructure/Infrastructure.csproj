@@ -228,6 +228,10 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>cacheDevelopment.cs</LastGenOutput>
     </None>
+    <None Update="Templates\Default\T4\src\WebHost\config\excelDevelopment.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>excelDevelopment.cs</LastGenOutput>
+    </None>
     <None Update="Templates\Default\T4\src\Web\Csproj.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Csproj.cs</LastGenOutput>
@@ -311,6 +315,14 @@
     <None Update="Templates\Default\T4\src\UI\App\Prettierrc.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Prettierrc.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Default\T4\src\WebHost\config\excel.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>excel.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Default\T4\src\WebHost\config\excelDevelopment.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>excelDevelopment.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -693,6 +705,16 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Prettierrc.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\config\excel.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>excel.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\config\excelDevelopment.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>excelDevelopment.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 
