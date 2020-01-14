@@ -6,12 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="NetModular.Lib.Cache.MemoryCache" Version="1.5.3" />
-    <PackageReference Include="NetModular.Lib.Data.MySql" Version="1.5.9" />
-    <PackageReference Include="NetModular.Lib.Data.SQLite" Version="1.5.9" />
-    <PackageReference Include="NetModular.Lib.Data.SqlServer" Version="1.5.9" />
+    <PackageReference Include="NetModular.Lib.Data.MySql" Version="1.6.6" />
+    <PackageReference Include="NetModular.Lib.Data.SQLite" Version="1.6.6" />
+    <PackageReference Include="NetModular.Lib.Data.SqlServer" Version="1.6.6" />
     <PackageReference Include="NetModular.Lib.Excel.EPPlus" Version="1.5.0" />
-    <PackageReference Include="NetModular.Lib.Host.Web" Version="1.5.4" />
-    <PackageReference Include="NetModular.Module.Admin.Web" Version="1.5.11" />
+    <PackageReference Include="NetModular.Lib.Host.Web" Version="1.5.9" />
+    <PackageReference Include="NetModular.Module.Admin.Web" Version="1.6.3" />
   </ItemGroup>
 
   <ItemGroup>

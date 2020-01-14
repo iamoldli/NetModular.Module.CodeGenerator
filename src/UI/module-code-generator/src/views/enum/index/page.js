@@ -1,6 +1,7 @@
 /** 页面信息 */
 const page = new (function() {
   this.title = '枚举列表'
+  this.icon = 'tag'
   this.name = 'codegenerator_enum'
   this.path = '/codegenerator/enum'
   // 关联权限
