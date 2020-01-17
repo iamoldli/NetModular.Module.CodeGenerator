@@ -70,10 +70,10 @@ export default {
       api
         .buildCode({ id: row.id })
         .then(() => {
-          this._closenLoading()
+          this._closeLoading()
         })
         .catch(() => {
-          this._closenLoading()
+          this._closeLoading()
         })
     },
     manageClass(row) {
