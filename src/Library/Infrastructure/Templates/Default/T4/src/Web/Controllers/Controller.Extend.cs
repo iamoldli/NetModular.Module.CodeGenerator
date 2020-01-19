@@ -16,6 +16,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             _prefix = model.Project.Prefix;
         }
 
+        public bool IsGlobal => false;
+
         public void Save()
         {
             var dir = Path.Combine(_model.RootPath, "src/Web/Controllers");

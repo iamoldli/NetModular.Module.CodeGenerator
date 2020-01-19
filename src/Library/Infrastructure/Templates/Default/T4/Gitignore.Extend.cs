@@ -12,6 +12,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4
             _model = model;
         }
 
+        public bool IsGlobal => true;
+
         public void Save()
         {
             var content = TransformText();

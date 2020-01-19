@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Text;
 using NetModular.Lib.Utils.Core.Extensions;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
@@ -17,6 +14,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             _model = model;
         }
+
+        public bool IsGlobal => false;
 
         public void Save()
         {

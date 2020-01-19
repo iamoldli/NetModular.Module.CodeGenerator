@@ -12,6 +12,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.bu
             _model = model;
         }
 
+        public bool IsGlobal => true;
+
         public void Save()
         {
             var dir = Path.Combine(_model.RootPath, "build");

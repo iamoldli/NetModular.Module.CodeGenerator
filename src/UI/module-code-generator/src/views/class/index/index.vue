@@ -1,6 +1,6 @@
 <template>
   <nm-list-dialog v-bind="dialogOptions" :visible.sync="visible_" @open="onOpen">
-    <nm-list ref="list" v-bind="list">
+    <nm-list ref="list" v-bind="list" @reset="onReset">
       <template v-slot:querybar>
         <el-form-item label="名称：" prop="name">
           <el-input v-model="list.model.name" clearable />
@@ -12,11 +12,11 @@
       </template>
 
       <template v-slot:col-operation="{ row }">
-        <nm-button text="编辑" icon="edit" type="text" @click="edit(row)" />
-        <nm-button text="属性" icon="entity" type="text" @click="manageProperty(row)" />
+        <nm-button text="属性管理" icon="entity" type="text" @click="manageProperty(row)" />
         <nm-button text="视图模型" icon="entity" type="text" @click="openModelManage(row)" />
         <nm-button text="生成代码" icon="download" type="text" @click="buildCode(row)" />
         <!-- <nm-button text="预览代码" icon="display" type="text" @click="codePreview(row)" /> -->
+        <nm-button text="编辑" icon="edit" type="text" @click="edit(row)" />
         <nm-button-delete :action="removeAction" :id="row.id" @success="refresh" />
       </template>
     </nm-list>
@@ -70,7 +70,7 @@ export default {
   computed: {
     dialogOptions() {
       return {
-        title: `类列表(${this.project.name})`,
+        title: `实体列表(${this.project.name})`,
         icon: 'list',
         width: '80%'
       }
@@ -104,9 +104,12 @@ export default {
     onOpen() {
       this.$nextTick(() => {
         this.$refs.list.reset()
-        this.list.model.projectId = this.project.id
-        this.$refs.list.query()
       })
+    },
+    onReset() {
+      console.log(1)
+      this.list.model.projectId = this.project.id
+      this.$refs.list.query()
     }
   }
 }

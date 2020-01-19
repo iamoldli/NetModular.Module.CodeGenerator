@@ -122,7 +122,6 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService
             _mapper.Map(model, entity);
 
             var result = await _repository.UpdateAsync(entity);
-
             return ResultModel.Result(result);
         }
 
@@ -155,6 +154,8 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService
 
             if (classList == null)
             {
+                //如果classList参数为null，表示生成整个解决方案
+                buildModel.GenerateSln = true;
                 classList = await _classRepository.QueryAllByProject(project.Id);
             }
 

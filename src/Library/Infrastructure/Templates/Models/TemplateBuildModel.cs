@@ -6,6 +6,11 @@
     public class TemplateBuildModel
     {
         /// <summary>
+        /// 生成整个解决方案
+        /// </summary>
+        public bool GenerateSln { get; set; }
+
+        /// <summary>
         /// 代码存储根路径
         /// </summary>
         public string RootPath { get; set; }

@@ -1,6 +1,6 @@
 <template>
   <nm-list-dialog class="nm-module-code-generator-property" :title="`属性列表(${parent.name})`" icon="list" width="70%" :visible.sync="visible_" @open="onOpen">
-    <nm-list ref="list" v-bind="list">
+    <nm-list ref="list" v-bind="list" @reset="onReset">
       <template v-slot:querybar>
         <el-form-item label="名称：" prop="name">
           <el-input v-model="list.model.name" clearable />
@@ -121,9 +121,11 @@ export default {
     onOpen() {
       this.$nextTick(() => {
         this.$refs.list.reset()
-        this.list.model.classId = this.parent.id
-        this.$refs.list.query()
       })
+    },
+    onReset() {
+      this.list.model.classId = this.parent.id
+      this.$refs.list.query()
     }
   }
 }

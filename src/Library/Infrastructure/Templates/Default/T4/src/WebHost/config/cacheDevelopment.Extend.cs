@@ -14,6 +14,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             _prefix = model.Project.Prefix;
         }
 
+        public bool IsGlobal => true;
+
         public void Save()
         {
             var dir = Path.Combine(_model.RootPath, "src/WebHost/config");
@@ -21,7 +23,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, "cache.evelopment.json");
+            var filePath = Path.Combine(dir, "cache.Development.json");
             File.WriteAllText(filePath, content);
         }
     }

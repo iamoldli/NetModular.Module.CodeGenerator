@@ -21,9 +21,9 @@
 
       <!--操作列-->
       <template v-slot:col-operation="{ row }">
-        <nm-button v-bind="buttons.edit" @click="edit(row)" />
-        <nm-button text="实体" icon="entity" type="text" @click="manageClass(row)" />
+        <nm-button v-bind="buttons.classManage" @click="manageClass(row)" />
         <nm-button v-bind="buttons.buildCode" @click="buildCode(row)" />
+        <nm-button v-bind="buttons.edit" @click="edit(row)" />
         <nm-button-delete v-bind="buttons.del" :action="removeAction" :id="row.id" @success="refresh" />
       </template>
     </nm-list>

@@ -28,7 +28,7 @@ export default {
   mixins: [mixins.formSave],
   data() {
     return {
-      title: '项目',
+      title: '模块',
       actions: { add, edit, update },
       form: {
         width: '30%',
@@ -42,6 +42,10 @@ export default {
         rules: {
           name: [{ required: true, message: '请输入名称', trigger: 'blur' }],
           code: [{ required: true, message: '请输入编码', trigger: 'blur' }],
+          no: [
+            { required: true, message: '请输入编号', trigger: 'blur' },
+            { type: 'number', min: 0, max: 59315, message: '编码在 0 到 59315 之间', trigger: 'blur' }
+          ],
           copyright: [{ required: true, message: '请输入版权声明', trigger: 'blur' }]
         }
       }

@@ -18,7 +18,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             _model = model;
             _prefix = model.Project.Prefix;
         }
-
+        
+        public bool IsGlobal => false;
 
         public void Save()
         {

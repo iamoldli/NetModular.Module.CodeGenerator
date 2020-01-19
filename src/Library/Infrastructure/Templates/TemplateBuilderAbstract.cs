@@ -30,7 +30,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates
             foreach (var type in handlerTypeList)
             {
                 var instance = (ITemplateHandler)Activator.CreateInstance(type, model);
-                instance.Save();
+                if (model.GenerateSln || !instance.IsGlobal)
+                    instance.Save();
             }
         }
     }

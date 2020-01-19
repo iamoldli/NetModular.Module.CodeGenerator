@@ -1,6 +1,6 @@
 /** 页面信息 */
 const page = new (function() {
-  this.title = '项目列表'
+  this.title = '模块列表'
   this.icon = 'project'
   this.name = 'codegenerator_project'
   this.path = '/codegenerator/project'
@@ -32,11 +32,18 @@ const page = new (function() {
       permissions: [`${this.name}_delete_delete`]
     },
     buildCode: {
-      text: '生成',
+      text: '生成代码',
       type: 'text',
       icon: 'download',
       code: `${this.name}_build_code`,
       permissions: [`${this.name}_buildcode_post`]
+    },
+    classManage: {
+      text: '实体管理',
+      type: 'text',
+      icon: 'database',
+      code: `${this.name}_class_manage`,
+      permissions: []
     }
   }
 })()

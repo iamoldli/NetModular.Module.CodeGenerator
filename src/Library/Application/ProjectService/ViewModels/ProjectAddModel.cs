@@ -16,6 +16,7 @@ namespace NetModular.Module.CodeGenerator.Application.ProjectService.ViewModels
         /// <summary>
         /// 编号
         /// </summary>
+        [Range(0, 59315, ErrorMessage = "编码在 0 到 59315 之间")]
         public int No { get; set; }
 
         /// <summary>

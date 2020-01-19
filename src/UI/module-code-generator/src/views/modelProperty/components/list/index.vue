@@ -48,7 +48,7 @@ export default {
       list: {
         noHeader: true,
         queryOnCreated: false,
-        noSearch: true,
+        noResetBtn: true,
         action: api.query,
         operationWidth: 150,
         model: {

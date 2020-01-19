@@ -15,6 +15,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             _model = model;
         }
 
+        public bool IsGlobal => false;
+
         public void Save()
         {
             if (_model.Project.ClassList != null && _model.Project.ClassList.Any())
