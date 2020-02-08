@@ -28,7 +28,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4
             this.Write("## ");
             
             #line 2 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\Readme.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Name));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Name));
             
             #line default
             #line hidden

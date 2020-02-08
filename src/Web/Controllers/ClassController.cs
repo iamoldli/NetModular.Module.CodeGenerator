@@ -5,32 +5,31 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.Extensions.Options;
 using NetModular.Lib.Auth.Web.Attributes;
 using NetModular.Lib.Utils.Core.Extensions;
-using NetModular.Lib.Utils.Core.Options;
 using NetModular.Lib.Utils.Core.Result;
+using NetModular.Lib.Utils.Core.SystemConfig;
 using NetModular.Module.CodeGenerator.Application.ClassService;
 using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Class;
 using NetModular.Module.CodeGenerator.Domain.Class.Models;
-using NetModular.Module.CodeGenerator.Infrastructure.Options;
+using NetModular.Module.CodeGenerator.Infrastructure;
 
 namespace NetModular.Module.CodeGenerator.Web.Controllers
 {
     [Description("实体管理")]
     [Common]
-    public class ClassController : ModuleController
+    public class ClassController : Web.ModuleController
     {
-        private readonly IClassService _service;
-        private readonly ModuleCommonOptions _commonOptions;
+        private readonly SystemConfigModel _systemConfig;
         private readonly CodeGeneratorOptions _codeGeneratorOptions;
+        private readonly IClassService _service;
 
-        public ClassController(IClassService service, IOptionsMonitor<ModuleCommonOptions> commonOption, IOptionsMonitor<CodeGeneratorOptions> codeGeneratorOptions)
+        public ClassController(SystemConfigModel systemConfig, CodeGeneratorOptions codeGeneratorOptions, IClassService service)
         {
+            _systemConfig = systemConfig;
+            _codeGeneratorOptions = codeGeneratorOptions;
             _service = service;
-            _codeGeneratorOptions = codeGeneratorOptions.CurrentValue;
-            _commonOptions = commonOption.CurrentValue;
         }
 
         [HttpGet]
@@ -81,7 +80,7 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
         public async Task<IActionResult> BuildCode([BindRequired]Guid id)
         {
             var result = await _service.BuildCode(id);
-            var path = Path.Combine(_commonOptions.TempPath, _codeGeneratorOptions.BuildCodePath, result.Data.Id + ".zip");
+            var path = Path.Combine(_codeGeneratorOptions.BuildCodePath, result.Data.Id + ".zip");
             return PhysicalFile(path, "application/octet-stream", HttpUtility.UrlEncode(result.Data.Name), true);
         }
     }

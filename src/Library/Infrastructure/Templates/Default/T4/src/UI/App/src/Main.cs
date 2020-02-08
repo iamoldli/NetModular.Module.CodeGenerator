@@ -35,14 +35,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-module-admin\'\r\nimport config from \'./config\'\r\nimport ");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\Main.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(" from \'./index\'\r\n\r\n// ×¢ÈëÄ£¿é\r\nWebHost.registerModule(");
             
             #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\Main.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden

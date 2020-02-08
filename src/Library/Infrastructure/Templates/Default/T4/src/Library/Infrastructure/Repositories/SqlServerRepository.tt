@@ -8,10 +8,10 @@ using <#= _prefix #>.Lib.Data.Query;
 <# if(_class.IsEntityBase){ #>
 using <#= _prefix #>.Module.Admin.Domain.Account;
 <# } #>
-using <#= _prefix #>.Module.<#= _model.Project.Code #>.Domain.<#= _class.Name #>;
-using <#= _prefix #>.Module.<#= _model.Project.Code #>.Domain.<#= _class.Name #>.Models;
+using <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>;
+using <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>.Models;
 
-namespace <#= _prefix #>.Module.<#= _model.Project.Code #>.Infrastructure.Repositories.SqlServer
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Infrastructure.Repositories.SqlServer
 {
     public class <#= _class.Name #>Repository : RepositoryAbstract<<#= _class.Name #>Entity>, I<#= _class.Name #>Repository
     {

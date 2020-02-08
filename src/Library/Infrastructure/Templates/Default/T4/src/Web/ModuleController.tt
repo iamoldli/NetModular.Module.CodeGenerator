@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using <#= _prefix #>.Lib.Auth.Web;
 
-namespace <#= _prefix #>.Module.<#= _model.Project.Code #>.Web
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Web
 {
-    [Area("<#= _model.Project.Code #>")]
+    [Area("<#= _model.Module.Code #>")]
     public abstract class ModuleController : ControllerAbstract
     {
 

@@ -4,12 +4,12 @@
   <<#= _uiPrefix #>-container>
     <<#= _uiPrefix #>-list ref="list" v-bind="list">
       <!--查询条件-->
-      <template v-slot:querybar> 
-        <# foreach(var p in _class.QueryModelPropertyList){ #>
-          <el-form-item label="<#= p.Remarks #>：" prop="<#= p.CamelName #>">
-            <el-input v-model="list.model.<#= p.CamelName #>" clearable />
-          </el-form-item>
-        <#    } #>
+      <template v-slot:querybar>
+<# foreach(var p in _class.QueryModelPropertyList){ #>
+        <el-form-item label="<#= p.Remarks #>：" prop="<#= p.CamelName #>">
+          <el-input v-model="list.model.<#= p.CamelName #>" clearable />
+        </el-form-item>
+<#    } #>
       </template>
 
       <!--按钮-->
@@ -38,7 +38,7 @@ import page from './page'
 import cols from './cols'
 import SavePage from '../components/save'
 
-const api = $api.<#= _model.Project.Code.FirstCharToLower() #>.<#= _class.Name.FirstCharToLower() #>
+const api = $api.<#= _model.Module.Code.FirstCharToLower() #>.<#= _class.Name.FirstCharToLower() #>
 
 export default {
   name: page.name,

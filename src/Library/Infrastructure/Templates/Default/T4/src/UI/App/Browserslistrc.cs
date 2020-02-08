@@ -25,7 +25,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("> 1%\r\nlast 2 versions\r\nnot ie <= 11\r\n");
+            this.Write("> 1%\r\nlast 2 versions");
             return this.GenerationEnvironment.ToString();
         }
     }

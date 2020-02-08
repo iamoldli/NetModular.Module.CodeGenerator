@@ -42,14 +42,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write(".Module.");
             
             #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleController.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(".Web\r\n{\r\n    [Area(\"");
             
             #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleController.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden

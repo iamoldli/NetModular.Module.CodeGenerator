@@ -11,7 +11,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public DbContext(TemplateBuildModel model)
         {
             _model = model;
-            _prefix = model.Project.Prefix;
+            _prefix = model.Module.Prefix;
         }
         
         public bool IsGlobal => true;
@@ -23,7 +23,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, $"{_model.Project.Code}DbContext.cs");
+            var filePath = Path.Combine(dir, $"{_model.Module.Code}DbContext.cs");
             File.WriteAllText(filePath, content);
         }
     }

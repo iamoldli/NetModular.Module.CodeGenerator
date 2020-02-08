@@ -42,7 +42,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write(".Module.");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
@@ -63,7 +63,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write(".Module.");
             
             #line 5 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
@@ -84,7 +84,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write(".Module.");
             
             #line 7 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\MapperConfig.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden

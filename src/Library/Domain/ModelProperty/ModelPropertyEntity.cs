@@ -9,9 +9,9 @@ namespace NetModular.Module.CodeGenerator.Domain.ModelProperty
     public partial class ModelPropertyEntity : EntityBase
     {
         /// <summary>
-        /// 项目编号
+        /// 模块编号
         /// </summary>
-        public Guid ProjectId { get; set; }
+        public Guid ModuleId { get; set; }
 
         /// <summary>
         /// 所属类

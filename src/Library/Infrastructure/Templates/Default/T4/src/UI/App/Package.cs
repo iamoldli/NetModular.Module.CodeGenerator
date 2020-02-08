@@ -36,28 +36,28 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-module-");
             
             #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.ToLower()));
             
             #line default
             #line hidden
             this.Write("\",\r\n  \"version\": \"1.0.0\",\r\n  \"code\": \"");
             
             #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.FirstCharToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.FirstCharToLower()));
             
             #line default
             #line hidden
             this.Write("\",\r\n  \"title\": \"");
             
             #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Name));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Name));
             
             #line default
             #line hidden
             this.Write("\",\r\n  \"description\": \"");
             
             #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Name));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Name));
             
             #line default
             #line hidden
@@ -75,15 +75,15 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     ""pub"": ""cd ../../../script && npm_publish.ps1""
   },
   ""dependencies"": {
-    ""netmodular-module-admin"": ""^1.1.4"",
-    ""netmodular-ui"": ""^1.3.3""
+    ""netmodular-module-admin"": ""^1.1.9"",
+    ""netmodular-ui"": ""^1.4.6""
   },
   ""devDependencies"": {
-    ""@vue/cli-plugin-babel"": ""^4.1.1"",
-    ""@vue/cli-plugin-eslint"": ""^4.1.1"",
-    ""@vue/cli-plugin-router"": ""^4.1.1"",
-    ""@vue/cli-plugin-vuex"": ""^4.1.1"",
-    ""@vue/cli-service"": ""^4.1.1"",
+    ""@vue/cli-plugin-babel"": ""^4.2.2"",
+    ""@vue/cli-plugin-eslint"": ""^4.2.2"",
+    ""@vue/cli-plugin-router"": ""^4.2.2"",
+    ""@vue/cli-plugin-vuex"": ""^4.2.2"",
+    ""@vue/cli-service"": ""^4.2.2"",
     ""@vue/eslint-config-prettier"": ""^5.0.0"",
     ""babel-eslint"": ""^10.0.3"",
     ""eslint"": ""^5.16.0"",
@@ -91,9 +91,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     ""eslint-plugin-vue"": ""^5.0.0"",
     ""prettier"": ""^1.18.2"",
     ""raw-loader"": ""^3.1.0"",
-    ""rimraf"": ""^3.0.0"",
-    ""sass"": ""^1.22.10"",
-    ""sass-loader"": ""^8.0.0"",
+    ""rimraf"": ""^3.0.1"",
+    ""sass"": ""^1.25.0"",
+    ""sass-loader"": ""^8.0.2"",
     ""vue-template-compiler"": ""^2.6.11""
   }
 }

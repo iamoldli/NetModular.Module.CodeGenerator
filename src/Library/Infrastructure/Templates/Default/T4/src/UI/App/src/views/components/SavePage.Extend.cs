@@ -15,21 +15,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public SavePage(TemplateBuildModel model)
         {
             _model = model;
-            _prefix = _model.Project.Prefix.ToLower();
-            _uiPrefix = _model.Project.UIPrefix.ToLower();
+            _prefix = _model.Module.Prefix.ToLower();
+            _uiPrefix = _model.Module.UiPrefix.ToLower();
         }
 
         public bool IsGlobal => false;
 
         public void Save()
         {
-            if (_model.Project.ClassList != null && _model.Project.ClassList.Any())
+            if (_model.Module.ClassList != null && _model.Module.ClassList.Any())
             {
-                foreach (var classModel in _model.Project.ClassList)
+                foreach (var classModel in _model.Module.ClassList)
                 {
                     _class = classModel;
 
-                    var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}/src/views", _class.Name.FirstCharToLower(), "components/save");
+                    var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Module.WebUIDicName}/src/views", _class.Name.FirstCharToLower(), "components/save");
                     if (!Directory.Exists(dir))
                         Directory.CreateDirectory(dir);
 

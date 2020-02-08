@@ -11,14 +11,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public VueConfig(TemplateBuildModel model)
         {
             _model = model;
-            _prefix = _model.Project.Prefix.ToLower();
+            _prefix = _model.Module.Prefix.ToLower();
         }
 
         public bool IsGlobal => true;
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}");
+            var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Module.WebUIDicName}");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 

@@ -9,7 +9,7 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService.ViewModels
         /// <summary>
         /// 项目编号
         /// </summary>
-        public Guid ProjectId { get; set; }
+        public Guid ModuleId { get; set; }
 
         /// <summary>
         /// 类名称
@@ -33,6 +33,11 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService.ViewModels
         /// </summary>
         [Required(ErrorMessage = "请输入类名")]
         public string Remarks { get; set; }
+
+        /// <summary>
+        /// 菜单图标
+        /// </summary>
+        public string MenuIcon { get; set; }
 
         /// <summary>
         /// 方法

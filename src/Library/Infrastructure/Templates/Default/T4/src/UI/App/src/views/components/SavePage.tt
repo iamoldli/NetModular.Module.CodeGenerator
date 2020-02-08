@@ -4,11 +4,11 @@
   <<#= _uiPrefix #>-form-dialog ref="form" v-bind="form" v-on="on" :visible.sync="visible_">
     <el-row>
       <el-col :span="20" :offset="1">
-      <#    foreach(var p in _class.EditModelPropertyList){ #>
+<#    foreach(var p in _class.EditModelPropertyList){ #>
         <el-form-item label="<#= p.Remarks #>：" prop="<#= p.CamelName #>">
           <el-input v-model="form.model.<#= p.CamelName #>" clearable />
         </el-form-item>
-      <#    } #>
+<#    } #>
       </el-col>
     </el-row>
   </<#= _uiPrefix #>-form-dialog>
@@ -16,7 +16,7 @@
 <script>
 import { mixins } from '<#= _prefix.ToLower() #>-ui'
 
-const { add, edit, update } = $api.<#= _model.Project.Code.FirstCharToLower() #>.<#= _class.Name.FirstCharToLower() #>
+const { add, edit, update } = $api.<#= _model.Module.Code.FirstCharToLower() #>.<#= _class.Name.FirstCharToLower() #>
 
 export default {
   mixins: [mixins.formSave],

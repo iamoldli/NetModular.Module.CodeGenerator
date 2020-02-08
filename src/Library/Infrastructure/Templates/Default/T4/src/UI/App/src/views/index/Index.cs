@@ -41,14 +41,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             #line default
             #line hidden
             this.Write("-list ref=\"list\" v-bind=\"list\">\r\n      <!--²éÑ¯Ìõ¼þ-->\r\n      <template v-slot:queryb" +
-                    "ar> \r\n        ");
+                    "ar>\r\n");
             
             #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
  foreach(var p in _class.QueryModelPropertyList){ 
             
             #line default
             #line hidden
-            this.Write("          <el-form-item label=\"");
+            this.Write("        <el-form-item label=\"");
             
             #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
@@ -62,14 +62,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("\">\r\n            <el-input v-model=\"list.model.");
+            this.Write("\">\r\n          <el-input v-model=\"list.model.");
             
             #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.CamelName));
             
             #line default
             #line hidden
-            this.Write("\" clearable />\r\n          </el-form-item>\r\n        ");
+            this.Write("\" clearable />\r\n        </el-form-item>\r\n");
             
             #line 12 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
     } 
@@ -128,7 +128,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "ents/save\'\r\n\r\nconst api = $api.");
             
             #line 41 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.FirstCharToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.FirstCharToLower()));
             
             #line default
             #line hidden

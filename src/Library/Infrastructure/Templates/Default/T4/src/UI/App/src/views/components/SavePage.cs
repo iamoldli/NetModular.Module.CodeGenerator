@@ -34,7 +34,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             #line default
             #line hidden
             this.Write("-form-dialog ref=\"form\" v-bind=\"form\" v-on=\"on\" :visible.sync=\"visible_\">\r\n    <e" +
-                    "l-row>\r\n      <el-col :span=\"20\" :offset=\"1\">\r\n      ");
+                    "l-row>\r\n      <el-col :span=\"20\" :offset=\"1\">\r\n");
             
             #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
     foreach(var p in _class.EditModelPropertyList){ 
@@ -62,7 +62,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("\" clearable />\r\n        </el-form-item>\r\n      ");
+            this.Write("\" clearable />\r\n        </el-form-item>\r\n");
             
             #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
     } 
@@ -86,7 +86,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-ui\'\r\n\r\nconst { add, edit, update } = $api.");
             
             #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\components\SavePage.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.FirstCharToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.FirstCharToLower()));
             
             #line default
             #line hidden

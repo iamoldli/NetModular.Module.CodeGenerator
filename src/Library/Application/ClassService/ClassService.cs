@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
-using NetModular.Module.CodeGenerator.Application.ProjectService;
-using NetModular.Module.CodeGenerator.Application.ProjectService.ResultModels;
+using NetModular.Module.CodeGenerator.Application.ModuleService;
+using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;
 using NetModular.Module.CodeGenerator.Domain.Class;
 using NetModular.Module.CodeGenerator.Domain.Class.Models;
 using NetModular.Module.CodeGenerator.Domain.ClassMethod;
@@ -23,10 +23,10 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService
         private readonly BaseEntityPropertyCollection _baseEntityPropertyCollection;
         private readonly IClassMethodRepository _classMethodRepository;
 
-        private readonly IProjectService _projectService;
+        private readonly IModuleService _projectService;
         private readonly CodeGeneratorDbContext _dbContext;
 
-        public ClassService(IMapper mapper, IClassRepository repository, BaseEntityPropertyCollection baseEntityPropertyCollection, IPropertyRepository propertyRepository, IClassMethodRepository classMethodRepository, IProjectService projectService, CodeGeneratorDbContext dbContext)
+        public ClassService(IMapper mapper, IClassRepository repository, BaseEntityPropertyCollection baseEntityPropertyCollection, IPropertyRepository propertyRepository, IClassMethodRepository classMethodRepository, IModuleService projectService, CodeGeneratorDbContext dbContext)
         {
             _mapper = mapper;
             _repository = repository;
@@ -156,14 +156,14 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService
             return ResultModel.Failed();
         }
 
-        public async Task<IResultModel<ProjectBuildCodeResultModel>> BuildCode(Guid id)
+        public async Task<IResultModel<ModuleBuildCodeResultModel>> BuildCode(Guid id)
         {
-            var result = new ResultModel<ProjectBuildCodeResultModel>();
+            var result = new ResultModel<ModuleBuildCodeResultModel>();
             var entity = await _repository.GetAsync(id);
             if (entity == null)
                 return result.Failed("对象不存在");
 
-            return await _projectService.BuildCode(entity.ProjectId, new List<ClassEntity> { entity });
+            return await _projectService.BuildCode(entity.ModuleId, new List<ClassEntity> { entity });
         }
     }
 }

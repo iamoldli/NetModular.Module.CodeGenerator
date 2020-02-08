@@ -32,30 +32,37 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("列表\'\r\n  this.name = \'");
+            this.Write("列表\'\r\n  this.icon = \'");
             
             #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_class.MenuIcon));
+            
+            #line default
+            #line hidden
+            this.Write("\'\r\n  this.name = \'");
+            
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.ToLower()));
             
             #line default
             #line hidden
             this.Write("_");
             
-            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name.ToLower()));
             
             #line default
             #line hidden
             this.Write("\'\r\n  this.path = \'/");
             
-            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.ToLower()));
             
             #line default
             #line hidden
             this.Write("/");
             
-            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
+            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name.ToLower()));
             
             #line default
@@ -96,14 +103,14 @@ export const route = {
   page,
   component: () => import(/* webpackChunkName: """);
             
-            #line 40 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            #line 41 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 40 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
+            #line 41 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Page.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default

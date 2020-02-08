@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="20" :offset="1">
         <el-form-item label="所属项目：">
-          <el-input v-model="project.name" disabled />
+          <el-input v-model="module.name" disabled />
         </el-form-item>
         <el-form-item label="基类类型：" prop="baseEntityType">
           <nm-select :disabled="isEdit_" :method="getBaseEntityTypeSelect" v-model="form.model.baseEntityType" />
@@ -16,6 +16,9 @@
         </el-form-item>
         <el-form-item label="备注：" prop="remarks">
           <el-input v-model="form.model.remarks" />
+        </el-form-item>
+        <el-form-item label="菜单图标：" prop="menuIcon">
+          <nm-icon-picker v-model="form.model.menuIcon" />
         </el-form-item>
         <el-form-item label="基础方法：" prop="method">
           <el-checkbox v-model="form.model.method.add">Add</el-checkbox>
@@ -45,11 +48,12 @@ export default {
       form: {
         width: '40%',
         model: {
-          projectId: '',
+          moduleId: '',
           name: '',
           tableName: '',
-          baseEntityType: 6,
+          baseEntityType: 7,
           remarks: '',
+          menuIcon: '',
           method: {
             query: true,
             add: true,
@@ -58,7 +62,7 @@ export default {
           }
         },
         rules: {
-          projectId: [{ required: true, message: '请选择项目', trigger: 'blur' }],
+          moduleId: [{ required: true, message: '请选择项目', trigger: 'blur' }],
           name: [{ required: true, message: '请输入实体名称', trigger: 'blur' }],
           remarks: [{ required: true, message: '请输入备注', trigger: 'blur' }],
           tableName: [{ required: true, message: '请输入表名', trigger: 'blur' }]
@@ -70,7 +74,7 @@ export default {
     }
   },
   props: {
-    project: {
+    module: {
       type: Object,
       required: true
     }
@@ -80,7 +84,7 @@ export default {
       return getBaseEntityTypeSelect()
     },
     onReset() {
-      this.form.model.projectId = this.project.id
+      this.form.model.moduleId = this.module.id
     }
   }
 }

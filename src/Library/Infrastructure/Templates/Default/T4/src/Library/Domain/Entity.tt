@@ -9,7 +9,7 @@ using <#= _prefix #>.Lib.Data.Core.Entities;
 using <#= _prefix #>.Lib.Data.Core.Entities.Extend;
 <#} #>
 
-namespace <#= _prefix #>.Module.<#= _model.Project.Code #>.Domain.<#= _class.Name #>
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>
 {
     /// <summary>
     /// <#= _class.Remarks #>

@@ -28,7 +28,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sc
             this.Write("cd ../src/UI/module-");
             
             #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\script\NpmInstall.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.ToLower()));
             
             #line default
             #line hidden

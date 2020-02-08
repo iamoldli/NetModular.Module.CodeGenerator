@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
-using NetModular.Module.CodeGenerator.Application.ProjectService.ResultModels;
+using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;
 using NetModular.Module.CodeGenerator.Domain.Class.Models;
 
 namespace NetModular.Module.CodeGenerator.Application.ClassService
@@ -52,6 +52,6 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<IResultModel<ProjectBuildCodeResultModel>> BuildCode(Guid id);
+        Task<IResultModel<ModuleBuildCodeResultModel>> BuildCode(Guid id);
     }
 }

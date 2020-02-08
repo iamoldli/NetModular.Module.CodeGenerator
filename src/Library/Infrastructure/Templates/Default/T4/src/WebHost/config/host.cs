@@ -28,7 +28,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("{\r\n    //地址\r\n    \"Urls\": \"http://*:");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\host.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.No + 6220));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.No + 6220));
             
             #line default
             #line hidden

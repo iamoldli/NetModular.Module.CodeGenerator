@@ -11,9 +11,9 @@ namespace NetModular.Module.CodeGenerator.Domain.Class
     public partial class ClassEntity : EntityBase
     {
         /// <summary>
-        /// 项目编号
+        /// 模块ID
         /// </summary>
-        public Guid ProjectId { get; set; }
+        public Guid ModuleId { get; set; }
 
         /// <summary>
         /// 名称
@@ -34,5 +34,10 @@ namespace NetModular.Module.CodeGenerator.Domain.Class
         /// 说明
         /// </summary>
         public string Remarks { get; set; }
+
+        /// <summary>
+        /// 菜单图标
+        /// </summary>
+        public string MenuIcon { get; set; }
     }
 }

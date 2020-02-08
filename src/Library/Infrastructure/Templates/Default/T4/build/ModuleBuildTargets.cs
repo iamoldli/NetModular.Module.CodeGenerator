@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.bu
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\build\ModuleBuildTargets.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\build\ModuleBuildTargets.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class ModuleBuildTargets : ModuleBuildTargetsBase
     {
@@ -30,19 +30,10 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.bu
   <PropertyGroup>
     <ModulesDir>_modules\$(Id)</ModulesDir>
     <ModuleName>$(ModulesDir)\_module.json</ModuleName>
-    <ModuleInfo>{""Id"": ""$(Id)"",""Name"":""$(Name)"",""Version"":""$(Version)""}</ModuleInfo>
+    <ModuleInfo>{""Id"": ""$(Id)"",""Name"":""$(Name)"",""Icon"":""$(Icon)"",""Version"":""$(Version)""}</ModuleInfo>
   </PropertyGroup>
 
-  <!--嵌入module.json文件-->
-  <ItemGroup Condition=""Exists('$(ModuleName)')"">
-    <Content Remove=""$(ModuleName)"" />
-  </ItemGroup>
-
-  <ItemGroup Condition=""Exists('$(ModuleName)')"">
-    <EmbeddedResource Include=""$(ModuleName)"" Watch=""false""/>
-  </ItemGroup>
-
-  <Target Name=""ModulesBuildBefore"" AfterTargets=""Build"">
+  <Target Name=""ModulesBuild"" AfterTargets=""Build"">
 
     <!--创建modules目录-->
     <MakeDir Directories=""$(ModulesDir)""/>

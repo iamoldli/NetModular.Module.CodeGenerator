@@ -17,7 +17,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class UpdateModel : UpdateModelBase
     {
@@ -29,110 +29,82 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write("using System;\r\nusing System.ComponentModel.DataAnnotations;\r\nusing ");
             
-            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(".Domain.");
             
-            #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write(";\r\n\r\nnamespace ");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(".Application.");
             
-            #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
             this.Write("Service.ViewModels\r\n{\r\n    /// <summary>\r\n    /// ");
             
-            #line 11 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Remarks));
             
             #line default
             #line hidden
             this.Write("添加模型\r\n    /// </summary>\r\n    public class ");
             
-            #line 13 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
             
             #line default
             #line hidden
-            this.Write("UpdateModel\r\n    {\r\n        [Required(ErrorMessage = \"请选择要修改的");
+            this.Write("UpdateModel : ");
             
-            #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_class.Name));
+            
+            #line default
+            #line hidden
+            this.Write("AddModel\r\n    {\r\n        [Required(ErrorMessage = \"请选择要修改的");
+            
+            #line 15 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.Remarks));
             
             #line default
             #line hidden
             this.Write("\")]\r\n        public ");
             
-            #line 16 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
+            #line 16 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_class.PrimaryKeyTypeName));
             
             #line default
             #line hidden
-            this.Write(" Id { get; set; }\r\n\r\n    ");
-            
-            #line 18 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
- foreach(var p in _class.AddModelPropertyList){ 
-            
-            #line default
-            #line hidden
-            this.Write("        /// <summary>\r\n        /// ");
-            
-            #line 20 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(p.Remarks));
-            
-            #line default
-            #line hidden
-            this.Write("\r\n        /// </summary>\r\n        public ");
-            
-            #line 22 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(p.Type == PropertyType.Enum ? p.Enum.Name : p.Type.ToDescription()));
-            
-            #line default
-            #line hidden
-            this.Write(" ");
-            
-            #line 22 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(p.Name));
-            
-            #line default
-            #line hidden
-            this.Write(" { get; set; }\r\n\r\n    ");
-            
-            #line 24 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\ViewModels\UpdateModel.tt"
- } 
-            
-            #line default
-            #line hidden
-            this.Write("\r\n    }\r\n}\r\n");
+            this.Write(" Id { get; set; }\r\n    }\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

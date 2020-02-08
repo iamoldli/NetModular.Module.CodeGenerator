@@ -33,6 +33,11 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
         public string Remarks { get; set; }
 
         /// <summary>
+        /// 菜单图标
+        /// </summary>
+        public string MenuIcon { get; set; }
+
+        /// <summary>
         /// 主键类型名称
         /// </summary>
         public string PrimaryKeyTypeName

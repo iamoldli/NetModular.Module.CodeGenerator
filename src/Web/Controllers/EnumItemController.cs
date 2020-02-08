@@ -14,7 +14,7 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
 {
     [Description("枚举项管理")]
     [Common]
-    public class EnumItemController : ModuleController
+    public class EnumItemController : Web.ModuleController
     {
         private readonly IEnumItemService _service;
 

@@ -4,15 +4,22 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <Import Project="..\..\..\build\module.build.targets" />
-
   <ItemGroup>
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.6.6" />
+    <PackageReference Include="NetModular.Lib.Options.Abstraction" Version="1.7.1" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.7.1" />
     <PackageReference Include="System.CodeDom" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <!--打包模块相关文件到NuGet包中，此功能需要编译两次项目才行，因为打包操作在创建_module.json文件之前执行的-->
+  <ItemGroup>
+    <Content Include="$(SolutionDir)\src\WebHost\_modules*\**\*.*" PackagePath="contentFiles\any\any">
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,10 +34,6 @@
     <None Update="Templates\Default\T4\script\NpmUpdate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>NpmUpdate.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\Default\T4\src\Library\Infrastructure\Options\ModuleOptionsConfigure.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>ModuleOptionsConfigure.cs</LastGenOutput>
     </None>
     <None Update="Templates\Default\T4\src\Library\Infrastructure\Repositories\PostgreSQLRepository.tt">
       <LastGenOutput>PostgreSQLRepository.cs</LastGenOutput>
@@ -192,7 +195,7 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>SQLiteRepository.cs</LastGenOutput>
     </None>
-    <None Update="Templates\Default\T4\src\Library\Infrastructure\Options\Options.tt">
+    <None Update="Templates\Default\T4\src\Library\Infrastructure\Options.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>Options.cs</LastGenOutput>
     </None>
@@ -283,14 +286,6 @@
     <None Update="Templates\Default\T4\src\WebHost\config\jwtDevelopment.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>jwtDevelopment.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\Default\T4\src\WebHost\config\module.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>module.cs</LastGenOutput>
-    </None>
-    <None Update="Templates\Default\T4\src\WebHost\config\moduleDevelopment.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>moduleDevelopment.cs</LastGenOutput>
     </None>
     <None Update="Templates\Default\T4\src\WebHost\config\logging.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -430,11 +425,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>SQLiteRepository.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Options\Options.*">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Options.tt</DependentUpon>
     </Compile>
     <Compile Update="Templates\Default\T4\src\Library\Application\Csproj.*">
       <DesignTime>True</DesignTime>
@@ -681,11 +671,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>cacheDevelopment.tt</DependentUpon>
     </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Options\ModuleOptionsConfigure.*">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ModuleOptionsConfigure.tt</DependentUpon>
-    </Compile>
     <Compile Update="Templates\Default\T4\build\ModuleBuildTargets.*">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -715,6 +700,39 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>excelDevelopment.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Options.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Options.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\components\SavePage.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SavePage.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Page.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Page.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\config\db.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>db.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\config\jwt.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>jwt.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\WebHost\config\loggingDevelopment.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>loggingDevelopment.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

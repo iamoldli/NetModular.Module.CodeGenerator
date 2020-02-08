@@ -62,9 +62,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Repositories.SqlServer
             return Db.Find(m => m.ClassId == classId).UseUow(uow).DeleteAsync();
         }
 
-        public Task<bool> DeleteByProject(Guid projectId, IUnitOfWork uow)
+        public Task<bool> DeleteByModule(Guid moduleId, IUnitOfWork uow)
         {
-            return Db.Find(m => m.ProjectId == projectId).UseUow(uow).DeleteAsync();
+            return Db.Find(m => m.ModuleId == moduleId).UseUow(uow).DeleteAsync();
         }
     }
 }

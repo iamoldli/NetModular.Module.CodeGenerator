@@ -11,6 +11,10 @@
         <nm-button type="success" text="添加" icon="add" @click="add" />
       </template>
 
+      <template v-slot:menuIcon="{ row }">
+        <nm-icon :name="row.menuIcon" />
+      </template>
+
       <template v-slot:col-operation="{ row }">
         <nm-button text="属性管理" icon="entity" type="text" @click="manageProperty(row)" />
         <nm-button text="视图模型" icon="entity" type="text" @click="openModelManage(row)" />
@@ -21,7 +25,7 @@
       </template>
     </nm-list>
 
-    <save-page :id="curr.id" :project="project" :visible.sync="dialog.save" @success="refresh" />
+    <save-page :id="curr.id" :module="module" :visible.sync="dialog.save" @success="refresh" />
     <property-page :parent="curr" :visible.sync="dialog.property" />
     <model-manage-page :parent="curr" :visible.sync="dialog.model" />
     <code-preview :id="curr.id" :visible.sync="dialog.codePreview" />
@@ -48,7 +52,7 @@ export default {
         action: api.query,
         operationWidth: '400',
         model: {
-          projectId: '',
+          moduleId: '',
           name: ''
         },
         cols
@@ -62,7 +66,7 @@ export default {
     }
   },
   props: {
-    project: {
+    module: {
       type: Object,
       required: true
     }
@@ -70,7 +74,7 @@ export default {
   computed: {
     dialogOptions() {
       return {
-        title: `实体列表(${this.project.name})`,
+        title: `实体列表(${this.module.name})`,
         icon: 'list',
         width: '80%'
       }
@@ -108,7 +112,7 @@ export default {
     },
     onReset() {
       console.log(1)
-      this.list.model.projectId = this.project.id
+      this.list.model.moduleId = this.module.id
       this.$refs.list.query()
     }
   }

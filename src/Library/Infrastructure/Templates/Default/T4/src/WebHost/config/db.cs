@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class db : dbBase
     {
@@ -42,6 +42,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
   ""Password"": """",
   //是否创建数据库和表
   ""CreateDatabase"": true,
+  //是否创建数据库后初始化数据
+  ""InitData"": true,
   //模块列表
   ""Modules"": [
     {
@@ -50,29 +52,29 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
       //数据库名称
       ""Database"": """);
             
-            #line 25 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
+            #line 27 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_dbPrefix));
             
             #line default
             #line hidden
             this.Write("_Admin\"\r\n    },\r\n    {\r\n      \"Name\": \"");
             
-            #line 28 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            #line 30 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write("\",\r\n      \"Database\": \"");
             
-            #line 29 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
+            #line 31 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_dbPrefix));
             
             #line default
             #line hidden
             this.Write("_");
             
-            #line 29 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            #line 31 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden

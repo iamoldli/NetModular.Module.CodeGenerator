@@ -1,9 +1,10 @@
 ﻿<#@ template language="C#" #>
 <Project>
   <PropertyGroup>
-    <Id><#= _model.Project.Code #></Id>
-    <Name><#= _model.Project.Name #></Name>
+    <Id><#= _model.Module.Code #></Id>
+    <Name><#= _model.Module.Name #></Name>
     <Authors>Oldli</Authors>
+    <Icon><#= _model.Module.Icon #></Icon>
     <Version>1.0.0</Version>
     <Description>NetModular Module $(Id)($(Name)) - $(MSBuildProjectName)</Description>
     <NoWarn>$(NoWarn);1591</NoWarn>
@@ -17,7 +18,7 @@
     <PackageOutputPath>$(SolutionDir)\_packages</PackageOutputPath>
     <Company>Oldli</Company>
     <Copyright>Oldli</Copyright>
-    <PackageProjectUrl>https://nm.iamoldli.com/docs/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/iamoldli/NetModular.Module.<#= _model.Project.Code #></RepositoryUrl>
+    <PackageProjectUrl>https://docs.17mkh.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/iamoldli/NetModular.Module.<#= _model.Module.Code #></RepositoryUrl>
   </PropertyGroup>
 </Project>

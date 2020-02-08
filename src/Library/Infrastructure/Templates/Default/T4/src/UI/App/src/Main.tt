@@ -1,10 +1,10 @@
 <#@ template language="C#" #>
 import WebHost from '<#= _prefix #>-module-admin'
 import config from './config'
-import <#= _model.Project.Code #> from './index'
+import <#= _model.Module.Code #> from './index'
 
 // 注入模块
-WebHost.registerModule(<#= _model.Project.Code #>)
+WebHost.registerModule(<#= _model.Module.Code #>)
 
 // 启动
 WebHost.start(config)

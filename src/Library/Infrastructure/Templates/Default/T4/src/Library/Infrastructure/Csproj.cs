@@ -26,18 +26,38 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public virtual string TransformText()
         {
             this.Write("<Project Sdk=\"Microsoft.NET.Sdk\">\r\n\r\n  <PropertyGroup>\r\n    <TargetFramework>nets" +
-                    "tandard2.0</TargetFramework>\r\n  </PropertyGroup>\r\n\r\n  <Import Project=\"..\\..\\..\\" +
-                    "build\\module.build.targets\" />\r\n\r\n  <ItemGroup>\r\n    <PackageReference Include=\"" +
-                    "");
+                    "tandard2.0</TargetFramework>\r\n  </PropertyGroup>\r\n\r\n  <ItemGroup>\r\n    <PackageR" +
+                    "eference Include=\"");
             
-            #line 11 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Csproj.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Module.Admin.Domain\" Version=\"1.5.11\" />\r\n  </ItemGroup>\r\n \r\n  <ItemGroup>\r\n    " +
-                    "<ProjectReference Include=\"..\\Domain\\Domain.csproj\" />\r\n  </ItemGroup>\r\n\r\n</Proj" +
-                    "ect>\r\n");
+            this.Write(".Lib.Options.Abstraction\" Version=\"1.7.1\" />\r\n    <PackageReference Include=\"");
+            
+            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            
+            #line default
+            #line hidden
+            this.Write(@".Module.Admin.Domain"" Version=""1.7.1"" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <ProjectReference Include=""..\Domain\Domain.csproj"" />
+  </ItemGroup>
+  
+  <!--打包模块相关文件到NuGet包中，此功能需要编译两次项目才行，因为打包操作在创建_module.json文件之前执行的-->
+  <ItemGroup>
+    <Content Include=""$(SolutionDir)\src\WebHost\_modules*\**\*.*"" PackagePath=""contentFiles\any\any"">
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+  </ItemGroup>
+
+</Project>
+");
             return this.GenerationEnvironment.ToString();
         }
     }

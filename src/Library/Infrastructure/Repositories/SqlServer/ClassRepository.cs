@@ -20,7 +20,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Repositories.SqlServer
         public async Task<IList<ClassEntity>> Query(ClassQueryModel model)
         {
             var paging = model.Paging();
-            var query = Db.Find(m => m.ProjectId == model.ProjectId);
+            var query = Db.Find(m => m.ModuleId == model.ModuleId);
             query.WhereNotNull(model.Name, m => m.Name.Contains(model.Name) || m.Remarks.Contains(model.Name));
 
             var joinQuery = query.LeftJoin<AccountEntity>((x, y) => x.CreatedBy == y.Id);
@@ -37,21 +37,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Repositories.SqlServer
             return list;
         }
 
-        public Task<IList<ClassEntity>> QueryAllByProject(Guid projectId)
+        public Task<IList<ClassEntity>> QueryAllByModule(Guid moduleId)
         {
-            return Db.Find(m => m.ProjectId == projectId).ToListAsync();
+            return Db.Find(m => m.ModuleId == moduleId).ToListAsync();
         }
 
         public Task<bool> Exists(ClassEntity entity)
         {
-            return Db.Find(m => m.ProjectId == entity.ProjectId && m.Name.Equals(entity.Name))
+            return Db.Find(m => m.ModuleId == entity.ModuleId && m.Name.Equals(entity.Name))
                 .WhereNotEmpty(entity.Id, m => m.Id != entity.Id)
                 .ExistsAsync();
         }
 
-        public Task<bool> DeleteByProject(Guid projectId, IUnitOfWork uow)
+        public Task<bool> DeleteByModule(Guid moduleId, IUnitOfWork uow)
         {
-            return Db.Find(m => m.ProjectId == projectId).UseUow(uow).DeleteAsync();
+            return Db.Find(m => m.ModuleId == moduleId).UseUow(uow).DeleteAsync();
         }
     }
 }

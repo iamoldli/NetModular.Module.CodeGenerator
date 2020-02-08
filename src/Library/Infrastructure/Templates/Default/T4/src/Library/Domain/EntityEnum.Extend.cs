@@ -13,7 +13,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             _model = model;
             _class = @class;
-            _prefix = model.Project.Prefix;
+            _prefix = model.Module.Prefix;
             _enum = @enum;
         }
     }

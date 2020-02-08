@@ -14,7 +14,7 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
 {
     [Description("模型属性管理")]
     [Common]
-    public class ModelPropertyController : ModuleController
+    public class ModelPropertyController : Web.ModuleController
     {
         private readonly IModelPropertyService _service;
 

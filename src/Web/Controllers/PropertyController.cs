@@ -16,7 +16,7 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
 {
     [Description("实体属性管理")]
     [Common]
-    public class PropertyController : ModuleController
+    public class PropertyController : Web.ModuleController
     {
         private readonly IPropertyService _service;
 

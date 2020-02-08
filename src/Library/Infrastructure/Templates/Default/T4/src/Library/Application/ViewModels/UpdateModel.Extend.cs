@@ -13,7 +13,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public UpdateModel(TemplateBuildModel model)
         {
             _model = model;
-            _prefix = model.Project.Prefix;
+            _prefix = model.Module.Prefix;
         }
 
         public bool IsGlobal => false;
@@ -21,9 +21,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
 
         public void Save()
         {
-            if (_model.Project.ClassList != null && _model.Project.ClassList.Any())
+            if (_model.Module.ClassList != null && _model.Module.ClassList.Any())
             {
-                foreach (var classModel in _model.Project.ClassList)
+                foreach (var classModel in _model.Module.ClassList)
                 {
                     _class = classModel;
 

@@ -12,7 +12,7 @@ using NetModular.Module.CodeGenerator.Domain.Enum.Models;
 namespace NetModular.Module.CodeGenerator.Web.Controllers
 {
     [Description("枚举管理")]
-    public class EnumController : ModuleController
+    public class EnumController : Web.ModuleController
     {
         private readonly IEnumService _service;
 

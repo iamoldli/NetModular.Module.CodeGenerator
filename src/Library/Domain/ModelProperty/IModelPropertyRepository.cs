@@ -36,11 +36,11 @@ namespace NetModular.Module.CodeGenerator.Domain.ModelProperty
         Task<bool> Exists(ModelPropertyEntity entity);
 
         /// <summary>
-        /// 删除指定类的所有属性
+        /// 删除指定模块的所有属性
         /// </summary>
-        /// <param name="projectId"></param>
+        /// <param name="moduleId"></param>
         /// <param name="uow"></param>
         /// <returns></returns>
-        Task<bool> DeleteByProject(Guid projectId, IUnitOfWork uow);
+        Task<bool> DeleteByModule(Guid moduleId, IUnitOfWork uow);
     }
 }

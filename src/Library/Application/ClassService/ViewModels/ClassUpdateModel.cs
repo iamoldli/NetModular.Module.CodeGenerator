@@ -29,6 +29,11 @@ namespace NetModular.Module.CodeGenerator.Application.ClassService.ViewModels
         public string Remarks { get; set; }
 
         /// <summary>
+        /// 菜单图标
+        /// </summary>
+        public string MenuIcon { get; set; }
+
+        /// <summary>
         /// 基类类型
         /// </summary>
         public BaseEntityType BaseEntityType { get; set; }

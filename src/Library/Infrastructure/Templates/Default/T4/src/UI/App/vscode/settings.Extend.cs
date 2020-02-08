@@ -17,7 +17,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public void Save()
         {
             var content = TransformText();
-            var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Project.WebUIDicName}/.vscode");
+            var dir = Path.Combine(_model.RootPath, $"src/UI/{_model.Module.WebUIDicName}/.vscode");
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);

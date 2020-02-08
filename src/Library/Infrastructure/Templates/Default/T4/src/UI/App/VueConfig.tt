@@ -5,17 +5,18 @@ const TerserPlugin = require('terser-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development' // 开发环境
 
 // 增加环境变量
-process.env.VUE_APP_COPYRIGHT = '<#= _model.Project.Copyright #>'
+process.env.VUE_APP_COPYRIGHT = '<#= _model.Module.Copyright #>'
 process.env.VUE_APP_BUILD_TIME = require('dayjs')().format('YYYYMDHHmmss')
 // 打包输出路径
 const outputDir = '../../WebHost/wwwroot/app'
 
 module.exports = {
+  devServer: {
+    port: <#= _model.Module.No + 5220 #>
+  },
   outputDir: outputDir,
   publicPath: '/app',
-  devServer: {
-    port: <#= _model.Project.No + 5220 #>
-  },
+  transpileDependencies: ['netmodular.*', 'element-ui'],
   configureWebpack() {
     let config = {
       plugins: [

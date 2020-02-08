@@ -48,11 +48,11 @@ namespace NetModular.Module.CodeGenerator.Domain.Property
         Task<bool> DeleteByClass(Guid classId, IUnitOfWork uow);
 
         /// <summary>
-        /// 删除指定类的所有属性
+        /// 删除指定项目的所有属性
         /// </summary>
-        /// <param name="projectId"></param>
+        /// <param name="moduleId"></param>
         /// <param name="uow"></param>
         /// <returns></returns>
-        Task<bool> DeleteByProject(Guid projectId, IUnitOfWork uow);
+        Task<bool> DeleteByModule(Guid moduleId, IUnitOfWork uow);
     }
 }

@@ -1,4 +1,4 @@
 <#@ template language="C#" #>
-## <#= _model.Project.Name #>
+## <#= _model.Module.Name #>
 
 ### 配置项

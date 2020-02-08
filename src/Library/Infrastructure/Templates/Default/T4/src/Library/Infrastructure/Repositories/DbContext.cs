@@ -49,21 +49,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write(".Module.");
             
             #line 6 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(".Infrastructure.Repositories\r\n{\r\n    public class ");
             
             #line 8 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write("DbContext : DbContext\r\n    {\r\n        public ");
             
             #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Repositories\DbContext.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden

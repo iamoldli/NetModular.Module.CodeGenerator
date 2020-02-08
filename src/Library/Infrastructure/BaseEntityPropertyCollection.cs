@@ -109,7 +109,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure
                 new PropertyEntity
                 {
                     Name = "Id", IsPrimaryKey = true, IsInherit = true, Remarks = "主键", Type = primaryKeyPropertyType,
-                    ShowInList = true, Length=(primaryKeyPropertyType==PropertyType.String)?50:0
+                    ShowInList = true, Length = (primaryKeyPropertyType == PropertyType.String) ? 50 : 0
                 },
                 new PropertyEntity
                 {
@@ -129,15 +129,15 @@ namespace NetModular.Module.CodeGenerator.Infrastructure
                 },
                 new PropertyEntity
                 {
-                    Name = "Deleted", IsInherit = true, Remarks = "已删除",Type = PropertyType.Bool, Sort = 1004
+                    Name = "Deleted", IsInherit = true, Remarks = "已删除", Type = PropertyType.Bool, Sort = 1004
                 },
                 new PropertyEntity
                 {
-                    Name = "DeletedTime",IsInherit = true, Remarks = "删除时间",Type = PropertyType.DateTime, Sort = 1005
+                    Name = "DeletedTime", IsInherit = true, Remarks = "删除时间", Type = PropertyType.DateTime, Sort = 1005
                 },
                 new PropertyEntity
                 {
-                    Name = "DeletedBy", IsInherit = true, Remarks = "删除人",Type = PropertyType.Guid, Sort = 1006
+                    Name = "DeletedBy", IsInherit = true, Remarks = "删除人", Type = PropertyType.Guid, Sort = 1006
                 }
             };
         }

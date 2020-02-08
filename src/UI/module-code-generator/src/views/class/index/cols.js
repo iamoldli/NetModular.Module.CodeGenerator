@@ -20,6 +20,10 @@ export default [
     width: 250
   },
   {
+    name: 'menuIcon',
+    label: '菜单图标'
+  },
+  {
     name: 'remarks',
     label: '备注'
   },

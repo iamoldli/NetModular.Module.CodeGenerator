@@ -2,7 +2,7 @@
 <#@ import namespace="System.Linq" #>
 using System.ComponentModel;
 
-namespace <#= _prefix #>.Module.<#= _model.Project.Code #>.Domain.<#= _class.Name #>
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>
 {
     /// <summary>
     /// <#= _enum.Remarks #>

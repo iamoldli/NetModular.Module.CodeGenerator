@@ -19,11 +19,11 @@ namespace NetModular.Module.CodeGenerator.Domain.Class
         Task<IList<ClassEntity>> Query(ClassQueryModel model);
 
         /// <summary>
-        /// 查询指定项目的所有类列表
+        /// 查询指定模块的所有类列表
         /// </summary>
-        /// <param name="projectId"></param>
+        /// <param name="moduleId"></param>
         /// <returns></returns>
-        Task<IList<ClassEntity>> QueryAllByProject(Guid projectId);
+        Task<IList<ClassEntity>> QueryAllByModule(Guid moduleId);
 
         /// <summary>
         /// 是否存在
@@ -32,11 +32,11 @@ namespace NetModular.Module.CodeGenerator.Domain.Class
         Task<bool> Exists(ClassEntity entity);
 
         /// <summary>
-        /// 删除制定项目的所有类
+        /// 删除制定模块的所有类
         /// </summary>
-        /// <param name="projectId"></param>
+        /// <param name="moduleId"></param>
         /// <param name="uow"></param>
         /// <returns></returns>
-        Task<bool> DeleteByProject(Guid projectId, IUnitOfWork uow);
+        Task<bool> DeleteByModule(Guid moduleId, IUnitOfWork uow);
     }
 }

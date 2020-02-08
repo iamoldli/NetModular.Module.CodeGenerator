@@ -48,7 +48,7 @@ namespace NetModular.Module.CodeGenerator.Application.ModelPropertyService
                 return ResultModel.Failed("关联类不存在");
 
             var entity = _mapper.Map<ModelPropertyEntity>(model);
-            entity.ProjectId = classEntity.ProjectId;
+            entity.ModuleId = classEntity.ModuleId;
 
             if (await _repository.Exists(entity))
             {

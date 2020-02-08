@@ -16,8 +16,8 @@
         public string RootPath { get; set; }
 
         /// <summary>
-        /// 项目
+        /// 模块模型
         /// </summary>
-        public ProjectBuildModel Project { get; set; }
+        public ModuleBuildModel Module { get; set; }
     }
 }

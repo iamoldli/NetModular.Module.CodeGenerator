@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\jwt.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\jwt.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class jwt : jwtBase
     {
@@ -25,9 +25,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n  //秘钥\r\n  \"Key\": \"twAJ$j5##pVc5*y&\",\r\n  //发行商\r\n  \"Issuer\": \"http://www.iamoldl" +
-                    "i.com\",\r\n  //订阅者\r\n  \"Audience\": \"http://www.iamoldli.com\",\r\n  //有效期(分钟)\r\n  \"Expi" +
-                    "res\": 120\r\n}");
+            this.Write("{\r\n  //秘钥\r\n  \"Key\": \"twAJ$j5##pVc5*y&\",\r\n  //发行商\r\n  \"Issuer\": \"http://www.17mkh.c" +
+                    "om\",\r\n  //订阅者\r\n  \"Audience\": \"http://www.17mkh.com\",\r\n  //有效期(分钟)\r\n  \"Expires\": " +
+                    "120\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -11,7 +11,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public db(TemplateBuildModel model)
         {
             _model = model;
-            _dbPrefix = model.Project.UIPrefix;
+            _dbPrefix = model.Module.UiPrefix;
         }
 
         public bool IsGlobal => true;

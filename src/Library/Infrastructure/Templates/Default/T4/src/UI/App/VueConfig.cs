@@ -31,23 +31,24 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
                     "YRIGHT = \'");
             
             #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Copyright));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Copyright));
             
             #line default
             #line hidden
             this.Write("\'\r\nprocess.env.VUE_APP_BUILD_TIME = require(\'dayjs\')().format(\'YYYYMDHHmmss\')\r\n//" +
                     " 打包输出路径\r\nconst outputDir = \'../../WebHost/wwwroot/app\'\r\n\r\nmodule.exports = {\r\n  " +
-                    "outputDir: outputDir,\r\n  publicPath: \'/app\',\r\n  devServer: {\r\n    port: ");
+                    "devServer: {\r\n    port: ");
             
-            #line 17 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.No + 5220));
+            #line 15 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.No + 5220));
             
             #line default
             #line hidden
-            this.Write("\r\n  },\r\n  configureWebpack() {\r\n    let config = {\r\n      plugins: [\r\n        /**" +
-                    "\r\n         * 复制");
+            this.Write("\r\n  },\r\n  outputDir: outputDir,\r\n  publicPath: \'/app\',\r\n  transpileDependencies: " +
+                    "[\'netmodular.*\', \'element-ui\'],\r\n  configureWebpack() {\r\n    let config = {\r\n   " +
+                    "   plugins: [\r\n        /**\r\n         * 复制");
             
-            #line 23 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 24 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
@@ -55,7 +56,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-ui/public目录下的文件到输出目录\r\n         */\r\n        new CopyWebpackPlugin([\r\n          {\r" +
                     "\n            from: path.join(__dirname, \'node_modules/");
             
-            #line 27 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 28 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
@@ -101,7 +102,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /**
      * 设置index.html模板路径，使用");
             
-            #line 66 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 67 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
@@ -109,7 +110,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("-ui/public中的模板\r\n     */\r\n    config.plugin(\'html\').tap(args => {\r\n      args[0].t" +
                     "emplate = \'./node_modules/");
             
-            #line 69 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 70 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
@@ -140,14 +141,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             skins: {
               name: 'chunk-");
             
-            #line 93 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 94 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write("-ui\',\r\n              priority: 10,\r\n              test: /[\\\\/]node_modules[\\\\/]");
             
-            #line 95 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
+            #line 96 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\VueConfig.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
