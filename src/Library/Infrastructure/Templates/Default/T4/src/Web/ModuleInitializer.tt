@@ -13,7 +13,7 @@ namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Web
         /// 注入服务
         /// </summary>
         /// <param name="services"></param>
-        public void ConfigureServices(IServiceCollection services, IHostEnvironment env)
+        public void ConfigureServices(IServiceCollection services, IModuleCollection modules, IHostEnvironment env)
         {
         }
 

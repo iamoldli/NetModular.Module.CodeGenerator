@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Options.Abstraction" Version="1.7.1" />
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.7.1" />
+    <PackageReference Include="NetModular.Lib.Options.Abstraction" Version="1.7.2" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.7.2" />
     <PackageReference Include="System.CodeDom" Version="4.7.0" />
   </ItemGroup>
 
@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ModuleServicesConfigurator.cs</LastGenOutput>
+    </None>
     <None Update="Templates\Default\T4\script\NpmInstall.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>NpmInstall.cs</LastGenOutput>
@@ -326,6 +330,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.*">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModuleServicesConfigurator.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\Default\T4\script\NpmInstall.*">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -710,29 +719,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>SavePage.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Page.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Page.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\WebHost\config\db.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>db.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\WebHost\config\jwt.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>jwt.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\WebHost\config\loggingDevelopment.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>loggingDevelopment.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

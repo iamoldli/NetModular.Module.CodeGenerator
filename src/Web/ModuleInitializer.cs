@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetModular.Lib.Module.Abstractions;
 using NetModular.Lib.Module.AspNetCore;
 
 namespace NetModular.Module.CodeGenerator.Web
@@ -12,9 +13,11 @@ namespace NetModular.Module.CodeGenerator.Web
         /// 注入服务
         /// </summary>
         /// <param name="services"></param>
+        /// <param name="modules"></param>
         /// <param name="env"></param>
-        public void ConfigureServices(IServiceCollection services, IHostEnvironment env)
+        public void ConfigureServices(IServiceCollection services, IModuleCollection modules, IHostEnvironment env)
         {
+            
         }
 
         /// <summary>

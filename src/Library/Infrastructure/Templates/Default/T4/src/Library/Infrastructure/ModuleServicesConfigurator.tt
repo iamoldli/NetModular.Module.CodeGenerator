@@ -1,0 +1,13 @@
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using <#= _prefix #>.Lib.Module.Abstractions;
+
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Infrastructure
+{
+    public class ModuleServicesConfigurator : IModuleServicesConfigurator
+    {
+        public void Configure(IServiceCollection services, IModuleCollection modules, IHostEnvironment env)
+        {
+        }
+    }
+}

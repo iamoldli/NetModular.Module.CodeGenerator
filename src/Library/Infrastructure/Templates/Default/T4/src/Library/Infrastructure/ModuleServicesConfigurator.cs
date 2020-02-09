@@ -7,7 +7,7 @@
 //     重新生成代码，这些更改将会丢失。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Web
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class ModuleInitializer : ModuleInitializerBase
+    public partial class ModuleServicesConfigurator : ModuleServicesConfiguratorBase
     {
 #line hidden
         /// <summary>
@@ -25,61 +25,32 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using Microsoft.AspNetCore.Builder;\r\nusing Microsoft.AspNetCore.Mvc;\r\nusing Micro" +
-                    "soft.Extensions.DependencyInjection;\r\nusing Microsoft.Extensions.Hosting;\r\nusing" +
-                    " ");
+            this.Write("using Microsoft.Extensions.DependencyInjection;\r\nusing Microsoft.Extensions.Hosti" +
+                    "ng;\r\nusing ");
             
-            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 3 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Module.AspNetCore;\r\n\r\nnamespace ");
+            this.Write(".Lib.Module.Abstractions;\r\n\r\nnamespace ");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
-            this.Write(@".Web
-{
-    public class ModuleInitializer : IModuleInitializer
-    {
-        /// <summary>
-        /// 注入服务
-        /// </summary>
-        /// <param name=""services""></param>
-        public void ConfigureServices(IServiceCollection services, IModuleCollection modules, IHostEnvironment env)
-        {
-        }
-
-        /// <summary>
-        /// 配置中间件
-        /// </summary>
-        /// <param name=""app""></param>
-        /// <param name=""env""></param>
-        public void Configure(IApplicationBuilder app, IHostEnvironment env)
-        {
-        }
-
-        /// <summary>
-        /// 配置MVC功能
-        /// </summary>
-        /// <param name=""mvcOptions""></param>
-        public void ConfigureMvc(MvcOptions mvcOptions)
-        {
-            
-        }
-    }
-}
-");
+            this.Write(".Infrastructure\r\n{\r\n    public class ModuleServicesConfigurator : IModuleServices" +
+                    "Configurator\r\n    {\r\n        public void Configure(IServiceCollection services, " +
+                    "IModuleCollection modules, IHostEnvironment env)\r\n        {\r\n        }\r\n    }\r\n}" +
+                    "\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -91,7 +62,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class ModuleInitializerBase
+    public class ModuleServicesConfiguratorBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
