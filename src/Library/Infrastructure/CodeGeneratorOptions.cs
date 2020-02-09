@@ -7,9 +7,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure
 {
     public class CodeGeneratorOptions : IModuleOptions
     {
-        public SystemConfigModel SystemConfig { get; set; }
+        private readonly SystemConfigModel _systemConfig;
 
         private string _buildCodePath;
+
+        public CodeGeneratorOptions(SystemConfigModel systemConfig)
+        {
+            _systemConfig = systemConfig;
+        }
 
         /// <summary>
         /// 生成代码存储路径
@@ -21,11 +26,11 @@ namespace NetModular.Module.CodeGenerator.Infrastructure
             {
                 if (_buildCodePath.IsNull())
                 {
-                    _buildCodePath = Path.Combine(SystemConfig.Path.TempPath, "CodeGenerator", "BuildCode");
+                    _buildCodePath = Path.Combine(_systemConfig.Path.TempPath, "CodeGenerator", "BuildCode");
                 }
                 else if (!Path.IsPathRooted(_buildCodePath))
                 {
-                    _buildCodePath = Path.Combine(SystemConfig.Path.TempPath, _buildCodePath);
+                    _buildCodePath = Path.Combine(_systemConfig.Path.TempPath, _buildCodePath);
                 }
                 return _buildCodePath;
             }
