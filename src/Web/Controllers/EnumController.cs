@@ -37,16 +37,16 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
 
         [HttpDelete]
         [Description("删除")]
-        public async Task<IResultModel> Delete([BindRequired] Guid id)
+        public Task<IResultModel> Delete([BindRequired] Guid id)
         {
-            return await _service.Delete(id);
+            return _service.Delete(id);
         }
 
         [HttpGet]
         [Description("编辑")]
-        public async Task<IResultModel> Edit([BindRequired] Guid id)
+        public Task<IResultModel> Edit([BindRequired] Guid id)
         {
-            return await _service.Edit(id);
+            return _service.Edit(id);
         }
 
         [HttpPost]

@@ -30,9 +30,9 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
 
         [HttpGet]
         [Description("查询")]
-        public async Task<IResultModel> Query([FromQuery]ModuleQueryModel model)
+        public Task<IResultModel> Query([FromQuery]ModuleQueryModel model)
         {
-            return await _service.Query(model);
+            return _service.Query(model);
         }
 
         [HttpPost]
