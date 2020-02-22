@@ -722,4 +722,12 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Templates\Default\T4\src\Web\ModuleInitializer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModuleInitializer.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

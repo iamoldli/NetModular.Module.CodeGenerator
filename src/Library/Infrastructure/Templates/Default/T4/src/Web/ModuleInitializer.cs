@@ -34,16 +34,23 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
+            this.Write(".Lib.Module.Abstractions;\r\nusing ");
+            
+            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            
+            #line default
+            #line hidden
             this.Write(".Lib.Module.AspNetCore;\r\n\r\nnamespace ");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Web\ModuleInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
@@ -75,7 +82,6 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// <param name=""mvcOptions""></param>
         public void ConfigureMvc(MvcOptions mvcOptions)
         {
-            
         }
     }
 }
