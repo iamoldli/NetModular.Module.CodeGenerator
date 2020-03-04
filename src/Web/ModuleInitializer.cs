@@ -17,7 +17,6 @@ namespace NetModular.Module.CodeGenerator.Web
         /// <param name="env"></param>
         public void ConfigureServices(IServiceCollection services, IModuleCollection modules, IHostEnvironment env)
         {
-            
         }
 
         /// <summary>

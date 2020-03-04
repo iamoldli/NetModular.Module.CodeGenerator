@@ -40,7 +40,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
   },
   globals: {
     $http: 'readonly',
-    $api: 'readonly'
+    $api: 'readonly',
+    $const: 'readonly'
   }
 }
 ");

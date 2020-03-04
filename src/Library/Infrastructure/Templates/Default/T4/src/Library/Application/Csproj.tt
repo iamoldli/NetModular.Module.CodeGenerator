@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="<#= _prefix #>.Lib.Data.Query" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Mapper.AutoMapper" Version="1.7.0" />
+	<PackageReference Include="<#= _prefix #>.Lib.Data.Query" Version="<#= _versions.Lib_Data_Query #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Mapper.AutoMapper" Version="<#= _versions.Lib_Mapper_AutoMapper #>" />
   </ItemGroup>
 
   <ItemGroup>

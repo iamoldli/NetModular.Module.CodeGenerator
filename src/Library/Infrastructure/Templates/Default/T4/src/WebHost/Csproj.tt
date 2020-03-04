@@ -10,13 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="<#= _prefix #>.Lib.Cache.MemoryCache" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Data.MySql" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Data.SQLite" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Data.SqlServer" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Excel.EPPlus" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Host.Web" Version="1.7.1" />
-    <PackageReference Include="<#= _prefix #>.Module.Admin.Web" Version="1.7.1" />
+	<PackageReference Include="<#= _prefix #>.Lib.Cache.MemoryCache" Version="<#= _versions.Lib_Cache_MemoryCache #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Data.MySql" Version="<#= _versions.Lib_Data_MySql #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Data.SQLite" Version="<#= _versions.Lib_Data_SQLite #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Data.SqlServer" Version="<#= _versions.Lib_Data_SqlServer #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Excel.EPPlus" Version="<#= _versions.Lib_Excel_EPPlus #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Host.Web" Version="<#= _versions.Lib_Host_Web #>" />
+    <PackageReference Include="<#= _prefix #>.Module.Admin.Web" Version="<#= _versions.Module_Admin_Web #>" />
   </ItemGroup>
 
   <ItemGroup>

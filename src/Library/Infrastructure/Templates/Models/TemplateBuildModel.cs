@@ -1,4 +1,6 @@
-﻿namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
+﻿using NetModular.Module.CodeGenerator.Infrastructure.NuGet;
+
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
 {
     /// <summary>
     /// 模板生成模型
@@ -19,5 +21,10 @@
         /// 模块模型
         /// </summary>
         public ModuleBuildModel Module { get; set; }
+
+        /// <summary>
+        /// NuGet包版本
+        /// </summary>
+        public NuGetPackageVersions NuGetPackageVersions { get; set; }
     }
 }

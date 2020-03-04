@@ -37,5 +37,23 @@ namespace NetModular.Module.CodeGenerator.Domain.Module
         [Nullable]
         [Length(200)]
         public string Copyright { get; set; }
+
+        /// <summary>
+        /// 公司单位
+        /// </summary>
+        [Nullable]
+        public string Company { get; set; }
+
+        /// <summary>
+        /// 官方地址
+        /// </summary>
+        [Nullable]
+        public string ProjectUrl { get; set; }
+
+        /// <summary>
+        /// 仓库地址
+        /// </summary>
+        [Nullable]
+        public string RepositoryUrl { get; set; }
     }
 }

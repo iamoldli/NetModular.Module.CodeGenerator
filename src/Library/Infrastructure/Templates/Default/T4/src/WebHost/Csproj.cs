@@ -43,49 +43,98 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Cache.MemoryCache\" Version=\"1.7.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Cache.MemoryCache\" Version=\"");
+            
+            #line 13 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Cache_MemoryCache));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 14 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.MySql\" Version=\"1.7.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.MySql\" Version=\"");
+            
+            #line 14 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Data_MySql));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 15 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.SQLite\" Version=\"1.7.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.SQLite\" Version=\"");
+            
+            #line 15 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Data_SQLite));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 16 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.SqlServer\" Version=\"1.7.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.SqlServer\" Version=\"");
+            
+            #line 16 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Data_SqlServer));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 17 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Excel.EPPlus\" Version=\"1.7.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Excel.EPPlus\" Version=\"");
+            
+            #line 17 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Excel_EPPlus));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 18 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Host.Web\" Version=\"1.7.1\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Host.Web\" Version=\"");
+            
+            #line 18 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Host_Web));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(@".Module.Admin.Web"" Version=""1.7.1"" />
+            this.Write(".Module.Admin.Web\" Version=\"");
+            
+            #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Module_Admin_Web));
+            
+            #line default
+            #line hidden
+            this.Write(@""" />
   </ItemGroup>
 
   <ItemGroup>

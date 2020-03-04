@@ -34,16 +34,29 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Data.Query\" Version=\"1.7.0\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Data.Query\" Version=\"");
+            
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Data_Query));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(".Lib.Mapper.AutoMapper\" Version=\"1.7.0\" />\r\n  </ItemGroup>\r\n\r\n  <ItemGroup>\r\n    " +
-                    "<ProjectReference Include=\"..\\Infrastructure\\Infrastructure.csproj\" />\r\n  </Item" +
-                    "Group>\r\n\r\n</Project>\r\n");
+            this.Write(".Lib.Mapper.AutoMapper\" Version=\"");
+            
+            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Application\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Mapper_AutoMapper));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n  </ItemGroup>\r\n\r\n  <ItemGroup>\r\n    <ProjectReference Include=\"..\\Infrastr" +
+                    "ucture\\Infrastructure.csproj\" />\r\n  </ItemGroup>\r\n\r\n</Project>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

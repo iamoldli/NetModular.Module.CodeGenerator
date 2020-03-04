@@ -62,13 +62,31 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <!--设置打包路径-->
     <PackageOutputPath>$(SolutionDir)\_packages</PackageOutputPath>
-    <Company>Oldli</Company>
-    <Copyright>Oldli</Copyright>
-    <PackageProjectUrl>https://docs.17mkh.com/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/iamoldli/NetModular.Module.");
+    <Company>");
+            
+            #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Company));
+            
+            #line default
+            #line hidden
+            this.Write("</Company>\r\n    <Copyright>");
+            
+            #line 20 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Copyright));
+            
+            #line default
+            #line hidden
+            this.Write("</Copyright>\r\n    <PackageProjectUrl>");
+            
+            #line 21 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.ProjectUrl));
+            
+            #line default
+            #line hidden
+            this.Write("</PackageProjectUrl>\r\n    <RepositoryUrl>");
             
             #line 22 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.RepositoryUrl));
             
             #line default
             #line hidden

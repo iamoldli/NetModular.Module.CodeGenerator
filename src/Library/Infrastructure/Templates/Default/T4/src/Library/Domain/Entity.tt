@@ -21,20 +21,20 @@ namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name
         /// <summary>
         /// <#= p.Remarks #>
         /// </summary>
-<# if(p.Nullable){ #>
+<# if(p.Nullable && p.Type == PropertyType.String){ #>
 		[Nullable]
 <# } #>
 <# if(p.Type == PropertyType.String){ #>
 <# if(p.Length == 0){ #>
 		[Max]
-<# } else { #>
+<# } else if(p.Length !=50) { #>
         [Length(<#= p.Length #>)]
 <# } #>
 <# } #>
 <# if(p.Type == PropertyType.Decimal||p.Type == PropertyType.Double){ #>
 		[Precision]
 <# } #>
-        public <#= p.Type == PropertyType.Enum ? p.Enum.Name : p.Type.ToDescription() #> <#= p.Name #> { get; set; }<#= GetDefaultValue(p) #>
+        public <#= p.Type == PropertyType.Enum ? p.Enum.Name : p.Type.ToDescription() #> <#= p.Name #><#= p.Nullable && p.Type != PropertyType.String ? "?" : "" #> { get; set; }<#= GetDefaultValue(p) #>
 
 <# } #>
     }

@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="<#= _prefix #>.Lib.Auth.Web" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Module.AspNetCore" Version="1.7.0" />
-    <PackageReference Include="<#= _prefix #>.Lib.Utils.Mvc" Version="1.7.1" />
-    <PackageReference Include="<#= _prefix #>.Lib.Validation.FluentValidation" Version="1.7.0" />
+	<PackageReference Include="<#= _prefix #>.Lib.Auth.Web" Version="<#= _versions.Lib_Auth_Web #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Module.AspNetCore" Version="<#= _versions.Lib_Module_AspNetCore #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Utils.Mvc" Version="<#= _versions.Lib_Utils_Mvc #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Validation.FluentValidation" Version="<#= _versions.Lib_Validation_FluentValidation #>" />
   </ItemGroup>
 
   <ItemGroup>

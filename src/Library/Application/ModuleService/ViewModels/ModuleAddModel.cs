@@ -35,5 +35,20 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService.ViewModels
         /// 版权声明
         /// </summary>
         public string Copyright { get; set; }
+
+        /// <summary>
+        /// 公司单位
+        /// </summary>
+        public string Company { get; set; }
+
+        /// <summary>
+        /// 官方地址
+        /// </summary>
+        public string ProjectUrl { get; set; }
+
+        /// <summary>
+        /// 仓库地址
+        /// </summary>
+        public string RepositoryUrl { get; set; }
     }
 }

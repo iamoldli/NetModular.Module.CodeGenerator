@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using NetModular.Lib.Utils.Core.Extensions;
 using NetModular.Lib.Utils.Core.Result;
-using NetModular.Lib.Utils.Core.SystemConfig;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Class;
@@ -19,6 +18,7 @@ using NetModular.Module.CodeGenerator.Domain.Module;
 using NetModular.Module.CodeGenerator.Domain.Module.Models;
 using NetModular.Module.CodeGenerator.Domain.Property;
 using NetModular.Module.CodeGenerator.Infrastructure;
+using NetModular.Module.CodeGenerator.Infrastructure.NuGet;
 using NetModular.Module.CodeGenerator.Infrastructure.Repositories;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Default;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
@@ -37,9 +37,9 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
         private readonly IClassMethodRepository _classMethodRepository;
         private readonly CodeGeneratorDbContext _dbContext;
         private readonly CodeGeneratorOptions _codeGeneratorOptions;
-        private readonly SystemConfigModel _systemConfig;
+        private readonly NugetHelper _nugetHelper;
 
-        public ModuleService(IModuleRepository repository, IMapper mapper, IClassRepository classRepository, IPropertyRepository propertyRepository, IEnumRepository enumRepository, IEnumItemRepository enumItemRepository, IModelPropertyRepository modelPropertyRepository, IClassMethodRepository classMethodRepository, CodeGeneratorDbContext dbContext, CodeGeneratorOptions codeGeneratorOptions, SystemConfigModel systemConfig)
+        public ModuleService(IModuleRepository repository, IMapper mapper, IClassRepository classRepository, IPropertyRepository propertyRepository, IEnumRepository enumRepository, IEnumItemRepository enumItemRepository, IModelPropertyRepository modelPropertyRepository, IClassMethodRepository classMethodRepository, CodeGeneratorDbContext dbContext, CodeGeneratorOptions codeGeneratorOptions, NugetHelper nugetHelper)
         {
             _repository = repository;
             _mapper = mapper;
@@ -51,7 +51,7 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
             _classMethodRepository = classMethodRepository;
             _dbContext = dbContext;
             _codeGeneratorOptions = codeGeneratorOptions;
-            _systemConfig = systemConfig;
+            _nugetHelper = nugetHelper;
         }
 
         public async Task<IResultModel> Query(ModuleQueryModel model)
@@ -149,6 +149,7 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
             var buildModel = new TemplateBuildModel
             {
                 RootPath = Path.Combine(rootPath, id, moduleFullName),
+                NuGetPackageVersions = _nugetHelper.GetVersions()
             };
 
             if (classList == null)
