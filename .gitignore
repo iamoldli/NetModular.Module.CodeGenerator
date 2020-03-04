@@ -339,3 +339,4 @@ ASALocalRun/
 /src/UI/module-common/package-lock.json
 /src/WebHost/wwwroot
 /src/UI/module-code-generator/package-lock.json
+/src/UI/module-codegenerator/package-lock.json
