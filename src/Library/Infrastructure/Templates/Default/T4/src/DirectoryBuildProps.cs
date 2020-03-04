@@ -65,28 +65,28 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     <Company>");
             
             #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Company));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_company));
             
             #line default
             #line hidden
             this.Write("</Company>\r\n    <Copyright>");
             
             #line 20 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Copyright));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_copyright));
             
             #line default
             #line hidden
             this.Write("</Copyright>\r\n    <PackageProjectUrl>");
             
             #line 21 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.ProjectUrl));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_projectUrl));
             
             #line default
             #line hidden
             this.Write("</PackageProjectUrl>\r\n    <RepositoryUrl>");
             
             #line 22 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\DirectoryBuildProps.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.RepositoryUrl));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_repositoryUrl));
             
             #line default
             #line hidden

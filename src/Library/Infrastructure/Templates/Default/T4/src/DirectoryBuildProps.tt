@@ -16,9 +16,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <!--设置打包路径-->
     <PackageOutputPath>$(SolutionDir)\_packages</PackageOutputPath>
-    <Company><#= _model.Module.Company #></Company>
-    <Copyright><#= _model.Module.Copyright #></Copyright>
-    <PackageProjectUrl><#= _model.Module.ProjectUrl #></PackageProjectUrl>
-    <RepositoryUrl><#= _model.Module.RepositoryUrl #></RepositoryUrl>
+    <Company><#= _company #></Company>
+    <Copyright><#= _copyright #></Copyright>
+    <PackageProjectUrl><#= _projectUrl #></PackageProjectUrl>
+    <RepositoryUrl><#= _repositoryUrl #></RepositoryUrl>
   </PropertyGroup>
 </Project>

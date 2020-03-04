@@ -42,18 +42,21 @@ namespace NetModular.Module.CodeGenerator.Domain.Module
         /// 公司单位
         /// </summary>
         [Nullable]
+        [Length(100)]
         public string Company { get; set; }
 
         /// <summary>
         /// 官方地址
         /// </summary>
         [Nullable]
+        [Length(300)]
         public string ProjectUrl { get; set; }
 
         /// <summary>
         /// 仓库地址
         /// </summary>
         [Nullable]
+        [Length(300)]
         public string RepositoryUrl { get; set; }
     }
 }
