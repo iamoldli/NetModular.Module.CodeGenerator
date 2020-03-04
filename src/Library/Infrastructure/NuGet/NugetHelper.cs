@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
 using NetModular.Lib.Utils.Core.Attributes;
 using NetModular.Lib.Utils.Core.Extensions;
 
@@ -14,18 +13,16 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.NuGet
     /// NuGet帮助类
     /// </summary>
     [Singleton]
-    public class NugetHelper
+    public class NuGetHelper
     {
         private const string QueryUrl = "https://azuresearch-usnc.nuget.org/query?q={0}&take=1";
         private readonly Dictionary<string, PropertyInfo> _infos = new Dictionary<string, PropertyInfo>();
         private readonly HttpClient _client;
-        private readonly ILogger _logger;
         private NuGetPackageVersions _versions;
         private DateTime _lastSearchTime = DateTime.Now;
 
-        public NugetHelper(CodeGeneratorOptions options, IHttpClientFactory clientFactory, ILogger<NugetHelper> logger)
+        public NuGetHelper(CodeGeneratorOptions options, IHttpClientFactory clientFactory)
         {
-            _logger = logger;
             _client = clientFactory.CreateClient();
 
             var properties = typeof(NuGetPackageVersions).GetProperties();

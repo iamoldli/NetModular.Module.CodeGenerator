@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="<#= _prefix #>.Lib.Options.Abstraction" Version="1.7.1" />
-    <PackageReference Include="<#= _prefix #>.Module.Admin.Domain" Version="1.7.1" />
+    <PackageReference Include="<#= _prefix #>.Lib.Options.Abstraction" Version="<#= _versions.Lib_Options_Abstraction #>" />
+    <PackageReference Include="<#= _prefix #>.Module.Admin.Domain" Version="<#= _versions.Module_Admin_Domain #>" />
   </ItemGroup>
  
   <ItemGroup>

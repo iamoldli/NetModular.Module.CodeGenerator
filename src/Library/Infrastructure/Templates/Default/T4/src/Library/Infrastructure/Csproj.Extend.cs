@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using NetModular.Module.CodeGenerator.Infrastructure.NuGet;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
 namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure
@@ -7,11 +8,13 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     {
         private readonly TemplateBuildModel _model;
         private readonly string _prefix;
+        private readonly NuGetPackageVersions _versions;
 
         public Csproj(TemplateBuildModel model)
         {
             _model = model;
             _prefix = model.Module.Prefix;
+            _versions = _model.NuGetPackageVersions;
         }
 
         public bool IsGlobal => true;

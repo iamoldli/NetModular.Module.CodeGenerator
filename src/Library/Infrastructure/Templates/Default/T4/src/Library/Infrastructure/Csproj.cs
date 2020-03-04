@@ -34,14 +34,28 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Lib.Options.Abstraction\" Version=\"1.7.1\" />\r\n    <PackageReference Include=\"");
+            this.Write(".Lib.Options.Abstraction\" Version=\"");
+            
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_Options_Abstraction));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
             
             #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write(@".Module.Admin.Domain"" Version=""1.7.1"" />
+            this.Write(".Module.Admin.Domain\" Version=\"");
+            
+            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Module_Admin_Domain));
+            
+            #line default
+            #line hidden
+            this.Write(@""" />
   </ItemGroup>
  
   <ItemGroup>

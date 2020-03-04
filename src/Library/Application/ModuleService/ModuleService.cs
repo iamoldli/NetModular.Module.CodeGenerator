@@ -37,9 +37,9 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
         private readonly IClassMethodRepository _classMethodRepository;
         private readonly CodeGeneratorDbContext _dbContext;
         private readonly CodeGeneratorOptions _codeGeneratorOptions;
-        private readonly NugetHelper _nugetHelper;
+        private readonly NuGetHelper _nugetHelper;
 
-        public ModuleService(IModuleRepository repository, IMapper mapper, IClassRepository classRepository, IPropertyRepository propertyRepository, IEnumRepository enumRepository, IEnumItemRepository enumItemRepository, IModelPropertyRepository modelPropertyRepository, IClassMethodRepository classMethodRepository, CodeGeneratorDbContext dbContext, CodeGeneratorOptions codeGeneratorOptions, NugetHelper nugetHelper)
+        public ModuleService(IModuleRepository repository, IMapper mapper, IClassRepository classRepository, IPropertyRepository propertyRepository, IEnumRepository enumRepository, IEnumItemRepository enumItemRepository, IModelPropertyRepository modelPropertyRepository, IClassMethodRepository classMethodRepository, CodeGeneratorDbContext dbContext, CodeGeneratorOptions codeGeneratorOptions, NuGetHelper nugetHelper)
         {
             _repository = repository;
             _mapper = mapper;
