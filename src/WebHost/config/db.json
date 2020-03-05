@@ -2,21 +2,21 @@
   //是否开启日志
   "Logging": false,
   //数据库类型 0、SqlServer 1、MySql 2、SQLite
-  "Dialect": 2,
+  "Dialect": 0,
   //数据库版本
   "Version": "",
   //数据库地址
-  "Server": "..\\..\\data\\SQLite",
+  "Server": "106.12.206.86",
   //端口号
-  "Port": 0,
+  "Port": 1433,
   //用户名
-  "UserId": "",
+  "UserId": "sa",
   //密码
-  "Password": "",
+  "Password": "bianhao125",
   //是否创建数据库和表
-  "CreateDatabase": true,
+  "CreateDatabase": false,
   //是否创建数据库后初始化数据
-  "InitData": true,
+  "InitData": false,
   //模块列表
   "Modules": [
     {
