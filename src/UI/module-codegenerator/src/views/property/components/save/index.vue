@@ -11,7 +11,10 @@
         <el-form-item label="类型：" prop="type">
           <type-select v-model="form.model.type" />
         </el-form-item>
-        <el-form-item v-show="showLength" label="长度：" prop="length">
+        <el-form-item v-show="showLength" prop="length">
+          <template v-slot:label>
+            <el-tooltip effect="dark" content="0标识最大长度，比如SqlServer就是nvarchar(MAX)" placement="top"> <nm-icon name="question" class="nm-size-20 nm-text-warning"/></el-tooltip> 长度</template
+          >
           <el-input v-model.number="form.model.length" />
         </el-form-item>
         <el-form-item v-show="showPrecision" label="精度：" prop="precision">
@@ -173,7 +176,6 @@ export default {
     }
   },
   props: {
-    total: Number,
     parent: {
       type: Object,
       required: true

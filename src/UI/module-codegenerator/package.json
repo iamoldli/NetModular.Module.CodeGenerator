@@ -1,6 +1,6 @@
 {
   "name": "netmodular-module-codegenerator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Oldli",
   "license": "ISC",
   "code": "codeGenerator",
@@ -18,8 +18,8 @@
     "pub": "cd ../../../script && npm_publish.ps1"
   },
   "dependencies": {
-    "netmodular-module-admin": "^1.2.6",
-    "netmodular-ui": "^1.5.9"
+    "netmodular-module-admin": "^1.2.9",
+    "netmodular-ui": "^1.6.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.3",

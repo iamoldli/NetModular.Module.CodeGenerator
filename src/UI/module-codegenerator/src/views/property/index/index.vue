@@ -93,6 +93,7 @@ export default {
     },
     add(total) {
       this.total = total
+      this.curr.id = ''
       this.dialog.save = true
     },
     edit(row) {
