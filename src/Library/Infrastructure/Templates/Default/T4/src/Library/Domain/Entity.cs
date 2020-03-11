@@ -205,16 +205,16 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
+            
+            #line 37 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(p.Nullable && p.Type != PropertyType.String ? "?" : ""));
+            
+            #line default
+            #line hidden
             this.Write(" ");
             
             #line 37 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Name));
-            
-            #line default
-            #line hidden
-            
-            #line 37 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Domain\Entity.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(p.Nullable && p.Type != PropertyType.String ? "?" : ""));
             
             #line default
             #line hidden

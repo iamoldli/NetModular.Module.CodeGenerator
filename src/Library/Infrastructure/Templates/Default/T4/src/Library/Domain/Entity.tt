@@ -34,7 +34,7 @@ namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name
 <# if(p.Type == PropertyType.Decimal||p.Type == PropertyType.Double){ #>
 		[Precision]
 <# } #>
-        public <#= p.Type == PropertyType.Enum ? p.Enum.Name : p.Type.ToDescription() #> <#= p.Name #><#= p.Nullable && p.Type != PropertyType.String ? "?" : "" #> { get; set; }<#= GetDefaultValue(p) #>
+        public <#= p.Type == PropertyType.Enum ? p.Enum.Name : p.Type.ToDescription() #><#= p.Nullable && p.Type != PropertyType.String ? "?" : "" #> <#= p.Name #> { get; set; }<#= GetDefaultValue(p) #>
 
 <# } #>
     }
