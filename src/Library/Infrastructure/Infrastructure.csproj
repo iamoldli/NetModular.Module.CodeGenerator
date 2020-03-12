@@ -744,6 +744,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Domain\Models\QueryModel.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>QueryModel.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Default\T4\src\Library\Domain\Repository.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
     <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Csproj.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

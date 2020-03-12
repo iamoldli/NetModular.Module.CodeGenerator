@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using <#= _prefix #>.Lib.Data.Abstractions;
-using <#= _prefix #>.Lib.Data.Abstractions.Pagination;
 using <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>.Models;
 
 namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>

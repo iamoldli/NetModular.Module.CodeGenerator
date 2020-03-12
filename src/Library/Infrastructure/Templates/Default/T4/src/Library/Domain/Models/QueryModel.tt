@@ -4,7 +4,7 @@
 using System;
 using <#= _prefix #>.Lib.Data.Query;
 
-namespace  <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>.Models
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Domain.<#= _class.Name #>.Models
 {
     public class <#= _class.Name #>QueryModel : QueryModel
     {
