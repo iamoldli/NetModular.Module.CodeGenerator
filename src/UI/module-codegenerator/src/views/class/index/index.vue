@@ -46,6 +46,7 @@ export default {
   components: { SavePage, PropertyPage, ModelManagePage, CodePreview },
   data() {
     return {
+      curr: { name: '' },
       list: {
         noHeader: true,
         queryOnCreated: false,
@@ -83,11 +84,13 @@ export default {
   methods: {
     /** 打开模型管理 */
     openModelManage(row) {
-      this.curr = row
+      this.curr.id = row.id
+      this.curr.name = row.name
       this.dialog.model = true
     },
     manageProperty(row) {
-      this.curr = row
+      this.curr.id = row.id
+      this.curr.name = row.name
       this.dialog.property = true
     },
     buildCode(row) {
@@ -102,7 +105,8 @@ export default {
         })
     },
     codePreview(row) {
-      this.curr = row
+      this.curr.id = row.id
+      this.curr.name = row.name
       this.dialog.codePreview = true
     },
     onOpen() {
@@ -111,7 +115,6 @@ export default {
       })
     },
     onReset() {
-      console.log(1)
       this.list.model.moduleId = this.module.id
       this.$refs.list.query()
     }

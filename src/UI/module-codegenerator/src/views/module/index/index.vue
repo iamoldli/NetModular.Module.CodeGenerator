@@ -73,6 +73,7 @@ export default {
   components: { SavePage, ClassPage },
   data() {
     return {
+      curr: { name: '' },
       list: {
         title: page.title,
         cols,
@@ -102,7 +103,8 @@ export default {
         })
     },
     manageClass(row) {
-      this.curr = row
+      this.curr.id = row.id
+      this.curr.name = row.name
       this.dialog.class = true
     }
   }

@@ -64,7 +64,8 @@ export default {
   },
   methods: {
     manageItem(row) {
-      this.curr = row
+      this.curr.id = row.id
+      this.curr.name = row.name
       this.dialog.item = true
     }
   }
