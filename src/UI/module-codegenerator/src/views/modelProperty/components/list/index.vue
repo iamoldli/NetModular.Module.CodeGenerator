@@ -1,5 +1,5 @@
 <template>
-  <nm-list ref="list" v-bind="list">
+  <nm-list ref="list" v-bind="list" style="border-top:none">
     <template v-slot:querybar-buttons="{ total }">
       <nm-button type="success" text="添加" icon="add" @click="add(total)" />
       <nm-button type="warning" text="排序" icon="sort" @click="openSort" />
@@ -89,9 +89,6 @@ export default {
     refresh() {
       this.$refs.list.refresh()
     },
-    reset() {
-      this.$refs.list.reset()
-    },
     add(total) {
       this.total = total
       this.dialog.add = true
@@ -117,9 +114,12 @@ export default {
     }
   },
   watch: {
-    parent(val) {
-      this.list.model.classId = val.id
-      this.refresh()
+    parent: {
+      deep: true,
+      handler(val) {
+        this.list.model.classId = val.id
+        this.refresh()
+      }
     },
     modelType(val) {
       this.list.model.modelType = val

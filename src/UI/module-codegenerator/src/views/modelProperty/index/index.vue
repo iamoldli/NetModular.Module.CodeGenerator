@@ -17,7 +17,7 @@
       </el-tabs>
     </div>
     <div class="bottom">
-      <list-page ref="list" :parent="parent" :model-type="modelType" @reset="onReset" />
+      <list-page ref="list" :parent="parent" :model-type="modelType" />
     </div>
   </nm-dialog>
 </template>
@@ -53,16 +53,13 @@ export default {
   },
   methods: {
     refresh() {
-      this.$refs.list.refresh()
-    },
-    onOpen() {
       this.$nextTick(() => {
-        this.active = 'query'
-        this.$refs.list.reset()
+        this.$refs.list.refresh()
       })
     },
-    onReset() {
-      this.$refs.list.refresh()
+    onOpen() {
+      this.active = 'query'
+      this.refresh()
     }
   }
 }

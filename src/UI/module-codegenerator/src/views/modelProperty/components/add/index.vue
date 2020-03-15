@@ -76,7 +76,8 @@ export default {
       },
       on: {
         success: this.onSuccess,
-        open: this.onOpen
+        open: this.onOpen,
+        reset: this.onReset
       }
     }
   },
@@ -106,10 +107,12 @@ export default {
     onOpen() {
       this.$nextTick(() => {
         this.$refs.form.reset()
-        this.form.model.classId = this.parent.id
-        this.form.model.sort = this.total
-        this.form.model.modelType = this.modelType
       })
+    },
+    onReset() {
+      this.form.model.classId = this.parent.id
+      this.form.model.sort = this.total
+      this.form.model.modelType = this.modelType
     }
   },
   watch: {
