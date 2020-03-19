@@ -48,5 +48,15 @@ namespace NetModular.Module.CodeGenerator.Infrastructure
         /// </summary>
         [ModuleOptionDefinition("前端组件前缀", "前端组件前缀，如Nm，组件名称就是nm-list")]
         public string UiPrefix { get; set; } = "Nm";
+
+        public IModuleOptions Copy()
+        {
+            return new CodeGeneratorOptions(_systemConfig)
+            {
+                BuildCodePath = BuildCodePath,
+                Prefix = Prefix,
+                UiPrefix = UiPrefix
+            };
+        }
     }
 }
