@@ -55,23 +55,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(@""" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include=""..\Infrastructure\Infrastructure.csproj"" />
-  </ItemGroup>
-    
-  <!--打包模块相关文件到NuGet包中，此功能需要编译两次项目才行，因为打包操作在创建_module.json文件之前执行的-->
-  <ItemGroup>
-    <Content Include=""$(SolutionDir)\src\WebHost\_modules*\**\*.*"" PackagePath=""contentFiles\any\any"">
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-    </Content>
-  </ItemGroup>
-
-</Project>
-");
+            this.Write("\" />\r\n  </ItemGroup>\r\n\r\n  <ItemGroup>\r\n    <ProjectReference Include=\"..\\Infrastr" +
+                    "ucture\\Infrastructure.csproj\" />\r\n  </ItemGroup>\r\n    \r\n</Project>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

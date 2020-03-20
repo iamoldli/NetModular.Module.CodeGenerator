@@ -7,20 +7,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.2" />
     <PackageReference Include="NetModular.Lib.Options.Abstraction" Version="1.8.2" />
-    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.8.8" />
+    <PackageReference Include="NetModular.Module.Admin.Domain" Version="1.8.9" />
     <PackageReference Include="System.CodeDom" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-  </ItemGroup>
-
-  <!--打包模块相关文件到NuGet包中，此功能需要编译两次项目才行，因为打包操作在创建_module.json文件之前执行的-->
-  <ItemGroup>
-    <Content Include="$(SolutionDir)\src\WebHost\_modules*\**\*.*" PackagePath="contentFiles\any\any">
-      <Pack>true</Pack>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -724,52 +716,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Templates\Default\T4\src\DirectoryBuildProps.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>DirectoryBuildProps.tt</DependentUpon>
-    </Compile>
     <Compile Update="Templates\Default\T4\src\Library\Application\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Domain\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Domain\Entity.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Domain\Models\QueryModel.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>QueryModel.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Domain\Repository.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Repository.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Library\Infrastructure\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\UI\App\Eslintrc.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Eslintrc.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Csproj.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\Default\T4\src\Web\Csproj.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Csproj.tt</DependentUpon>
