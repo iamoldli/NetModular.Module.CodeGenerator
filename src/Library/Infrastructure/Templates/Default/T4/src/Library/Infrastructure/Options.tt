@@ -8,6 +8,9 @@ namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Infrastructure
     /// </summary>
     public class <#= _model.Module.Code #>Options : IModuleOptions
     {
-
+        public IModuleOptions Copy()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

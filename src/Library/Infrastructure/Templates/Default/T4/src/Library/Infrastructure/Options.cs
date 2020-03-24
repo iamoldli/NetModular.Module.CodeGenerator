@@ -60,7 +60,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("Options : IModuleOptions\r\n    {\r\n\r\n    }\r\n}\r\n");
+            this.Write("Options : IModuleOptions\r\n    {\r\n        public IModuleOptions Copy()\r\n        {\r" +
+                    "\n            throw new System.NotImplementedException();\r\n        }\r\n    }\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
