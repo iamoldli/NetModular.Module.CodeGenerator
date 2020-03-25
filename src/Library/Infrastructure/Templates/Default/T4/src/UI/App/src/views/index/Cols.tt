@@ -12,7 +12,7 @@ export default [
   {
     name: '<#= p.CamelName #>',
     label: '<#= p.Remarks #>'
-  }<#= _class.IsEntityBase || i < _class.PropertyList.Count - 1 ? ",":"" #>
+  }<#= _class.IsEntityBase || i < _properties.Count - 1 ? ",":"" #>
 <#     } #>
 <#   } #>
 <#    if(_class.IsEntityBase){ #>

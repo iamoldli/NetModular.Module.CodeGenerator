@@ -62,7 +62,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("\'\r\n  }");
             
             #line 15 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Cols.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_class.IsEntityBase || i < _class.PropertyList.Count - 1 ? ",":""));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_class.IsEntityBase || i < _properties.Count - 1 ? ",":""));
             
             #line default
             #line hidden
