@@ -10,7 +10,7 @@ namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Infrastructure
     {
         public IModuleOptions Copy()
         {
-            throw new System.NotImplementedException();
+            throw new System.NotImplementedException("请实现当前类的深度复制功能，并返回新的对象。");
         }
     }
 }
