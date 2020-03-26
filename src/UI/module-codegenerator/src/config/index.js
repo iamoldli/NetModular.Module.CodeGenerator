@@ -6,6 +6,6 @@ const config = {
 
 // 开发模式
 if (isDev) {
-  config.baseUrl = 'https://api.demo.17mkh.com/api/'
+  config.baseUrl = 'http://localhost:6222/api/'
 }
 export default config
