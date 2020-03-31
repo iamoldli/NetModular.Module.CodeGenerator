@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using NetModular.Lib.Auth.Web.Attributes;
 using NetModular.Lib.Utils.Core.Extensions;
 using NetModular.Lib.Utils.Core.Models;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.PropertyService;
 using NetModular.Module.CodeGenerator.Application.PropertyService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Property;

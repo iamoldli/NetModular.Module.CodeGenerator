@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using NetModular.Lib.Auth.Web.Attributes;
 using NetModular.Lib.Utils.Core.Models;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.EnumItemService;
 using NetModular.Module.CodeGenerator.Application.EnumItemService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.EnumItem.Models;

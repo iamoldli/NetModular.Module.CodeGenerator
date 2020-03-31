@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using NetModular.Lib.Utils.Core.Models;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.PropertyService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Property.Models;
 

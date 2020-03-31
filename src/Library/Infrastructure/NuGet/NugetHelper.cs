@@ -5,7 +5,6 @@ using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using NetModular.Lib.Utils.Core.Attributes;
-using NetModular.Lib.Utils.Core.Extensions;
 
 namespace NetModular.Module.CodeGenerator.Infrastructure.NuGet
 {

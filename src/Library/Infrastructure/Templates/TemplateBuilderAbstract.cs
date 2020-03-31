@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using NetModular.Lib.Utils.Core;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
 namespace NetModular.Module.CodeGenerator.Infrastructure.Templates

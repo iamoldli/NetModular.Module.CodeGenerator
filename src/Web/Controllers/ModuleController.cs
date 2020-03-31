@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Lib.Utils.Core.SystemConfig;
 using NetModular.Module.CodeGenerator.Application.ModuleService;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ViewModels;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;
 using NetModular.Module.CodeGenerator.Domain.Class.Models;

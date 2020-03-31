@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.EnumService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Enum.Models;
 

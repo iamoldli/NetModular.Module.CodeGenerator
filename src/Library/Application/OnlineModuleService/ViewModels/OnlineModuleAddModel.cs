@@ -1,7 +1,3 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using NetModular.Module.CodeGenerator.Domain.OnlineModule;
-
 namespace NetModular.Module.CodeGenerator.Application.OnlineModuleService.ViewModels
 {
     /// <summary>

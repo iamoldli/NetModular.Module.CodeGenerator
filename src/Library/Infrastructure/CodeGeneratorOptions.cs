@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using NetModular.Lib.Options.Abstraction;
-using NetModular.Lib.Utils.Core.Extensions;
 using NetModular.Lib.Utils.Core.SystemConfig;
 
 namespace NetModular.Module.CodeGenerator.Infrastructure

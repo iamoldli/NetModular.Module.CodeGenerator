@@ -1,8 +1,6 @@
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.OnlineModuleService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.OnlineModule;
 using NetModular.Module.CodeGenerator.Domain.OnlineModule.Models;

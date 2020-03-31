@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
 using NetModular.Module.CodeGenerator.Application.ModuleService;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;

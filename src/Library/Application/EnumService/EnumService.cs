@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.EnumService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Enum;
 using NetModular.Module.CodeGenerator.Domain.Enum.Models;

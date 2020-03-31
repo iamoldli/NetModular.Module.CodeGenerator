@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NetModular.Lib.Utils.Core.Result;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Class;

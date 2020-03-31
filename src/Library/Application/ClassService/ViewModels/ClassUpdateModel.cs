@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using AutoMapper;
 using NetModular.Module.CodeGenerator.Domain.Class;
 
 namespace NetModular.Module.CodeGenerator.Application.ClassService.ViewModels
