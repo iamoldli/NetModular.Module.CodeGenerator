@@ -25,7 +25,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("module.exports = {\r\n  presets: [\'@vue/cli-plugin-babel/preset\']\r\n}\r\n");
+            this.Write("module.exports = {\r\n  presets: [\r\n    [\r\n      \'@vue/cli-plugin-babel/preset\',\r\n " +
+                    "     {\r\n        useBuiltIns: \'entry\'\r\n      }\r\n    ]\r\n  ]\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

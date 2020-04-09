@@ -1,11 +1,13 @@
-const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const isDev = process.env.NODE_ENV === 'development' // 开发环境
 
 // 增加环境变量
 process.env.VUE_APP_COPYRIGHT = '版权所有：尼古拉斯·老李 | 用代码改变世界'
 process.env.VUE_APP_BUILD_TIME = require('dayjs')().format('YYYYMDHHmmss')
+
+const path = require('path')
+// 开发环境
+const isDev = process.env.NODE_ENV === 'development'
 // 打包输出路径
 const outputDir = '../../WebHost/wwwroot/app'
 
@@ -15,6 +17,7 @@ module.exports = {
   devServer: {
     port: 5222
   },
+  transpileDependencies: ['netmodular-*', 'element-ui'],
   configureWebpack() {
     let config = {
       plugins: [

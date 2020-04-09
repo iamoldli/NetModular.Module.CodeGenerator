@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NetModular;
 using NetModular.Lib.Utils.Core.SystemConfig;
 using NetModular.Module.CodeGenerator.Infrastructure;
 using NetModular.Module.CodeGenerator.Infrastructure.NuGet;

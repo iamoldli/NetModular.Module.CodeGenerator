@@ -1,22 +1,24 @@
 <#@ template language="C#" #>
-const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const isDev = process.env.NODE_ENV === 'development' // 开发环境
 
 // 增加环境变量
 process.env.VUE_APP_COPYRIGHT = '<#= _model.Module.Copyright #>'
 process.env.VUE_APP_BUILD_TIME = require('dayjs')().format('YYYYMDHHmmss')
+
+const path = require('path')
+// 开发环境
+const isDev = process.env.NODE_ENV === 'development'
 // 打包输出路径
 const outputDir = '../../WebHost/wwwroot/app'
 
 module.exports = {
+  outputDir: outputDir,
+  publicPath: '/app',
   devServer: {
     port: <#= _model.Module.No + 5220 #>
   },
-  outputDir: outputDir,
-  publicPath: '/app',
-  transpileDependencies: ['netmodular.*', 'element-ui'],
+  transpileDependencies: ['<#= _prefix #>-*', 'element-ui'],
   configureWebpack() {
     let config = {
       plugins: [
@@ -80,7 +82,6 @@ module.exports = {
       )
       // 非开发环境
       .when(!isDev, config => {
-
         // 拆分
         config.optimization.splitChunks({
           chunks: 'all',
@@ -91,7 +92,7 @@ module.exports = {
               test: /[\\/]node_modules[\\/]element-ui(.*)/
             },
             skins: {
-              name: 'chunk-<#= _prefix #>-ui',
+              name: 'chunk-netmodular-ui',
               priority: 10,
               test: /[\\/]node_modules[\\/]<#= _prefix #>-ui(.*)/
             }

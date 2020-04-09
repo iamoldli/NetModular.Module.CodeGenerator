@@ -75,24 +75,23 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     ""pub"": ""cd ../../../script && npm_publish.ps1""
   },
   ""dependencies"": {
-    ""netmodular-module-admin"": ""^1.1.9"",
-    ""netmodular-ui"": ""^1.4.6""
+    ""netmodular-module-admin"": ""^1.2.9"",
+    ""netmodular-ui"": ""^1.7.6""
   },
   ""devDependencies"": {
-    ""@vue/cli-plugin-babel"": ""^4.2.2"",
-    ""@vue/cli-plugin-eslint"": ""^4.2.2"",
-    ""@vue/cli-plugin-router"": ""^4.2.2"",
-    ""@vue/cli-plugin-vuex"": ""^4.2.2"",
-    ""@vue/cli-service"": ""^4.2.2"",
+    ""@vue/cli-plugin-babel"": ""^4.2.3"",
+    ""@vue/cli-plugin-eslint"": ""^4.2.3"",
+    ""@vue/cli-plugin-router"": ""^4.2.3"",
+    ""@vue/cli-plugin-vuex"": ""^4.2.3"",
+    ""@vue/cli-service"": ""^4.2.3"",
     ""@vue/eslint-config-prettier"": ""^5.0.0"",
-    ""babel-eslint"": ""^10.0.3"",
+    ""babel-eslint"": ""^10.1.0"",
     ""eslint"": ""^5.16.0"",
     ""eslint-plugin-prettier"": ""^3.1.2"",
     ""eslint-plugin-vue"": ""^5.0.0"",
     ""prettier"": ""^1.18.2"",
-    ""raw-loader"": ""^3.1.0"",
-    ""rimraf"": ""^3.0.1"",
-    ""sass"": ""^1.25.0"",
+    ""rimraf"": ""^3.0.2"",
+    ""sass"": ""^1.26.3"",
     ""sass-loader"": ""^8.0.2"",
     ""vue-template-compiler"": ""^2.6.11""
   }

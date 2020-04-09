@@ -4,7 +4,7 @@
     <Name>代码生成</Name>
     <Icon>develop</Icon>
     <Authors>Oldli</Authors>
-    <Version>1.7.3</Version>
+    <Version>1.7.4</Version>
     <Description>NetModular Module $(Id)($(Name)) - $(MSBuildProjectName)</Description>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <LangVersion>Latest</LangVersion>
