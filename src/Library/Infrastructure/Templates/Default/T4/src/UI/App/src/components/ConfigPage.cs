@@ -27,21 +27,33 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         {
             this.Write(@"<template>
   <nm-form-page v-bind=""form"">
-    <!--这里自定义表单-->
+    <!--自定义表单-->
   </nm-form-page>
 </template>
 <script>
-import { mixins } from 'netmodular-module-admin'
 import module from '../../module'
+const { edit, update } = $api.admin.config
 export default {
-  mixins: [mixins.configForm],
   data() {
     return {
       code: module.code,
+      type: 1,
       form: {
+        header: false,
+        action: this.update,
         model: {}
       }
     }
+  },
+  methods: {
+    update() {
+      return update({ type: this.type, code: this.code, json: JSON.stringify(this.form.model) })
+    }
+  },
+  created() {
+    edit({ type: this.type, code: this.code }).then(data => {
+      this.form.model = data
+    })
   }
 }
 </script>
