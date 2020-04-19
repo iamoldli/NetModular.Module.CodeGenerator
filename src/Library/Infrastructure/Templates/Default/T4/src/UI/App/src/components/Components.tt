@@ -1,13 +1,11 @@
 <#@ template language="C#" #>
-export default []
-
-/**  全局组件注册示例  */
-// import DictionarySelect from '../views/dictionary/select'
-//
-// export default [{
-// //组件名称
-// name: '<#= _uiPrefix #>-dictionary-select',
-// //组件对象
-// component: DictionarySelect
-// }
-// ]
+import library from '<#= _prefix #>-ui/packages/library'
+let components = []
+const requireComponent = require.context('./', true, /index\.vue$/)
+requireComponent.keys().map(fileName => {
+  components.push({
+    name: `${library.prefix.toLowerCase()}-${fileName.split('/')[1]}`,
+    component: requireComponent(fileName).default
+  })
+})
+export default components

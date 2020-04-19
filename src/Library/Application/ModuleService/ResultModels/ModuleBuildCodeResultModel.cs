@@ -8,5 +8,10 @@
         public string Id { get; set; }
 
         public string Name { get; set; }
+
+        /// <summary>
+        /// 压缩文件路径
+        /// </summary>
+        public string ZipPath { get; set; }
     }
 }

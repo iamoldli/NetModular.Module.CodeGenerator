@@ -1,15 +1,16 @@
 ﻿<#@ template language="C#" #>
 <Project>
   <PropertyGroup>
-    <Id><#= _model.Module.Code #></Id>
-    <Name><#= _model.Module.Name #></Name>
+    <Id><#= _model.Module.No<10 ? "0" + _model.Module.No : _model.Module.No + "" #></Id>
+    <Code><#= _model.Module.Code #></Code>
+	<Name><#= _model.Module.Name #></Name>
     <Authors>Oldli</Authors>
     <Icon><#= _model.Module.Icon #></Icon>
     <Version>1.0.0</Version>
-    <Description>NetModular Module $(Id)($(Name)) - $(MSBuildProjectName)</Description>
+    <Description>NetModular Module $(Code)($(Name)) - $(MSBuildProjectName)</Description>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <LangVersion>Latest</LangVersion>
-    <RootNamespacePrefix><#= _prefix #>.Module.$(Id)</RootNamespacePrefix>
+    <RootNamespacePrefix><#= _prefix #>.Module.$(Code)</RootNamespacePrefix>
     <AssemblyName>$(RootNamespacePrefix).$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>$(AssemblyName)</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

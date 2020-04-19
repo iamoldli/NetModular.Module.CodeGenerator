@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\config\Config.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\config\Config.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Config : ConfigBase
     {
@@ -28,7 +28,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("const isDev = process.env.NODE_ENV !== \'production\'\r\n\r\nconst config = {\r\n  baseUr" +
                     "l: \'/api/\'\r\n}\r\n\r\n// 开发模式\r\nif (isDev) {\r\n  config.baseUrl = \'http://localhost:");
             
-            #line 10 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\config\Config.tt"
+            #line 10 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\config\Config.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(6220 + _model.Module.No));
             
             #line default

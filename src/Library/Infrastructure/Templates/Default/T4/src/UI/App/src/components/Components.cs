@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\components\Components.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\components\Components.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Components : ComponentsBase
     {
@@ -25,15 +25,24 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("export default []\r\n\r\n/**  全局组件注册示例  */\r\n// import DictionarySelect from \'../views" +
-                    "/dictionary/select\'\r\n//\r\n// export default [{\r\n// //组件名称\r\n// name: \'");
+            this.Write("import library from \'");
             
-            #line 9 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\components\Components.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));
+            #line 2 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\components\Components.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write("-dictionary-select\',\r\n// //组件对象\r\n// component: DictionarySelect\r\n// }\r\n// ]\r\n");
+            this.Write(@"-ui/packages/library'
+let components = []
+const requireComponent = require.context('./', true, /index\.vue$/)
+requireComponent.keys().map(fileName => {
+  components.push({
+    name: `${library.prefix.toLowerCase()}-${fileName.split('/')[1]}`,
+    component: requireComponent(fileName).default
+  })
+})
+export default components
+");
             return this.GenerationEnvironment.ToString();
         }
     }

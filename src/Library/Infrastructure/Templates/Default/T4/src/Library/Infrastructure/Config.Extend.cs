@@ -1,14 +1,14 @@
 ﻿using System.IO;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.Library.Infrastructure
 {
-    public partial class cacheDevelopment : ITemplateHandler
+    public partial class Config : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
         private readonly string _prefix;
 
-        public cacheDevelopment(TemplateBuildModel model)
+        public Config(TemplateBuildModel model)
         {
             _model = model;
             _prefix = model.Module.Prefix;
@@ -18,12 +18,12 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, "src/WebHost/config");
+            var dir = Path.Combine(_model.RootPath, "src/Library/Infrastructure");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, "cache.Development.json");
+            var filePath = Path.Combine(dir, $"{_model.Module.Code}Config.cs");
             File.WriteAllText(filePath, content);
         }
     }

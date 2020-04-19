@@ -19,11 +19,13 @@
 
         public string Lib_Data_SqlServer { get; set; }
 
-        public string Lib_Options_Abstraction { get; set; }
+        public string Lib_Config_Abstractions { get; set; }
 
         public string Lib_Mapper_AutoMapper { get; set; }
 
         public string Lib_Auth_Web { get; set; }
+
+        public string Lib_Module_Abstractions { get; set; }
 
         public string Lib_Module_AspNetCore { get; set; }
 

@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\Solution.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\Solution.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Solution : SolutionBase
     {
@@ -27,21 +27,21 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4
         {
             this.Write("Microsoft Visual Studio Solution File, Format Version 12.00\r\n# Visual Studio Vers" +
                     "ion 16\r\nVisualStudioVersion = 16.0.28803.156\r\nMinimumVisualStudioVersion = 10.0." +
-                    "40219.1\r\nProject(\"{2150E333-8FDC-42A3-9474-1A3956D46DE8}\") = \"src\", \"src\", \"{B4D" +
-                    "3AF99-D551-4B7A-82F3-CE0950FCAA08}\"\r\nEndProject\r\nProject(\"{2150E333-8FDC-42A3-94" +
-                    "74-1A3956D46DE8}\") = \"build\", \"build\", \"{9C10C55A-E7D4-45D0-B23D-39BE8BF8DE4A}\"\r" +
-                    "\n\tProjectSection(SolutionItems) = preProject\r\n\t\tsrc\\Directory.Build.props = src\\" +
-                    "Directory.Build.props\r\n\t\tbuild\\module.build.targets = build\\module.build.targets" +
-                    "\r\n\tEndProjectSection\r\nEndProject\r\nProject(\"{2150E333-8FDC-42A3-9474-1A3956D46DE8" +
-                    "}\") = \"Library\", \"Library\", \"{E58182FC-0950-453F-8C3A-ABCB477C8A28}\"\r\nEndProject" +
-                    "\r\nProject(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Domain\", \"src\\Library\\Dom" +
-                    "ain\\Domain.csproj\", \"{851F1CBB-A081-40C7-844F-842E0FAE0DF0}\"\r\nEndProject\r\nProjec" +
-                    "t(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Infrastructure\", \"src\\Library\\Inf" +
-                    "rastructure\\Infrastructure.csproj\", \"{2277E74A-AE69-4392-A173-8ED4BD6EB11E}\"\r\nEn" +
-                    "dProject\r\nProject(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Web\", \"src\\Web\\We" +
-                    "b.csproj\", \"{C2D01E40-4038-4527-9AAF-323359CD5CF0}\"\r\nEndProject\r\nProject(\"{9A191" +
-                    "03F-16F7-4668-BE54-9A1E7A4F7556}\") = \"WebHost\", \"src\\WebHost\\WebHost.csproj\", \"{" +
-                    "CEAE0B43-438D-4778-BF3A-8665246EF718}\"\r\nEndProject\r\nProject(\"{9A19103F-16F7-4668" +
+                    "40219.1\r\nProject(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"WebHost\", \"src\\Web" +
+                    "Host\\WebHost.csproj\", \"{CEAE0B43-438D-4778-BF3A-8665246EF718}\"\r\nEndProject\r\nProj" +
+                    "ect(\"{2150E333-8FDC-42A3-9474-1A3956D46DE8}\") = \"src\", \"src\", \"{B4D3AF99-D551-4B" +
+                    "7A-82F3-CE0950FCAA08}\"\r\nEndProject\r\nProject(\"{2150E333-8FDC-42A3-9474-1A3956D46D" +
+                    "E8}\") = \"build\", \"build\", \"{9C10C55A-E7D4-45D0-B23D-39BE8BF8DE4A}\"\r\n\tProjectSect" +
+                    "ion(SolutionItems) = preProject\r\n\t\tsrc\\Directory.Build.props = src\\Directory.Bui" +
+                    "ld.props\r\n\t\tbuild\\module.build.targets = build\\module.build.targets\r\n\tEndProject" +
+                    "Section\r\nEndProject\r\nProject(\"{2150E333-8FDC-42A3-9474-1A3956D46DE8}\") = \"Librar" +
+                    "y\", \"Library\", \"{E58182FC-0950-453F-8C3A-ABCB477C8A28}\"\r\nEndProject\r\nProject(\"{9" +
+                    "A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Domain\", \"src\\Library\\Domain\\Domain.cs" +
+                    "proj\", \"{851F1CBB-A081-40C7-844F-842E0FAE0DF0}\"\r\nEndProject\r\nProject(\"{9A19103F-" +
+                    "16F7-4668-BE54-9A1E7A4F7556}\") = \"Infrastructure\", \"src\\Library\\Infrastructure\\I" +
+                    "nfrastructure.csproj\", \"{2277E74A-AE69-4392-A173-8ED4BD6EB11E}\"\r\nEndProject\r\nPro" +
+                    "ject(\"{9A19103F-16F7-4668-BE54-9A1E7A4F7556}\") = \"Web\", \"src\\Web\\Web.csproj\", \"{" +
+                    "C2D01E40-4038-4527-9AAF-323359CD5CF0}\"\r\nEndProject\r\nProject(\"{9A19103F-16F7-4668" +
                     "-BE54-9A1E7A4F7556}\") = \"Application\", \"src\\Library\\Application\\Application.cspr" +
                     "oj\", \"{792B8CBF-AB02-4A87-AB5E-A6CB8E9DE39C}\"\r\nEndProject\r\nProject(\"{2150E333-8F" +
                     "DC-42A3-9474-1A3956D46DE8}\") = \"Solution Items\", \"Solution Items\", \"{9BD68FC4-FD" +

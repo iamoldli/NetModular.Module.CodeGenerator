@@ -7,7 +7,7 @@
 //     重新生成代码，这些更改将会丢失。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.UI.App.src.components
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\excel.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\components\ConfigPage.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class excel : excelBase
+    public partial class ConfigPage : ConfigPageBase
     {
 #line hidden
         /// <summary>
@@ -25,8 +25,27 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n  //Excel操作库 0、EPPlus 1、NPOI 2、OpenXml\r\n  \"Provider\": 0,\r\n  //Excel相关临时文件路径名称，" +
-                    "默认Excel，该目录会放在全局的临时目录下\r\n  \"TempPath\": \"\"\r\n}");
+            this.Write(@"<template>
+  <nm-form-page v-bind=""form"">
+    <!--这里自定义表单-->
+  </nm-form-page>
+</template>
+<script>
+import { mixins } from 'netmodular-module-admin'
+import module from '../../module'
+export default {
+  mixins: [mixins.configForm],
+  data() {
+    return {
+      code: module.code,
+      form: {
+        model: {}
+      }
+    }
+  }
+}
+</script>
+");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -38,7 +57,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class excelBase
+    public class ConfigPageBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

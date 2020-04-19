@@ -7,7 +7,7 @@
 //     重新生成代码，这些更改将会丢失。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.Properties
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\jwt.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Properties\LaunchSettings.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class jwt : jwtBase
+    public partial class LaunchSettings : LaunchSettingsBase
     {
 #line hidden
         /// <summary>
@@ -25,9 +25,24 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n  //秘钥\r\n  \"Key\": \"twAJ$j5##pVc5*y&\",\r\n  //发行商\r\n  \"Issuer\": \"http://www.17mkh.c" +
-                    "om\",\r\n  //订阅者\r\n  \"Audience\": \"http://www.17mkh.com\",\r\n  //有效期(分钟)\r\n  \"Expires\": " +
-                    "120\r\n}");
+            this.Write(@"{
+""$schema"": ""http://json.schemastore.org/launchsettings.json"",
+  ""profiles"": {
+    ""WebHost"": {
+      ""commandName"": ""Project"",
+      ""launchBrowser"": true,
+      ""launchUrl"": ""swagger"",
+      ""environmentVariables"": {
+        ""ASPNETCORE_ENVIRONMENT"": ""Development""
+      },
+      ""applicationUrl"": ""http://localhost:");
+            
+            #line 12 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Properties\LaunchSettings.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.No + 6220));
+            
+            #line default
+            #line hidden
+            this.Write("\"\r\n    }\r\n  }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -39,7 +54,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class jwtBase
+    public class LaunchSettingsBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

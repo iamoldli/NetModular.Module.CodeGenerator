@@ -26,30 +26,30 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         public virtual string TransformText()
         {
             this.Write(@"{
-  //是否开启日志
+  //????????
   ""Logging"": false,
-  //数据库类型 0、SqlServer 1、MySql 2、SQLite
+  //????????? 0??SqlServer 1??MySql 2??SQLite
   ""Dialect"": 2,
-  //数据库版本
+  //?????汾
   ""Version"": """",
-  //数据库地址
+  //???????
   ""Server"": """",
-  //端口号
+  //????
   ""Port"": 0,
-  //用户名
+  //?????
   ""UserId"": """",
-  //密码
+  //????
   ""Password"": """",
-  //是否创建数据库和表
+  //????????????
   ""CreateDatabase"": true,
-  //是否创建数据库后初始化数据
+  //???????????????????
   ""InitData"": true,
-  //模块列表
+  //????б?
   ""Modules"": [
     {
-      //模块名称
+      //???????
       ""Name"": ""Admin"",
-      //数据库名称
+      //?????????
       ""Database"": """);
             
             #line 27 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\db.tt"

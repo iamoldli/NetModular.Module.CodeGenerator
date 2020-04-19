@@ -26,37 +26,44 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n  \"name\": \"");
+            this.Write("{\r\n  \"id\": ");
             
             #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.No));
+            
+            #line default
+            #line hidden
+            this.Write(",\r\n  \"name\": \"");
+            
+            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write("-module-");
             
-            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.ToLower()));
             
             #line default
             #line hidden
             this.Write("\",\r\n  \"version\": \"1.0.0\",\r\n  \"code\": \"");
             
-            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code.FirstCharToLower()));
             
             #line default
             #line hidden
             this.Write("\",\r\n  \"title\": \"");
             
-            #line 7 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Name));
             
             #line default
             #line hidden
             this.Write("\",\r\n  \"description\": \"");
             
-            #line 8 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
+            #line 9 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Name));
             
             #line default
@@ -75,19 +82,19 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     ""pub"": ""cd ../../../script && npm_publish.ps1""
   },
   ""dependencies"": {
-    ""netmodular-module-admin"": ""^1.2.9"",
-    ""netmodular-ui"": ""^1.7.6""
+    ""netmodular-module-admin"": ""^1.3.4"",
+    ""netmodular-ui"": ""^1.7.7""
   },
   ""devDependencies"": {
-    ""@vue/cli-plugin-babel"": ""^4.2.3"",
-    ""@vue/cli-plugin-eslint"": ""^4.2.3"",
-    ""@vue/cli-plugin-router"": ""^4.2.3"",
-    ""@vue/cli-plugin-vuex"": ""^4.2.3"",
-    ""@vue/cli-service"": ""^4.2.3"",
+    ""@vue/cli-plugin-babel"": ""^4.3.1"",
+    ""@vue/cli-plugin-eslint"": ""^4.3.1"",
+    ""@vue/cli-plugin-router"": ""^4.3.1"",
+    ""@vue/cli-plugin-vuex"": ""^4.3.1"",
+    ""@vue/cli-service"": ""^4.3.1"",
     ""@vue/eslint-config-prettier"": ""^5.0.0"",
     ""babel-eslint"": ""^10.1.0"",
     ""eslint"": ""^5.16.0"",
-    ""eslint-plugin-prettier"": ""^3.1.2"",
+    ""eslint-plugin-prettier"": ""^3.1.3"",
     ""eslint-plugin-vue"": ""^5.0.0"",
     ""prettier"": ""^1.18.2"",
     ""rimraf"": ""^3.0.2"",

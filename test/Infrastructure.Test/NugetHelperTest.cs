@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NetModular;
-using NetModular.Lib.Utils.Core.SystemConfig;
 using NetModular.Module.CodeGenerator.Infrastructure;
 using NetModular.Module.CodeGenerator.Infrastructure.NuGet;
 using Xunit;
@@ -15,8 +14,7 @@ namespace Infrastructure.Test
         {
             var service = new ServiceCollection();
             service.AddHttpClient();
-            service.AddSingleton<SystemConfigModel>();
-            service.AddSingleton<CodeGeneratorOptions>();
+            service.AddSingleton<CodeGeneratorConfig>();
             service.AddSingleton<NuGetHelper>();
             _nuGetHelper = service.BuildServiceProvider().GetService<NuGetHelper>();
         }

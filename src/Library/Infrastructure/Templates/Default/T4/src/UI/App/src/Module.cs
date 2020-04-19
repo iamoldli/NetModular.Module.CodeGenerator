@@ -15,7 +15,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\Module.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\Module.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class Module : ModuleBase
     {
@@ -25,9 +25,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("/** 模块信息 */\r\nconst pack = require(\'../package.json\')\r\n\r\nexport default {\r\n  name:" +
-                    " pack.title,\r\n  code: pack.code,\r\n  version: pack.version,\r\n  description: pack." +
-                    "description\r\n}\r\n");
+            this.Write("/** 模块信息 */\r\nconst pack = require(\'../package.json\')\r\n\r\nexport default {\r\n  id: p" +
+                    "ack.id,\r\n  name: pack.title,\r\n  code: pack.code,\r\n  version: pack.version,\r\n  de" +
+                    "scription: pack.description\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

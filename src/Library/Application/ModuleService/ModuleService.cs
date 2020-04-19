@@ -5,6 +5,8 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using NetModular.Lib.Config.Abstractions;
+using NetModular.Lib.Config.Abstractions.Impl;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ResultModels;
 using NetModular.Module.CodeGenerator.Application.ModuleService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Class;
@@ -34,10 +36,10 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
         private readonly IModelPropertyRepository _modelPropertyRepository;
         private readonly IClassMethodRepository _classMethodRepository;
         private readonly CodeGeneratorDbContext _dbContext;
-        private readonly CodeGeneratorOptions _codeGeneratorOptions;
         private readonly NuGetHelper _nugetHelper;
+        private readonly IConfigProvider _configProvider;
 
-        public ModuleService(IModuleRepository repository, IMapper mapper, IClassRepository classRepository, IPropertyRepository propertyRepository, IEnumRepository enumRepository, IEnumItemRepository enumItemRepository, IModelPropertyRepository modelPropertyRepository, IClassMethodRepository classMethodRepository, CodeGeneratorDbContext dbContext, CodeGeneratorOptions codeGeneratorOptions, NuGetHelper nugetHelper)
+        public ModuleService(IModuleRepository repository, IMapper mapper, IClassRepository classRepository, IPropertyRepository propertyRepository, IEnumRepository enumRepository, IEnumItemRepository enumItemRepository, IModelPropertyRepository modelPropertyRepository, IClassMethodRepository classMethodRepository, CodeGeneratorDbContext dbContext, NuGetHelper nugetHelper, IConfigProvider configProvider)
         {
             _repository = repository;
             _mapper = mapper;
@@ -48,8 +50,8 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
             _modelPropertyRepository = modelPropertyRepository;
             _classMethodRepository = classMethodRepository;
             _dbContext = dbContext;
-            _codeGeneratorOptions = codeGeneratorOptions;
             _nugetHelper = nugetHelper;
+            _configProvider = configProvider;
         }
 
         public async Task<IResultModel> Query(ModuleQueryModel model)
@@ -138,12 +140,19 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
             //创建模块生成对象
             var moduleBuildModel = _mapper.Map<ModuleBuildModel>(module);
 
-            moduleBuildModel.Prefix = _codeGeneratorOptions.Prefix;
-            moduleBuildModel.UiPrefix = _codeGeneratorOptions.UiPrefix;
+            var config = _configProvider.Get<CodeGeneratorConfig>();
+            moduleBuildModel.Prefix = config.Prefix;
+            moduleBuildModel.UiPrefix = config.UiPrefix;
 
             var id = Guid.NewGuid().ToString();
-            var rootPath = _codeGeneratorOptions.BuildCodePath;
-            var moduleFullName = $"{_codeGeneratorOptions.Prefix}.Module.{module.Code}";
+            var rootPath = config.BuildCodePath;
+            if (rootPath.IsNull())
+            {
+                var pathConfig = _configProvider.Get<PathConfig>();
+                rootPath = Path.Combine(pathConfig.TempPath, "CodeGenerator/BuildCode");
+            }
+
+            var moduleFullName = $"{config.Prefix}.Module.{module.Code}";
             var buildModel = new TemplateBuildModel
             {
                 RootPath = Path.Combine(rootPath, id, moduleFullName),
@@ -231,16 +240,18 @@ namespace NetModular.Module.CodeGenerator.Application.ModuleService
             var builder = new DefaultTemplateBuilder();
             builder.Build(buildModel);
 
-            var outputPath = Path.Combine(rootPath, id);
-            ZipFile.CreateFromDirectory(outputPath, Path.Combine(rootPath, id + ".zip"));
+            var sourceDir = Path.Combine(rootPath, id);
+            var outputFile = Path.Combine(rootPath, id + ".zip");
+            ZipFile.CreateFromDirectory(sourceDir, outputFile);
 
             //删除临时文件
-            Directory.Delete(outputPath, true);
+            Directory.Delete(sourceDir, true);
 
             var resultModel = new ModuleBuildCodeResultModel
             {
                 Id = id,
-                Name = moduleBuildModel.Name + ".zip"
+                Name = moduleBuildModel.Name + ".zip",
+                ZipPath = outputFile
             };
 
             return result.Success(resultModel);

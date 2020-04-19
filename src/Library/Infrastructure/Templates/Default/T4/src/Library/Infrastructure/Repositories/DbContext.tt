@@ -1,5 +1,4 @@
 ﻿<#@ template language="C#" #>
-using System;
 using <#= _prefix #>.Lib.Data.Abstractions;
 using <#= _prefix #>.Lib.Data.Core;
 
@@ -7,7 +6,7 @@ namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Infrastructure.Reposit
 {
     public class <#= _model.Module.Code #>DbContext : DbContext
     {
-        public <#= _model.Module.Code #>DbContext(IDbContextOptions options, IServiceProvider serviceProvider) : base(options, serviceProvider)
+        public <#= _model.Module.Code #>DbContext(IDbContextOptions options) : base(options)
         {
         }
     }

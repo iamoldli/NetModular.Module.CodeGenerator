@@ -6,8 +6,9 @@ using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using NetModular.Lib.Auth.Web.Attributes;
+using NetModular.Lib.Config.Abstractions;
+using NetModular.Lib.Config.Abstractions.Impl;
 using NetModular.Lib.Utils.Core.Extensions;
-using NetModular.Lib.Utils.Core.SystemConfig;
 using NetModular.Module.CodeGenerator.Application.ClassService;
 using NetModular.Module.CodeGenerator.Application.ClassService.ViewModels;
 using NetModular.Module.CodeGenerator.Domain.Class;
@@ -20,15 +21,12 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
     [Common]
     public class ClassController : Web.ModuleController
     {
-        private readonly SystemConfigModel _systemConfig;
-        private readonly CodeGeneratorOptions _codeGeneratorOptions;
         private readonly IClassService _service;
-
-        public ClassController(SystemConfigModel systemConfig, CodeGeneratorOptions codeGeneratorOptions, IClassService service)
+        private readonly IConfigProvider _configProvider;
+        public ClassController(IClassService service, IConfigProvider configProvider)
         {
-            _systemConfig = systemConfig;
-            _codeGeneratorOptions = codeGeneratorOptions;
             _service = service;
+            _configProvider = configProvider;
         }
 
         [HttpGet]
@@ -79,8 +77,7 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
         public async Task<IActionResult> BuildCode([BindRequired]Guid id)
         {
             var result = await _service.BuildCode(id);
-            var path = Path.Combine(_codeGeneratorOptions.BuildCodePath, result.Data.Id + ".zip");
-            return PhysicalFile(path, "application/octet-stream", HttpUtility.UrlEncode(result.Data.Name), true);
+            return PhysicalFile(result.Data.ZipPath, "application/octet-stream", HttpUtility.UrlEncode(result.Data.Name), true);
         }
     }
 }

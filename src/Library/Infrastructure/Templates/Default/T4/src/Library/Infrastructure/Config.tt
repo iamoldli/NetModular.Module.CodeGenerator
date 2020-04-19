@@ -1,0 +1,13 @@
+﻿<#@ template language="C#" #>
+using <#= _prefix #>.Lib.Config.Abstractions;
+
+namespace <#= _prefix #>.Module.<#= _model.Module.Code #>.Infrastructure
+{
+    /// <summary>
+    /// <#= _model.Module.Name #>配置项
+    /// </summary>
+    public class <#= _model.Module.Code #>Config : IConfig
+    {
+        
+    }
+}

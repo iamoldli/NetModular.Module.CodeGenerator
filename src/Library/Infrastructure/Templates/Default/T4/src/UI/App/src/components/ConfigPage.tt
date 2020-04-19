@@ -1,0 +1,21 @@
+<#@ template language="C#" #>
+<template>
+  <nm-form-page v-bind="form">
+    <!--这里自定义表单-->
+  </nm-form-page>
+</template>
+<script>
+import { mixins } from 'netmodular-module-admin'
+import module from '../../module'
+export default {
+  mixins: [mixins.configForm],
+  data() {
+    return {
+      code: module.code,
+      form: {
+        model: {}
+      }
+    }
+  }
+}
+</script>

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHost", "src\WebHost\WebHost.csproj", "{CEAE0B43-438D-4778-BF3A-8665246EF718}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B4D3AF99-D551-4B7A-82F3-CE0950FCAA08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9C10C55A-E7D4-45D0-B23D-39BE8BF8DE4A}"
@@ -18,8 +20,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Library\Infrastructure\Infrastructure.csproj", "{2277E74A-AE69-4392-A173-8ED4BD6EB11E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "src\Web\Web.csproj", "{C2D01E40-4038-4527-9AAF-323359CD5CF0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHost", "src\WebHost\WebHost.csproj", "{CEAE0B43-438D-4778-BF3A-8665246EF718}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Library\Application\Application.csproj", "{792B8CBF-AB02-4A87-AB5E-A6CB8E9DE39C}"
 EndProject

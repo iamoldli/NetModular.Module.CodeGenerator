@@ -92,7 +92,7 @@ export default {
   },
   methods: {
     buildCode(row) {
-      this._openLoading('正在努力生成代码，请稍后...')
+      this._openLoading('正在努力生成代码，首次生成需要调用官方NuGet接口查询最新包版本号，该过程较耗时，请您耐心等待...')
       api
         .buildCode({ id: row.id })
         .then(() => {

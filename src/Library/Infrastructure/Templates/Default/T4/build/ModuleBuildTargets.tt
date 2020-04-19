@@ -1,19 +1,19 @@
 <Project>
 
-  <PropertyGroup>
-    <ModulesDir>_modules\$(Id)</ModulesDir>
-    <ModuleName>$(ModulesDir)\_module.json</ModuleName>
-    <ModuleInfo>{"Id": "$(Id)","Name":"$(Name)","Icon":"$(Icon)","Version":"$(Version)"}</ModuleInfo>
-  </PropertyGroup>
+	<PropertyGroup>
+		<ModulesDir>_modules\$(Id)_$(Code)</ModulesDir>
+		<ModuleName>$(ModulesDir)\_module.json</ModuleName>
+		<ModuleInfo>{"Id": "$(Id)","Name":"$(Name)","Code":"$(Code)","Icon":"$(Icon)","Version":"$(Version)","Description":"$(Description)"}</ModuleInfo>
+	</PropertyGroup>
 
-  <Target Name="ModulesBuild" AfterTargets="Build">
+	<Target Name="ModulesBuild" AfterTargets="Build">
 
-    <!--创建modules目录-->
-    <MakeDir Directories="$(ModulesDir)"/>
+		<!--创建modules目录-->
+		<MakeDir Directories="$(ModulesDir)"/>
 
-    <!--生成module.json文件，Note：项目需要生成两次，否则Nuget包中的文件不是最新的-->
-    <WriteLinesToFile File="$(ModuleName)" Overwrite="true" Lines="$(ModuleInfo)" />
+		<!--生成module.json文件，Note：项目需要生成两次，否则Nuget包中的文件不是最新的-->
+		<WriteLinesToFile File="$(ModuleName)" Overwrite="true" Lines="$(ModuleInfo)" />
 
-  </Target>
+	</Target>
 
 </Project>

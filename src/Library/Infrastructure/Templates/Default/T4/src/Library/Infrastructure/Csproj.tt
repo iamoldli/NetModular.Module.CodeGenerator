@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="<#= _prefix #>.Lib.Options.Abstraction" Version="<#= _versions.Lib_Options_Abstraction #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.Config.Abstractions" Version="<#= _versions.Lib_Config_Abstractions #>" />
+	  <PackageReference Include="<#= _prefix #>.Lib.Module.Abstractions" Version="<#= _versions.Lib_Module_Abstractions #>" />
     <PackageReference Include="<#= _prefix #>.Module.Admin.Domain" Version="<#= _versions.Module_Admin_Domain #>" />
   </ItemGroup>
  
