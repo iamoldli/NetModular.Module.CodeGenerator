@@ -632,6 +632,9 @@
 	  <Compile Update="Templates\Default\T4\src\UI\App\src\components\ConfigPage.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
+	  <Compile Update="Templates\Default\T4\src\WebHost\config\db.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\WebHost\Properties\LaunchSettings.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
