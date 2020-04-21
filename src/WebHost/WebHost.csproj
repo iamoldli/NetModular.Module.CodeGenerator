@@ -10,12 +10,12 @@
 
   <ItemGroup>
     <PackageReference Include="NetModular.Lib.Cache.MemoryCache" Version="1.9.13" />
-    <PackageReference Include="NetModular.Lib.Data.MySql" Version="1.9.14" />
-    <PackageReference Include="NetModular.Lib.Data.SQLite" Version="1.9.14" />
-    <PackageReference Include="NetModular.Lib.Data.SqlServer" Version="1.9.14" />
+    <PackageReference Include="NetModular.Lib.Data.MySql" Version="1.9.15" />
+    <PackageReference Include="NetModular.Lib.Data.SQLite" Version="1.9.15" />
+    <PackageReference Include="NetModular.Lib.Data.SqlServer" Version="1.9.15" />
     <PackageReference Include="NetModular.Lib.Excel.EPPlus" Version="1.9.6" />
-    <PackageReference Include="NetModular.Lib.Host.Web" Version="1.9.11" />
-    <PackageReference Include="NetModular.Module.Admin.Web" Version="1.9.10" />
+    <PackageReference Include="NetModular.Lib.Host.Web" Version="1.9.13" />
+    <PackageReference Include="NetModular.Module.Admin.Web" Version="1.9.12" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,9 +26,6 @@
 
   <ItemGroup>
     <!--复制配置文件到输出目录-->
-    <None Update="config\**\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <!--复制模块相关文件到输出路径中-->
     <None Update="_modules\**\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

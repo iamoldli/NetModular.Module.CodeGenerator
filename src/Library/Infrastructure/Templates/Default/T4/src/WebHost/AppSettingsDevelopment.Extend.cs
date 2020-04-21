@@ -1,13 +1,13 @@
 ﻿using System.IO;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost
 {
-    public partial class host : ITemplateHandler
+    public partial class AppSettingsDevelopment : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
 
-        public host(TemplateBuildModel model)
+        public AppSettingsDevelopment(TemplateBuildModel model)
         {
             _model = model;
         }
@@ -16,12 +16,12 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, "src/WebHost/config");
+            var dir = Path.Combine(_model.RootPath, "src/WebHost");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, "host.json");
+            var filePath = Path.Combine(dir, "appsettings.Development.json");
             File.WriteAllText(filePath, content);
         }
     }

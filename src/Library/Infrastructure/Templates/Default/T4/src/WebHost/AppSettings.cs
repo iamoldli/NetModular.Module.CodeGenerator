@@ -7,7 +7,7 @@
 //     重新生成代码，这些更改将会丢失。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost
 {
     using System;
     
@@ -15,9 +15,9 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\config\loggingDevelopment.tt"
+    #line 1 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\AppSettings.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class loggingDevelopment : loggingDevelopmentBase
+    public partial class AppSettings : AppSettingsBase
     {
 #line hidden
         /// <summary>
@@ -25,9 +25,102 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("{\r\n  \"Serilog\": {\r\n    \"MinimumLevel\": {\r\n      \"Default\": \"Debug\",\r\n      \"Overr" +
-                    "ide\": {\r\n        \"Microsoft\": \"Debug\",\r\n        \"System\": \"Debug\"\r\n      }\r\n    " +
-                    "}\r\n  }\r\n}");
+            this.Write("{\r\n  \"Host\": {\r\n    //地址\r\n    \"Urls\": \"http://*:");
+            
+            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\AppSettings.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.No + 6220));
+            
+            #line default
+            #line hidden
+            this.Write(@""",
+    //开启Swagger
+    ""Swagger"": false,
+    //代理
+    ""Proxy"": false,
+    //指定跨域访问时预检请求的有效期，单位秒，默认30分钟
+    ""PreflightMaxAge"": 0
+  },
+  ""Serilog"": {
+    ""MinimumLevel"": {
+      ""Default"": ""Error"",
+      ""Override"": {
+        ""Microsoft"": ""Error"",
+        ""System"": ""Error""
+      }
+    },
+    ""WriteTo"": [
+      //输出到文件
+      {
+        ""Name"": ""File"",
+        ""Args"": {
+          //文件路径
+          ""path"": ""log/log.log"",
+          //文件滚动方式
+          ""rollingInterval"": ""Day"",
+          //消息输出格式
+          ""outputTemplate"": ""{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"",
+          //文件数量
+          ""retainedFileCountLimit"": 60,
+          //使用缓冲，提高写入效率
+          ""buffered"": false
+        }
+      }
+    ]
+  },
+  ""Db"": {
+    //是否开启日志
+    ""Logging"": false,
+    //数据库类型 0、SqlServer 1、MySql 2、SQLite
+    ""Dialect"": 2,
+    //数据库版本
+    ""Version"": """",
+    //数据库地址
+    ""Server"": """",
+    //端口号
+    ""Port"": 0,
+    //用户名
+    ""UserId"": """",
+    //密码
+    ""Password"": """",
+    //是否创建数据库和表
+    ""CreateDatabase"": true,
+    //是否初始化数据
+    ""InitData"": true,
+    //模块列表
+    ""Modules"":  [
+      {
+        //模块名称
+        ""Name"": ""Admin"",
+        //数据库名称
+        ""Database"": """);
+            
+            #line 65 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\AppSettings.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_dbPrefix));
+            
+            #line default
+            #line hidden
+            this.Write("_Admin\"\r\n      },\r\n      {\r\n        \"Name\": \"");
+            
+            #line 68 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\AppSettings.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
+            
+            #line default
+            #line hidden
+            this.Write("\",\r\n        \"Database\": \"");
+            
+            #line 69 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\AppSettings.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_dbPrefix));
+            
+            #line default
+            #line hidden
+            this.Write("_");
+            
+            #line 69 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\AppSettings.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
+            
+            #line default
+            #line hidden
+            this.Write("\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -39,7 +132,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public class loggingDevelopmentBase
+    public class AppSettingsBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

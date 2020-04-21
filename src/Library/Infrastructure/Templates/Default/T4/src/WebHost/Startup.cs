@@ -25,29 +25,31 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using Microsoft.Extensions.Hosting;\r\nusing ");
+            this.Write("using Microsoft.Extensions.Configuration;\r\nusing Microsoft.Extensions.Hosting;\r\nu" +
+                    "sing ");
             
-            #line 3 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Startup.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Startup.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Host.Web;\r\n\r\nnamespace ");
             
-            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Startup.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Startup.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Startup.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Startup.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
             this.Write(".WebHost\r\n{\r\n    public class Startup : StartupAbstract\r\n    {\r\n        public St" +
-                    "artup(IHostEnvironment env) : base(env)\r\n        {\r\n        }\r\n    }\r\n}\r\n");
+                    "artup(IHostEnvironment env, IConfiguration cfg) : base(env, cfg)\r\n        {\r\n   " +
+                    "     }\r\n    }\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

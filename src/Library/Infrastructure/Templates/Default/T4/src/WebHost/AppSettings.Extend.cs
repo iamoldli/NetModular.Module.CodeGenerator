@@ -1,27 +1,29 @@
 ﻿using System.IO;
 using NetModular.Module.CodeGenerator.Infrastructure.Templates.Models;
 
-namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost.config
+namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.src.WebHost
 {
-    public partial class dbDevelopment : ITemplateHandler
+    public partial class AppSettings : ITemplateHandler
     {
         private readonly TemplateBuildModel _model;
+        private readonly string _dbPrefix;
 
-        public dbDevelopment(TemplateBuildModel model)
+        public AppSettings(TemplateBuildModel model)
         {
             _model = model;
+            _dbPrefix = model.Module.UiPrefix;
         }
 
         public bool IsGlobal => true;
 
         public void Save()
         {
-            var dir = Path.Combine(_model.RootPath, "src/WebHost/config");
+            var dir = Path.Combine(_model.RootPath, "src/WebHost");
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
             var content = TransformText();
-            var filePath = Path.Combine(dir, "db.Development.json");
+            var filePath = Path.Combine(dir, "appsettings.json");
             File.WriteAllText(filePath, content);
         }
     }
