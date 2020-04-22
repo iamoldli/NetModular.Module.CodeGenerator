@@ -1,6 +1,6 @@
 <template>
   <nm-form-page v-bind="form">
-    <el-row :gutter="20">
+    <el-row>
       <el-col :span="10" :offset="1">
         <el-form-item label="模块前缀(后端命名空间)：" prop="prefix">
           <el-input v-model="form.model.prefix" />
@@ -11,6 +11,8 @@
           <el-input v-model="form.model.uiPrefix" />
         </el-form-item>
       </el-col>
+    </el-row>
+    <el-row>
       <el-col :span="20" :offset="1">
         <el-form-item label="生成代码存储路径：" prop="buildCodePath">
           <el-input v-model="form.model.buildCodePath" placeholder="默认保存在通用临时路径下的CodeGenerator\BuildCode目录下" />
