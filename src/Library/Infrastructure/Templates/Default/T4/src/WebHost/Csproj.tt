@@ -16,6 +16,7 @@
     <PackageReference Include="<#= _prefix #>.Lib.Data.SqlServer" Version="<#= _versions.Lib_Data_SqlServer #>" />
     <PackageReference Include="<#= _prefix #>.Lib.Excel.EPPlus" Version="<#= _versions.Lib_Excel_EPPlus #>" />
     <PackageReference Include="<#= _prefix #>.Lib.Host.Web" Version="<#= _versions.Lib_Host_Web #>" />
+    <PackageReference Include="<#= _prefix #>.Lib.OSS.Local" Version="<#= _versions.Lib_OSS_Local #>" />
     <PackageReference Include="<#= _prefix #>.Module.Admin.Web" Version="<#= _versions.Module_Admin_Web #>" />
   </ItemGroup>
 

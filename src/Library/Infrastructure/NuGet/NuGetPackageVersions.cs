@@ -40,5 +40,7 @@
         public string Module_Admin_Domain { get; set; }
 
         public string Module_Admin_Web { get; set; }
+
+        public string Lib_OSS_Local { get; set; }
     }
 }

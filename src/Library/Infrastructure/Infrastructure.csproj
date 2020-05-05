@@ -7,7 +7,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.3" />
 		<PackageReference Include="NetModular.Lib.Config.Abstractions" Version="1.9.2" />
-		<PackageReference Include="NetModular.Module.Admin.Domain" Version="1.9.15" />
+		<PackageReference Include="NetModular.Module.Admin.Domain" Version="1.9.22" />
 		<PackageReference Include="System.CodeDom" Version="4.7.0" />
 	</ItemGroup>
 
@@ -590,13 +590,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\WebHost\AppSettings.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\WebHost\AppSettingsDevelopment.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
+	  <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\WebHost\Startup.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
+	  <Compile Update="Templates\Default\T4\src\Web\ModuleInitializer.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
 	</ItemGroup>

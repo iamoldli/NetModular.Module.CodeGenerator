@@ -120,7 +120,47 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n");
+            this.Write(@"""
+      }
+    ]
+  },
+  //缓存配置
+  ""Cache"": {
+    //缓存提供器：0、MemoryCache 1、Redis
+    ""Provider"": 0,
+    //Redis配置
+    ""Redis"": {
+      ""Prefix"": """",
+      ""ConnectionString"": ""127.0.0.1""
+    }
+  },
+  //Excel配置
+  ""Excel"": {
+    //Excel类库：0、EPPlus 1、NPOI 2、OpenXml (暂时只实现了EPPlus)
+    ""Provider"": 0,
+    //Excel操作时产生的临时文件存储根路径
+    ""TempPath"": """"
+  },
+  //OSS配置
+  ""OSS"": {
+    //存储提供器：0、本地存储 1、七牛
+    ""Provider"": 0,
+    //七牛存储配置
+    ""Qiniu"": {
+      //Key
+      ""AccessKey"": """",
+      //密钥
+      ""SecretKey"": """",
+      //域名(结尾不包含/)
+      ""Domain"": """",
+      //空间名称
+      ""Bucket"": """",
+      //存储区域：0、华 东 1、华 北 2、华 南 3、北 美 4、东南亚
+      ""Zone"": 0
+    }
+  }
+}
+");
             return this.GenerationEnvironment.ToString();
         }
     }

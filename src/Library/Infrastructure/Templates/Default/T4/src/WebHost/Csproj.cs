@@ -127,9 +127,23 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(".Module.Admin.Web\" Version=\"");
+            this.Write(".Lib.OSS.Local\" Version=\"");
             
             #line 19 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Lib_OSS_Local));
+            
+            #line default
+            #line hidden
+            this.Write("\" />\r\n    <PackageReference Include=\"");
+            
+            #line 20 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
+            
+            #line default
+            #line hidden
+            this.Write(".Module.Admin.Web\" Version=\"");
+            
+            #line 20 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\WebHost\Csproj.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_versions.Module_Admin_Web));
             
             #line default

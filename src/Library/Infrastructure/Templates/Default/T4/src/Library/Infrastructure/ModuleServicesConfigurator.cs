@@ -25,32 +25,38 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using Microsoft.Extensions.DependencyInjection;\r\nusing Microsoft.Extensions.Hosti" +
-                    "ng;\r\nusing ");
+            this.Write("using Microsoft.Extensions.Configuration;\r\nusing Microsoft.Extensions.DependencyI" +
+                    "njection;\r\nusing Microsoft.Extensions.Hosting;\r\nusing ");
             
-            #line 3 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
+            #line 4 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Lib.Module.Abstractions;\r\n\r\nnamespace ");
             
-            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
             this.Write(".Module.");
             
-            #line 5 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
+            #line 6 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_model.Module.Code));
             
             #line default
             #line hidden
-            this.Write(".Infrastructure\r\n{\r\n    public class ModuleServicesConfigurator : IModuleServices" +
-                    "Configurator\r\n    {\r\n        public void Configure(IServiceCollection services, " +
-                    "IModuleCollection modules, IHostEnvironment env)\r\n        {\r\n        }\r\n    }\r\n}" +
-                    "\r\n");
+            this.Write(@".Infrastructure
+{
+    public class ModuleServicesConfigurator : IModuleServicesConfigurator
+    {
+        public void Configure(IServiceCollection services, IModuleCollection modules, IHostEnvironment env, IConfiguration cfg)
+        {
+        }
+    }
+}
+");
             return this.GenerationEnvironment.ToString();
         }
     }
