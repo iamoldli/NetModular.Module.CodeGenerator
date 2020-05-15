@@ -1,4 +1,4 @@
-    using NetModular.Lib.Data.Abstractions;
+using NetModular.Lib.Data.Abstractions;
 
 namespace NetModular.Module.CodeGenerator.Infrastructure.Repositories.PostgreSQL
 {
