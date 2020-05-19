@@ -65,7 +65,7 @@ namespace NetModular.Module.CodeGenerator.Web.Controllers
         public async Task<IActionResult> BuildCode(ModuleBuildCodeModel model)
         {
             var result = await _service.BuildCode(model);
-            return PhysicalFile(result.Data.ZipPath, "application/octet-stream", HttpUtility.UrlEncode(result.Data.Name), true);
+            return PhysicalFile(result.Data.ZipPath, "application/octet-stream", result.Data.Name, true);
         }
     }
 }
