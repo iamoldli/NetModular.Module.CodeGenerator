@@ -84,8 +84,8 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write("-button-has :options=\"buttons.add\" @click=\"add\" />\r\n      </template>\r\n\r\n      <!" +
-                    "--自定义列-->\r\n      <!-- <template v-slot:col-name=\"{row}\">\r\n        <");
+            this.Write("-button v-bind=\"buttons.add\" @click=\"add\" />\r\n      </template>\r\n\r\n      <!--自定义列" +
+                    "-->\r\n      <!-- <template v-slot:col-name=\"{row}\">\r\n        <");
             
             #line 22 "D:\MyProject\NetModular\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\src\views\index\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_uiPrefix));

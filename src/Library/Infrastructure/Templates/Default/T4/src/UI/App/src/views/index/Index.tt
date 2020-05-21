@@ -14,7 +14,7 @@
 
       <!--按钮-->
       <template v-slot:querybar-buttons>
-        <<#= _uiPrefix #>-button-has :options="buttons.add" @click="add" />
+        <<#= _uiPrefix #>-button v-bind="buttons.add" @click="add" />
       </template>
 
       <!--自定义列-->

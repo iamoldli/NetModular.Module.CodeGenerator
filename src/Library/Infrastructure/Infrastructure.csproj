@@ -593,6 +593,9 @@
 	  <Compile Update="Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
+	  <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Index.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\WebHost\AppSettings.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
