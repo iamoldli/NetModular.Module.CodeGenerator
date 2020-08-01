@@ -9,14 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Cache.MemoryCache" Version="1.9.17" />
-    <PackageReference Include="NetModular.Lib.Data.MySql" Version="1.9.28" />
-    <PackageReference Include="NetModular.Lib.Data.SQLite" Version="1.9.28" />
-    <PackageReference Include="NetModular.Lib.Data.SqlServer" Version="1.9.28" />
-    <PackageReference Include="NetModular.Lib.Excel.EPPlus" Version="1.9.10" />
-    <PackageReference Include="NetModular.Lib.Host.Web" Version="1.9.27" />
-    <PackageReference Include="NetModular.Lib.OSS.Local" Version="1.9.6" />
-    <PackageReference Include="NetModular.Module.Admin.Web" Version="1.9.25" />
+    <PackageReference Include="NetModular.Lib.Cache.MemoryCache" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.Data.MySql" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.Data.SQLite" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.Data.SqlServer" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.Excel.EPPlus" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.Host.Web" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.OSS.Local" Version="2.0.0" />
+    <PackageReference Include="NetModular.Module.Admin.Web" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
