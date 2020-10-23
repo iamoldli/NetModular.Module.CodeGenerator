@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Auth.Web" Version="2.0.1" />
-    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="2.0.0" />
-    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="2.0.0" />
-    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="2.0.0" />
+    <PackageReference Include="NetModular.Lib.Auth.Web" Version="2.1.0" />
+    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="2.1.0" />
+    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="2.1.0" />
+    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="2.1.0" />
   </ItemGroup>
   
   <ItemGroup>
