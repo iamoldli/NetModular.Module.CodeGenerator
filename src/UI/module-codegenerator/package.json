@@ -1,6 +1,6 @@
 {
   "name": "netmodular-module-codegenerator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Oldli",
   "code": "codeGenerator",
   "title": "代码生成",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "netmodular-module-admin": "^1.4.7",
-    "netmodular-ui": "^1.8.1"
+    "netmodular-ui": "^2.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.3",
