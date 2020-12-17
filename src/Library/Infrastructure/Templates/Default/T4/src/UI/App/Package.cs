@@ -83,7 +83,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
   },
   ""dependencies"": {
     ""netmodular-module-admin"": ""^1.3.4"",
-    ""netmodular-ui"": ""^1.7.7""
+    ""netmodular-ui"": ""^2.0.0""
   },
   ""devDependencies"": {
     ""@vue/cli-plugin-babel"": ""^4.3.1"",

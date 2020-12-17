@@ -5,10 +5,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
 		<PackageReference Include="NetModular.Lib.Config.Abstractions" Version="2.1.0" />
-		<PackageReference Include="NetModular.Module.Admin.Domain" Version="2.1.0" />
-		<PackageReference Include="System.CodeDom" Version="4.7.0" />
+		<PackageReference Include="NetModular.Module.Admin.Domain" Version="2.1.3" />
+		<PackageReference Include="System.CodeDom" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -591,6 +591,9 @@
 
 	<ItemGroup>
 	  <Compile Update="Templates\Default\T4\src\Library\Infrastructure\ModuleServicesConfigurator.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
+	  <Compile Update="Templates\Default\T4\src\UI\App\Package.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\UI\App\src\views\index\Index.cs">
