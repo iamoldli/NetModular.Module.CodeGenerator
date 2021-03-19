@@ -16,7 +16,7 @@ const outputDir = '../../WebHost/wwwroot/app'
 
 module.exports = {
   outputDir: outputDir,
-  publicPath: '/app',
+  publicPath: './',
   devServer: {
     port: <#= _model.Module.No + 5220 #>
   },

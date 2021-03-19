@@ -46,7 +46,7 @@ const outputDir = '../../WebHost/wwwroot/app'
 
 module.exports = {
   outputDir: outputDir,
-  publicPath: '/app',
+  publicPath: './',
   devServer: {
     port: ");
             
