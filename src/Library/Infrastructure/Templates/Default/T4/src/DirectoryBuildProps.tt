@@ -1,6 +1,7 @@
 ﻿<#@ template language="C#" #>
 <Project>
   <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
     <Id><#= _model.Module.No<10 ? "0" + _model.Module.No : _model.Module.No + "" #></Id>
     <Code><#= _model.Module.Code #></Code>
 	<Name><#= _model.Module.Name #></Name>

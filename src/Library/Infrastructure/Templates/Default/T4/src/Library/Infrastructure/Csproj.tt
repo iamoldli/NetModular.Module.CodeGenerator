@@ -1,10 +1,6 @@
 <#@ template language="C#" #>
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="<#= _prefix #>.Lib.Config.Abstractions" Version="<#= _versions.Lib_Config_Abstractions #>" />
 	  <PackageReference Include="<#= _prefix #>.Lib.Module.Abstractions" Version="<#= _versions.Lib_Module_Abstractions #>" />

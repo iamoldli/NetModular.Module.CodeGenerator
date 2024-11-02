@@ -6,6 +6,7 @@
 		<Icon>develop</Icon>
 		<Authors>Oldli</Authors>
 		<Version>1.8.3</Version>
+		<TargetFramework>net9.0</TargetFramework>
 		<Description>NetModular Module $(Code)($(Name)) - $(MSBuildProjectName)</Description>
 		<NoWarn>$(NoWarn);1591</NoWarn>
 		<LangVersion>Latest</LangVersion>
