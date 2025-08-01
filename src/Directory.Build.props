@@ -5,7 +5,7 @@
 		<Name>代码生成</Name>
 		<Icon>develop</Icon>
 		<Authors>Oldli</Authors>
-		<Version>9.0.0</Version>
+		<Version>9.0.1</Version>
 		<TargetFramework>net9.0</TargetFramework>
 		<Description>NetModular Module $(Code)($(Name)) - $(MSBuildProjectName)</Description>
 		<NoWarn>$(NoWarn);1591</NoWarn>

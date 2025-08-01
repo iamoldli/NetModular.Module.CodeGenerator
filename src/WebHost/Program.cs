@@ -1,13 +1,12 @@
-﻿using System.Threading;
+﻿using System.Threading.Tasks;
 using NetModular.Lib.Host.Web;
 
-namespace NetModular.Module.CodeGenerator.WebHost
+namespace NetModular.Module.CodeGenerator.WebHost;
+
+public class Program
 {
-    public class Program
+    public static async Task Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            new HostBuilder().Run<Startup>(args);
-        }
+        await new HostBuilder().RunAsync(args);
     }
 }

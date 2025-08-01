@@ -2,8 +2,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Data.Query" Version="9.0.0" />
-    <PackageReference Include="NetModular.Lib.Mapper.AutoMapper" Version="9.0.0" />
+    <PackageReference Include="NetModular.Lib.Data.Query" Version="9.0.7" />
+    <PackageReference Include="NetModular.Lib.Mapper.AutoMapper" Version="9.0.7" />
   </ItemGroup>
   
   <ItemGroup>
