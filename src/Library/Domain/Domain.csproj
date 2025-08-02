@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Data.Core" Version="9.0.7" />
-    <PackageReference Include="NetModular.Lib.Data.Query" Version="9.0.7" />
-    <PackageReference Include="NetModular.Lib.Utils.Core" Version="9.0.7" />
+    <PackageReference Include="NetModular.Lib.Data.Core" Version="9.0.8" />
+    <PackageReference Include="NetModular.Lib.Data.Query" Version="9.0.8" />
+    <PackageReference Include="NetModular.Lib.Utils.Core" Version="9.0.8" />
   </ItemGroup>
   
 </Project>

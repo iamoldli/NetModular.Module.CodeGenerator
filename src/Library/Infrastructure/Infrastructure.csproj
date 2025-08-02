@@ -2,7 +2,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0-rc.2.24473.5" />
-		<PackageReference Include="NetModular.Lib.Config.Abstractions" Version="9.0.7" />
+		<PackageReference Include="NetModular.Lib.Config.Abstractions" Version="9.0.8" />
 		<PackageReference Include="NetModular.Module.Admin.Domain" Version="9.0.6" />
 		<PackageReference Include="System.CodeDom" Version="9.0.0-rc.2.24473.5" />
 	</ItemGroup>
@@ -235,10 +235,6 @@
 		<None Update="Templates\Default\T4\src\WebHost\Program.tt">
 			<Generator>TextTemplatingFilePreprocessor</Generator>
 			<LastGenOutput>Program.cs</LastGenOutput>
-		</None>
-		<None Update="Templates\Default\T4\src\WebHost\Startup.tt">
-			<Generator>TextTemplatingFilePreprocessor</Generator>
-			<LastGenOutput>Startup.cs</LastGenOutput>
 		</None>
 		<None Update="Templates\Default\T4\src\DirectoryBuildProps.tt">
 			<Generator>TextTemplatingFilePreprocessor</Generator>
@@ -605,9 +601,6 @@
 	    <DesignTime>True</DesignTime>
 	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\WebHost\Csproj.cs">
-	    <DesignTime>True</DesignTime>
-	  </Compile>
-	  <Compile Update="Templates\Default\T4\src\WebHost\Startup.cs">
 	    <DesignTime>True</DesignTime>
 	  </Compile>
 	  <Compile Update="Templates\Default\T4\src\Web\ModuleInitializer.cs">

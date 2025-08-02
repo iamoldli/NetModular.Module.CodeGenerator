@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Auth.Web" Version="9.0.7" />
-    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="9.0.7" />
-    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="9.0.7" />
-    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="9.0.7" />
+    <PackageReference Include="NetModular.Lib.Auth.Web" Version="9.0.8" />
+    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="9.0.8" />
+    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="9.0.8" />
+    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="9.0.8" />
   </ItemGroup>
   
   <ItemGroup>
